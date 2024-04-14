@@ -1,0 +1,188 @@
+/* -------------------------------------------- Footer Section Start ------------------------------------------*/
+.footer {
+  display: flex;
+  align-items: center;
+  height: auto;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 25, 41, 1),
+    rgba(37, 104, 132, 1),
+    rgba(25, 25, 41, 1)
+  );
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
+  margin: 5rem 0rem;
+}
+
+.footer_container_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer_container_left .footer_logo {
+  height: 4rem;
+  margin-right: 2rem;
+}
+.footer_container_left .footer_img {
+  height: 4.5rem;
+  margin-top: 1rem;
+}
+
+.footer_container_left .icon {
+  display: flex;
+  width: 77%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+.footer_container_left .icon p {
+  color: white;
+}
+.footer_container_left .footer_icons {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+.footer_container_left .footer_icons div {
+  height: 100%;
+  width: 100%;
+}
+
+.footer_container_left .footer_icons img {
+  object-fit: contain;
+  padding: 0.5rem;
+}
+
+.footer_container_middle {
+  display: flex;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  color: white;
+}
+
+.footer_container_middle h4 {
+  color: rgba(199, 73, 58, 1);
+  margin: 1rem 0rem;
+  font-weight: 700;
+}
+.footer_container_middle li {
+  margin: 0.5rem 0rem;
+}
+
+.footer_container_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.enquiry {
+  width: 90%;
+}
+.enquiry label {
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(199, 73, 58, 1);
+  font-size: large;
+  font-weight: 600;
+  margin: 0.4rem 0.8rem;
+}
+.enquiry div {
+  width: 100%;
+  height: 2.4rem;
+}
+
+.enquiry input {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  padding: 0rem 0.8rem 0rem 0.8rem;
+  font-size: large;
+  outline: none;
+  background: transparent;
+  border-radius: 3rem;
+  border: 2px solid rgb(255, 255, 255);
+  font-weight: 600;
+}
+.enquiry button {
+  width: 100%;
+  height: 100%;
+  font-family: "Open Sans", sans-serif;
+  color: rgba(255, 255, 255, 1);
+  padding: 0rem 0.8rem 0rem 0.8rem;
+  font-size: large;
+  outline: none;
+  background: transparent;
+  border-radius: 3rem;
+  border: 2px solid rgb(255, 255, 255);
+  font-weight: 600;
+}
+.enquiry input::placeholder,
+button {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.enquiry .enquiry_email {
+  position: relative;
+  z-index: 0;
+}
+.enquiry_email button {
+  position: absolute;
+  width: 3rem;
+  color: rgba(255, 255, 255, 0.5);
+  height: 100%;
+  left: 79%;
+  background: transparent;
+  border: 2px solid transparent;
+  border-radius: 0rem 3rem 3rem 0rem;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+.footer_container_right div {
+  width: 90%;
+  color: white;
+}
+
+
+
+
+@media screen and (max-width: 400px){
+  .footer_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: aqua;
+  }
+
+
+  .footer_container_left {
+    display: flex;
+    flex-direction: row;
+    background-color: blue;
+  }
+  
+  .footer_container_middle{
+    display: none;
+  }
+  .footer_img{
+    display: none;
+  }
+  .footer_container_left .icon {
+    margin-top: 0rem;
+    background-color: transparent;
+  }
+}

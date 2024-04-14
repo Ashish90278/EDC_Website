@@ -1,0 +1,65 @@
+.event-register {
+  display: flex;
+  height: 90vh;
+}
+
+.register-container {
+  height: 100%;
+  width: 50%;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.register-container h2 {
+  color: rgba(199, 73, 58, 1);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  height: 15%;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 5rem 5rem 5rem;
+  width: 100%;
+  height: 85%;
+}
+
+/* .register-container input {
+  outline: none;
+  padding: 2%;
+  margin: 1rem 0rem;
+} */
+.register-container button {
+  outline: none;
+  padding: 2%;
+  margin: 1rem 0rem;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(199, 73, 58, 1);
+  border: 2px solid transparent;
+}
+
+.event-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  height: 100%;
+  width: 50%;
+  padding: 2rem 1rem;
+  border-radius: 3rem;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+

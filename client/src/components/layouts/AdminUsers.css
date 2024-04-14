@@ -1,0 +1,88 @@
+.admin-users-section{
+    display: flex;
+}
+
+.admin-users{
+    margin-top: 5vh;
+    width: 71%;
+    margin-left: 1rem;
+    /* border: 2px solid red; */
+}
+
+.admin-users div{
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    border-radius: 0.5rem;
+    background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+}
+.admin-users h4{
+    color: white;
+}
+
+.admin-users table{
+    width: 100%;
+}
+
+.admin-users tr th{
+    margin-top: -1rem;
+}
+
+.admin-users tr{
+    display: flex;
+    height: 3rem;
+    /* width: 100%; */
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-top: 1rem;
+    /* gap: 2rem; */
+    /* border: 2px solid red; */
+}
+
+
+.admin-users tr :nth-child(1) {
+    width: 18%;
+    /* border: 2px solid pink; */
+    text-align: center;
+    text-wrap: wrap;
+}
+.admin-users tr :nth-child(2) {
+    width: 28%;
+    text-align: center;
+    text-wrap: wrap;
+    /* border: 2px solid pink; */
+}
+.admin-users tr :nth-child(3) {
+    width: 18%;
+    text-align: center;
+    text-wrap: wrap;
+    /* border: 2px solid pink; */
+}
+.admin-users tr :nth-child(4) {
+    width: 8%;
+    text-align: center;
+    text-wrap: wrap;
+    /* border: 2px solid pink; */
+}
+.admin-users tr :nth-child(5) {
+    width: 11%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+    /* border: 2px solid pink; */
+}
+
+.admin-users tr :nth-child(6) {
+    width: 11%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+
+    /* border: 2px solid pink; */
+}
+ /* .admin-users */

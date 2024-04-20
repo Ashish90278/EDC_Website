@@ -37,9 +37,9 @@ export const App = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="edc-website-ashy.vercel.app/events" element={<Events />} />
+            <Route path="/events" element={<Events />} />
             <Route
-              path="edc-website-ashy.vercel.app/events/mr.sandeepjain"
+              path="/events/mr.sandeepjain"
               element={
                 <EventPage
                   eventName="Speaker session with Mr.Sandeep Jain"
@@ -208,7 +208,7 @@ export const App = () => {
               }
             />
             <Route
-              path="edc-website-ashy.vercel.app/events/lakshya"
+              path="/events/lakshya"
               element={
                 <EventPage
                   eventName="Speaker session with Mr.Sandeep Jain"
@@ -377,7 +377,7 @@ export const App = () => {
               }
             />
             <Route
-              path="edc-website-ashy.vercel.app/events/stockgrow"
+              path="/events/stockgrow"
               element={
                 <EventPage
                   eventName="Speaker session with Mr.Sandeep Jain"
@@ -545,15 +545,15 @@ export const App = () => {
                 />
               }
             />
-            <Route path="edc-website-ashy.vercel.app/blog" element={<Blog />} />
-            <Route path="edc-website-ashy.vercel.app/contact" element={<Contact />} />
-            <Route path="edc-website-ashy.vercel.app/aboutus" element={<Aboutus />} />
-            <Route path="edc-website-ashy.vercel.app/login" element={<Login />} />
-            <Route path="edc-website-ashy.vercel.app/register" element={<Register />} />
-            <Route path="edc-website-ashy.vercel.app/signup" element={<Signup />} />
-            <Route path="edc-website-ashy.vercel.app/team" element={<Team />} />
-            <Route path="edc-website-ashy.vercel.app/admin" element={<AdminUsers />} />
-            <Route path="edc-website-ashy.vercel.app/admin/users" element={<AdminUsers />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/aboutus" element={<Aboutus />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/admin" element={<AdminUsers />} />
+            <Route path="/admin/users" element={<AdminUsers />} />
             <Route
               path="/admin/students-register"
               element={<AdminStudentsRegister />}

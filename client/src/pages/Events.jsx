@@ -8,7 +8,7 @@ export const Events = () => {
       <div className="container">
         <section className="events">
           <EventCard
-            eventImage="../../public/imgs/EDC_GFG.png"
+            eventImage="../imgs/EDC_GFG.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
@@ -16,7 +16,7 @@ export const Events = () => {
             eventPageLink="/events/mr.sandeepjain"
           ></EventCard>
           <EventCard
-            eventImage="../../public/imgs/EDC_Lakshya.png"
+            eventImage="../imgs/EDC_Lakshya.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
@@ -24,7 +24,7 @@ export const Events = () => {
             eventPageLink="/events/lakshya"
           ></EventCard>
           <EventCard
-            eventImage="../../public/imgs/EDC_Stockgrow.png"
+            eventImage="../imgs/EDC_Stockgrow.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
@@ -32,7 +32,7 @@ export const Events = () => {
             eventPageLink="/events/stockgrow"
           ></EventCard>
           <EventCard
-            eventImage="../../public/imgs/EDC_GFG.png"
+            eventImage="../imgs/EDC_GFG.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
@@ -40,7 +40,7 @@ export const Events = () => {
             eventPageLink="/events/mr.sandeepjain"
           ></EventCard>
           <EventCard
-            eventImage="../../public/imgs/EDC_Lakshya.png"
+            eventImage="../imgs/EDC_Lakshya.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
@@ -48,7 +48,7 @@ export const Events = () => {
             eventPageLink="/events/lakshya"
           ></EventCard>
           <EventCard
-            eventImage="../../public/imgs/EDC_Stockgrow.png"
+            eventImage="../imgs/EDC_Stockgrow.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "

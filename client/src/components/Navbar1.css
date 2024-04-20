@@ -1,0 +1,189 @@
+/* -------------------------------------------- Navbar Section Start ------------------------------------------*/
+
+header {
+  background: #011627;
+  background: linear-gradient(135deg, rgba(69, 69, 69, 0.1));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+nav {
+  /* z-index: 0;
+  position: relative; */
+}
+
+nav section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 6rem;
+}
+nav .logo {
+  height: 60%;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.menu {
+  height: 100%;
+  width: 60%;
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+.menu ul li a {
+  text-align: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: small;
+}
+
+.menu ul li a:hover {
+  color: rgb(0, 195, 255);
+}
+
+.menu ul li button {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid rgb(0, 195, 255);
+  border-radius: 10rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+}
+
+.menu ul li button:hover {
+  filter: drop-shadow(2px 2px 2px rgb(135, 128, 128));
+  background-color: rgb(0, 195, 255);
+}
+
+.menubutton {
+  /* display: flex; */
+  position: absolute;
+  z-index: 1;
+  height: 2rem;
+  width: 15%;
+  display: none;
+  bottom: 38%;
+  right: 0%;
+}
+.menubutton i {
+  height: 4rem;
+  width: 100%;
+  color: rgb(0, 195, 255);
+  font-size: 30px;
+}
+
+#closebtn {
+  display: none;
+}
+
+/* -------------------------------------------- Navbar Section End ------------------------------------------*/
+
+/* --------------------------------- Responsive CSS of Navbar Section for Tablet view Start ------------------------------------------*/
+
+
+@media screen and (max-width: 900px) {
+  nav .logo {
+    width: 25%;
+    margin-top: 0.8rem;
+  }
+  nav section {
+    height: 5rem;
+  }
+  .menu {
+    display: none;
+  }
+  .menubutton {
+    display: block;
+  }
+  .container {
+    width: 100vw;
+  }
+  .hamburgericon {
+    height: 50px;
+    font-size: xx-large;
+  }
+  .layer {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 1);
+    overflow: hidden;
+    animation: high 0.5s;
+    /* z-index: 4; */
+    /* display: block; */
+  }
+
+  .layer-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .layer li a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: rgb(0, 195, 255);
+    display: block;
+  }
+  .layer-content button {
+    padding: 0.6rem 1.5rem;
+    border: 2px solid rgb(0, 195, 255);
+    border-radius: 10rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    margin: 1rem;
+  }
+  #closebtn{
+    display: none;
+  }
+  @keyframes high {
+    0%{
+      height: 10vh;
+    }
+    100%{
+      height: 100vh;
+    }
+  }
+}
+
+/* --------------------------------- Responsive CSS of Navbar Section for Tablet view End ------------------------------------------*/
+/* --------------------------------- Responsive CSS of Navbar Section for Mobile view Start ------------------------------------------*/
+/* @media screen and (max-width: 440px) {
+  .menubutton {
+    bottom: 30%;
+  }
+  nav .logo {
+    width: 30%;
+    margin-top: 0.8rem;
+  }
+  nav section {
+    height: 4.8rem;
+  }
+} */
+/* --------------------------------- Responsive CSS of Navbar Section for Mobile view End ------------------------------------------*/
+/* --------------------------------- Responsive CSS of Navbar Section for Mobile view Start ------------------------------------------*/
+/* @media screen and (max-width: 400px) {
+  .menubutton {
+    bottom: 29%;
+  }
+  nav .logo {
+    width: 30%;
+    margin-top: 0.8rem;
+  }
+  nav section {
+    height: 4.8rem;
+  }
+} */
+/* --------------------------------- Responsive CSS of Navbar Section for Mobile view End ------------------------------------------*/

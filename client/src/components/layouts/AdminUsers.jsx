@@ -4,32 +4,45 @@ import { AdminSidebar } from "./AdminSidebar.jsx";
 import { Button } from "../Button.jsx";
 import "./AdminUsers.css";
 
-
 export const AdminUsers = () => {
   const [users, setUsers] = useState([]);
   // const edit = async() => {
   //   try {
-      
+
   //   } catch (error) {
   //     console.log(error);
   //   }
   // }
 
+  // const delete = async(id) => {
+  //   try {
+  //     const response = await fetch("http://localhost:8000/api/admin/users", {
+  //       method: "DELETE",
+  //     });
+  //     console.log(id);
 
-  
-  const delete = async(id) => {
-    try {
-      // const response = await fetch("http://localhost:8000/api/admin/users", {
-      //   method: "DELETE",
-      // });
-      console.log(id);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // const openModal = () => {
+  //   const modal = document.getElementById("myModal");
+  //   console.log(modal);
+  //   modal.style.display = "block";
+  // };
+  // const closeModal = () => {
+  //   const modal = document.querySelector(".modal");
 
-  const getAllUsersData = async() => {
+  //   modal.style.display = "none";
+  // };
+  // window.onclick = function(event) {
+  //   if (event.target == modal) {
+  //     modal.style.display = "none";
+  //   }
+  // }
+
+  const getAllUsersData = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/admin/users", {
         method: "GET",
@@ -77,7 +90,11 @@ export const AdminUsers = () => {
                   <td>{curUser.isAdmin}</td>
 
                   <Button text="Edit" class="edit button" onClick="edit()" />
-                  <Button text="Delete" class="delete button" onClick={delete(curUser._id)} />
+                  <Button
+                    text="Delete"
+                    class="delete button"
+                    onClick={delete curUser._id}
+                  />
                 </tr>
                 // <hr />
               );

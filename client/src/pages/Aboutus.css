@@ -1,0 +1,117 @@
+.aboutus {
+  /* height: 100vh; */
+  width: 100%;
+  /* background-color: #011627; */
+  /* border: 2px solid red; */
+}
+
+.aboutus-groupimg {
+  height: auto;
+  width: 100%;
+  padding: 2rem 0rem;
+  display: flex;
+  gap: 2rem;
+  /* border: 2px solid red; */
+  /* background-color: aqua; */
+}
+
+.aboutus-groupimgleft {
+  width: 50%;
+}
+
+.aboutus-groupimgright {
+  width: 50%;
+}
+
+.aboutus-groupimgleft img {
+  object-fit: cover;
+}
+.aboutus-groupimgright img {
+  object-fit: cover;
+}
+
+.ourvision {
+  background: linear-gradient(135deg, rgba(69, 69, 69, 0.1));
+backdrop-filter: blur(10px);
+-webkit-backdrop-filter:blur(10px);
+border-radius: 20px;
+border:1px solid rgba(255, 255, 255, 0.1);
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  width: 100%;
+  padding: 1.5rem 0rem;
+  margin-bottom: 2rem;
+}
+
+/* .ourvision{
+  background: rgba(0, 0, 0, 0);
+  filter: blur(5px);
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25); 
+} */
+
+.our-vision h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: rgb(255, 255, 255);
+  
+}
+
+.our-vision p {
+  padding: 2rem 10rem;
+  text-align: center;
+  color: white;
+}
+
+.president-note {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  color: white;
+}
+.president-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 15rem;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.president-photo img {
+  margin-left: 0rem;
+  margin-top: 3rem;
+  width: 20rem;
+  height: 20rem;
+  object-fit: contain;
+}
+.president-note p {
+  padding: 0rem 10rem 2rem 10rem;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .aboutus-groupimg {
+    padding: 2rem 0rem;
+    gap: 0rem;
+  }
+  .aboutus-groupimgleft {
+    width: 100%;
+  }
+  .aboutus-groupimgright {
+    display: none;
+  }
+  .our-vision {
+    padding: 1.5rem 0rem;
+  }
+
+  .our-vision p {
+    padding: 2rem 5rem;
+  }
+  .president-note p {
+    padding: 0rem 5rem 2rem 5rem;
+    text-align: center;
+  }
+}

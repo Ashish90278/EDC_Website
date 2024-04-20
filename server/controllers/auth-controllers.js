@@ -1,6 +1,6 @@
 import express from "express";
 import User from "../models/users.js";
-import userRegistration from "../models/registration.js";
+import Registration from "../models/registration.js";
 import bcrypt from "bcryptjs";
 
 // import bcrypt from "bcryptjs";
@@ -16,13 +16,13 @@ const home = async (req, res) => {
 const register = async (req, res) => {
   try {
     const { username, email, branch, year, admissionNo } = req.body;
-    const duplicateRegistration = await userRegistration.findOne({
+    const duplicateRegistration = await Registration.findOne({
       admissionNo,
     });
     if (duplicateRegistration) {
       return res.status(400).json({ msg: "You already register" });
     }
-    await userRegistration.create({ username, email, branch, year, admissionNo });
+    await Registration.create({ username, email, branch, year, admissionNo });
     res.status(200).json(req.body);
   } catch (error) {
     res.status(500).json("Internal Server Error");

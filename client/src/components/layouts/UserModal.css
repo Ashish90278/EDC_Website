@@ -1,0 +1,86 @@
+.modal {
+  display: none;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section {
+  background-color: deepskyblue;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 12px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+
+.input-wrapper {
+  --padding: 16px;
+  --focus-color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: var(--padding);
+  border: 2px solid gray;
+  outline: none;
+  border-radius: 6px;
+}
+.placeholder {
+  position: absolute;
+  background-color: white;
+  color: gray;
+  left: var(--padding);
+  padding: 0 4px;
+  transition: all 0.2s ease-in;
+}
+
+input:is(:focus, :valid) {
+  border: 2px solid var(--focus-color);
+}
+
+input:is(:focus, :valid) + .placeholder {
+  transform: translatey(calc(-1 * var(--padding) - 12px)) translatex(-8px);
+  font-size: 14px;
+  color: var(--focus-color);
+}

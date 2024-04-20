@@ -1,6 +1,81 @@
+.teamMembers{
+    background-color: #011627;
+}
 .team{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 5rem;
+    width: 100%;
+    /* padding: 0rem 2rem; */
+}
+
+.team ul{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 1rem;
+    text-align: center;
+    /* justify-content: space-around; */
+}
+
+.team ul li{
+    border: 2px solid rgb(0, 195, 255) ;
+    color: rgb(255, 255, 255);
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.8rem;
+}
+.team ul li:hover{
+    color: white;
+    background-color: rgb(0, 195, 255);
+}
+#core_team, #leads, #executive{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem 0rem;
+    padding: 0rem 2rem;
+    gap: 3rem;
+}
+
+@media screen and (max-width:900px) {
+    .team{
+        height: 6rem;
+    }
+    .team ul{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    #core_team, #leads, #executive{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+}
+@media screen and (max-width:650px) {
+    #core_team, #leads, #executive{
+        gap: 2rem;
+    }
+    .team ul li{
+        padding: 0.3rem 0.5rem;
+    }
+}
+@media screen and (max-width:600px) {
+    #core_team, #leads, #executive{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .team ul li{
+        padding: 0.3rem 0.4rem;
+    }
+}
+@media screen and (max-width:450px) {
+    .team{
+        height: 7rem;
+    }
+    #core_team, #leads, #executive{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .team ul li{
+        padding: 0.3rem 0.4rem;
+    }
 }

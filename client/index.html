@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,7 +7,42 @@
     <title>Vite + React</title>
   </head>
   <body>
+    <div id="spinner">
+      <img
+        src="./public/imgs/loader.png"
+        style="width: 100px; height: 100px"
+        alt=""
+      />
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   </body>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: #011627;
+    }
+    #spinner {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #spinner > img {
+      animation: spinner 1.5s infinite;
+    }
+    @keyframes spinner {
+      0% {
+        transform: translateY(400px);
+      }
+      100% {
+        transform: translateY(-400px);
+      }
+    }
+  </style>
 </html>

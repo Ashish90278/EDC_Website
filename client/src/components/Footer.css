@@ -1,22 +1,21 @@
 /* -------------------------------------------- Footer Section Start ------------------------------------------*/
 .footer {
   display: flex;
+  /* width: 100%; */
   align-items: center;
   height: auto;
-  background: linear-gradient(
-    to bottom,
-    rgba(25, 25, 41, 1),
-    rgba(37, 104, 132, 1),
-    rgba(25, 25, 41, 1)
-  );
+  background: #001524;
 }
 
 .footer_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   height: 100%;
   width: 100%;
   margin: 5rem 0rem;
+  /* border: 2px solid white; */
+}
+.footer_container hr {
+  display: none;
 }
 
 .footer_container_left {
@@ -24,7 +23,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 35%;
+  /* border: 2px solid red; */
 }
 .footer_container_left .footer_logo {
   height: 4rem;
@@ -33,6 +33,7 @@
 .footer_container_left .footer_img {
   height: 4.5rem;
   margin-top: 1rem;
+  /* border: 2px solid red; */
 }
 
 .footer_container_left .icon {
@@ -63,46 +64,68 @@
   padding: 0.5rem;
 }
 
+.tabletBottom {
+  display: flex;
+  /* border: 2px solid red; */
+  width: 65%;
+}
 .footer_container_middle {
   display: flex;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
   width: 100%;
   color: white;
+  padding-right: 2rem;
+  /* border: 2px solid red; */
 }
 
 .footer_container_middle h4 {
-  color: rgba(199, 73, 58, 1);
+  color: rgb(0, 195, 255);
   margin: 1rem 0rem;
   font-weight: 700;
+  text-align: center;
 }
 .footer_container_middle li {
   margin: 0.5rem 0rem;
+  text-align: center;
 }
 
 .footer_container_right {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
+  /* border: 2px solid white; */
+  /* padding: 1.5rem 0rem 0rem 0rem; */
 }
 
 .enquiry {
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+  width: 100%;
+  height: 10rem;
+  /* border: 2px solid red; */
+  margin-bottom: 1rem;
+  /* text-align: end; */
 }
 .enquiry label {
   display: block;
   font-family: "Open Sans", sans-serif;
-  color: rgba(199, 73, 58, 1);
+  color: rgb(0, 195, 255);
   font-size: large;
   font-weight: 600;
-  margin: 0.4rem 0.8rem;
+  margin: 0.4rem 0rem;
+  /* border: 2px solid green; */
+  padding-left: 1rem;
 }
-.enquiry div {
+.enquiry .enquiry_email {
   width: 100%;
-  height: 2.4rem;
+  height: 3rem;
+  /* border: 2px solid pink; */
 }
 
 .enquiry input {
@@ -110,7 +133,7 @@
   height: 100%;
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 1);
-  padding: 0rem 0.8rem 0rem 0.8rem;
+  padding: 0rem 1rem 0rem 1rem;
   font-size: large;
   outline: none;
   background: transparent;
@@ -123,13 +146,18 @@
   height: 100%;
   font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 1);
-  padding: 0rem 0.8rem 0rem 0.8rem;
+  padding: 0rem 0.8rem 0.1rem 0.8rem;
+  border: 2px solid purple;
   font-size: large;
   outline: none;
   background: transparent;
   border-radius: 3rem;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid white;
   font-weight: 600;
+  margin: -0.01rem 0rem 1rem 0rem;
+}
+.enquiry div:last-child{
+  width: 100%;
 }
 .enquiry input::placeholder,
 button {
@@ -142,10 +170,11 @@ button {
 }
 .enquiry_email button {
   position: absolute;
+  height: 100%;
   width: 3rem;
   color: rgba(255, 255, 255, 0.5);
-  height: 100%;
-  left: 79%;
+  left: 81%;
+  top: 0%;
   background: transparent;
   border: 2px solid transparent;
   border-radius: 0rem 3rem 3rem 0rem;
@@ -157,32 +186,197 @@ button {
   width: 90%;
   color: white;
 }
+/* -------------------------------------------- Footer Section End ------------------------------------------*/
 
+/* ------------------------------ Responsive CSS of Footer Section for Tablet view Start ------------------------------------------*/
 
-
-
-@media screen and (max-width: 400px){
+@media screen and (max-width: 800px) {
   .footer_container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    background-color: aqua;
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr); */
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin: 1rem 0rem 3rem 0rem;
   }
 
+  .footer_container hr {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+    border: 1px solid transparent;
+  }
 
   .footer_container_left {
     display: flex;
     flex-direction: row;
-    background-color: blue;
+    height: 5rem;
+    width: 100%;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    /* border: 2px solid pink; */
   }
-  
-  .footer_container_middle{
-    display: none;
+  .footer_container_left .footer_logo {
+    height: 4rem;
+    width: 25%;
+    margin-bottom: 1rem;
+    padding: 0.1rem;
+    margin-right: 0rem;
+    /* border: 2px solid red; */
   }
-  .footer_img{
-    display: none;
-  }
-  .footer_container_left .icon {
+  .footer_container_left .footer_img {
+    height: 4rem;
+    width: 40%;
     margin-top: 0rem;
-    background-color: transparent;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    /* border: 2px solid red; */
+  }
+
+  .footer_container_left .icon {
+    height: 4rem;
+    width: 30%;
+    margin-top: -1rem;
+    padding: 0.5rem;
+    /* border: 2px solid red; */
+
+    /* border: 2px solid white; */
+    /* padding: 0.3rem 0rem; */
+  }
+
+  .footer_container_left .icon :nth-child(2) {
+    display: none;
+  }
+  .footer_container_left .icon p {
+    color: white;
+  }
+  .footer_container_left .footer_icons {
+    padding: 0rem 1.5rem;
+  }
+  .footer_container_left .footer_icons div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .footer_container_left .footer_icons img {
+    object-fit: contain;
+    padding: 0.4rem;
+  }
+
+  .tabletBottom {
+    display: flex;
+    width: 100%;
+  }
+
+  .footer_container_middle {
+    text-align: center;
+    /* border: 2px solid purple; */
+    margin: 1rem 0rem;
+  }
+  .footer_container_right{
+    padding: 1.5rem 0rem 0rem 0rem;
+  }
+}
+
+/* ------------------------------- Responsive CSS of Footer Section for Tablet view End ------------------------------------------*/
+
+@media screen and (max-width: 640px){
+  .footer_img {
+    display: none;
+    /* border: 2px solid green; */
+  }
+  .footer_container_left{
+    justify-content: space-around;
+  }
+  .footer_container_left .icon{
+    width: 40%;
+  }
+}
+/* ------------------------------- Responsive CSS of Footer Section for Mobile view Start ------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+  .footer_container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* border: 2px solid red; */
+    margin: 1rem 0rem 3rem 0rem;
+  }
+
+  .footer_container hr {
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: grey;
+    border: 1px solid transparent;
+  }
+
+  .footer_img {
+    display: none;
+    /* border: 2px solid green; */
+  }
+
+  .footer_container_left {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+    /* border: 2px solid pink; */
+  }
+
+  .footer_container .footer_logo{
+    margin-bottom: 1rem;
+  }
+
+  .footer_container_left .icon {
+    width: 50%;
+    margin-top: 0rem;
+    /* border: 2px solid white; */
+    padding: 0.3rem 0rem;
+  }
+
+  .footer_container_left .icon :nth-child(2) {
+    display: none;
+  }
+  .footer_container_left .icon p {
+    color: white;
+    /* text-align: center; */
+  }
+  .footer_container_left .footer_icons {
+    padding: 0rem 1.6rem;
+  }
+  .footer_container_left .footer_icons div {
+    height: 100%;
+    width: 100%;
+  }
+
+  .footer_container_left .footer_icons img {
+    object-fit: contain;
+    padding: 0.4rem;
+  }
+
+  .tabletBottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_container_middle {
+    text-align: center;
+    /* border: 2px solid purple; */
+    margin: 1rem 0rem;
+  }
+  .footer_container_right{
+    /* border: 2px solid white; */
+    padding: 0rem 2rem;
+  }
+  .enquiry{
+    align-items: center;
+  }
+  .footer_container_right p{
+    text-align: center;
+  }
+}
+/* -------------------------------- Responsive CSS of Footer Section for Mobile view End------------------------------------------*/
+
+@media screen and (max-width: 350px){
+  .footer_container_left .icon{
+    width: 60%;
   }
 }

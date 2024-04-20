@@ -1,0 +1,148 @@
+.memberContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15rem;
+  perspective: 800px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.memberContainer:hover > .memberCard {
+  cursor: pointer;
+  transform: rotateY(180deg);
+  transition: all 0.5s;
+}
+
+.memberCard {
+  height: 97%;
+  width: 97%;
+  position: relative;
+  transition: transform 500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+  background-size: 100%;
+  /* object-fit: cover; */
+}
+
+.back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.overlay {
+  display: flex;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  border-radius: 0.5rem;
+}
+.overlay a {
+  height: 2rem;
+  width: 2rem;
+  color: white;
+}
+.react-icons {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  /* text-align: center; */
+}
+.react-icons:hover {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  transform: scale(1.3);
+  /* text-align: center; */
+  color: rgb(0, 195, 255);
+  transition: all ease 0.5s;
+}
+
+.designation {
+  display: flex;
+  /* background: rgba(0, 0, 0, 0); */
+  backdrop-filter: blur(30px);
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  height: 25%;
+  width: 100%;
+  position: absolute;
+  /* border-radius: 2rem; */
+  align-items: center;
+  text-align: center;
+  bottom: 0;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+}
+.designation h3{
+  color: rgb(0, 195, 255);
+}
+.designation p{
+  color: rgb(255, 255, 255);
+}
+.memberContainer:hover::before {
+  content: "";
+  z-index: -1;
+  background-image: 
+                    conic-gradient(rgb(0, 195, 255) 2deg, transparent 120deg);
+  width: 170%;
+  height: 170%;
+  position: absolute;
+  bottom: -32%;
+  left: -35%;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .memberContainer{
+    height: 14rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .memberContainer{
+    height: 13rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .memberContainer{
+    height: 14rem;
+  }
+  .designation h3{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .memberContainer{
+    height: 12rem;
+  }
+  .designation h3{
+    font-size: 0.9rem;
+  }
+}

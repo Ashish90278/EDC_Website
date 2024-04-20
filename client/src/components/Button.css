@@ -23,6 +23,10 @@
   background: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
   color: white;
 }
+.submit {
+  background: rgb(0, 195, 255);
+  color: white;
+}
 
 .register:hover {
   background-color: rgb(255, 255, 255);
@@ -33,7 +37,7 @@
   background: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border: 1px solid black;
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.1s;
 }
 .edit:hover {
   /* background: linear-gradient(195deg, #EC407A 0%, rgb(216, 27, 96) 100%);; */
@@ -43,6 +47,12 @@
 .delete:hover {
   background: white;
   color: rgb(216,27,96);
-  transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.1s;
   border: 1px solid rgb(216,27,96);
+}
+.submit:hover {
+  background: transparent;
+  color: rgb(0, 195, 255);
+  transition: all ease-in-out 0.1s;
+  border: 2px solid rgb(0, 195, 255);
 }

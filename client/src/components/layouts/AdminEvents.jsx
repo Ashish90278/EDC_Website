@@ -1,37 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AdminSidebar } from "./AdminSidebar.jsx";
+import { Button } from "../Button.jsx";
+import { NavLink, Outlet } from "react-router-dom";
+import "./AdminEvents.css";
 
 export const AdminEvents = () => {
+  const [events, setEvents] = useState([]);
+
+  const getAllEventsData = async () => {
+    try {
+      const response = await fetch("http://localhost:8000/api/admin/events", {
+        method: "GET",
+      });
+
+      const data = await response.json();
+      setEvents(data);
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getAllEventsData();
+  }, []);
+
   return (
     <>
-      <section className="admin-users-section">
+      <section className="admin-events-section">
         <AdminSidebar />
-        <div className="admin-users">
-          <h1>All Users</h1>
-
+        <div className="admin-events">
+          <div>
+            <h4>Events</h4>
+            <Button text="Add" class="add button" />
+          </div>
+          {/* <hr /> */}
+          {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
           <table>
-            <thead>
-              <tr>
-                <th>Username</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Update</th>
-                <th>Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {/* {users.map((curUser, index) => {
-                return (
-                  <tr key={index}>
-                    <td>{curUser.username}</td>
-                    <td>{curUser.email}</td>
-                    <td>{curUser.phone}</td>
-                    <td>Edit</td>
-                    <td>Delete</td>
-                  </tr>
-                );
-              })} */}
-            </tbody>
+            <tr>
+              <th>Event Name</th>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Venue</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+            <hr />
+
+            {events.map((curEvent, index) => {
+              return (
+                <tr key={index}>
+                  <td>{curEvent.eventName}</td>
+                  <td>{curEvent.description}</td>
+                  <td>{curEvent.date}</td>
+                  <td>{curEvent.time}</td>
+                  <td>{curEvent.venue}</td>
+
+                  <Button text="Edit" class="edit button" onClick="edit()" />
+                  <Button
+                    text="Delete"
+                    class="delete button"
+                    // onClick={delete curUser._id}
+                  />
+                </tr>
+              );
+            })}
           </table>
         </div>
         {/* <div className="admin-users-heading">

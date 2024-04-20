@@ -1,12 +1,26 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Home.css";
-
+import { useEffect } from "react";
+import Typewriter from "typewriter-effect";
+import { MemberCard } from "../components/MemberCard.jsx";
+import { EventCard } from "../components/EventCard.jsx";
 export const Home = () => {
   // const navigate = useNavigate();
   // const redirect = () => {
   //   let path = "/register";
   //   navigate(path);
   // }
+
+  // new Typewriter("#typewriter", {
+  //   strings: ["Hello", "World"],
+  //   autoStart: true,
+  //   loop: true,
+  // });
+
+  // useEffect(() => {
+  //   Typewriter();
+  // }, [])
+
   return (
     <>
       <div className="sticky">
@@ -41,28 +55,36 @@ export const Home = () => {
       <section className="hero_section">
         <div className="container">
           <div className="main_hero_section">
-            <img src="../imgs/Herosection.png" alt="" />
-            <ul>
-              <li>
-                <div></div>
-                <span>IDEATE</span>
-              </li>
-              <li>
-                <div></div>
-                <span>INNOVATE</span>
-              </li>
-              <li>
-                <div></div>
-                <span>INCUBATE</span>
-              </li>
-              <li>
-                <div></div>
-              </li>
-            </ul>
+            <div className="left_hero_section">
+              <div>
+                We
+                <h3>
+                  <Typewriter
+                    options={{
+                      strings: ["Ideate", "Innovate", "Incubate"],
+                      autoStart: true,
+                      loop: true,
+                      pauseFor: 1000,
+                    }}
+                  />
+                </h3>
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Debitis aspernatur veniam blanditiis aut eius distinctio
+                recusandae dolorum aliquid nesciunt cumque. Corrupti nesciunt
+                mollitia quaerat doloremque est ab sequi placeat maiores.
+                Placeat, tempora adipisci praesentium, sunt, beatae ipsa
+                officiis sit accusamus minus ipsum a corporis voluptatem.
+              </p>
+            </div>
+            <div className="right_hero_section">
+              <img src="../../public/imgs/y.svg" alt="" />
+            </div>
           </div>
         </div>
       </section>
-
+      {/* <hr /> */}
       {/* <!-- Code for Who we are section --> */}
       <section className="who_we_are">
         <div className="container">
@@ -79,15 +101,25 @@ export const Home = () => {
           </div>
           <div className="wwr_main">
             <div className="flowchart">
-              <img id="image" src="../imgs/wwr_main.png" alt="" />
+              {/* <img id="image" src="../imgs/wwr_main.png" alt="" media="(max-width:540px)"/> */}
+              <picture>
+                <source
+                  media="(max-width:580px)"
+                  srcset="../../public/imgs/wwr_flowchart.png"
+                />
+                <img
+                  src="../../public/imgs/wwr_main.png"
+                  alt="Flowers"
+                />
+              </picture>
             </div>
           </div>
         </div>
       </section>
 
       {/* <!-- Code for E_Summit Section --> */}
-      <section className="e_summit">
-        <div className="container">
+      <section>
+        <div className=" e_summit container">
           <div className="e_summit_top">
             <h4>COMING SOON...</h4>
             <img src="../imgs/EDC_logo.png" alt="" />
@@ -96,7 +128,9 @@ export const Home = () => {
             <img src="../imgs/E_summit.png" alt="E_Summit" />
           </div>
           <div className="e_summit_bottom">
-            <button>REGISTER</button>
+            <button>
+              <NavLink to="/register">Register</NavLink>
+            </button>
           </div>
         </div>
       </section>
@@ -113,219 +147,58 @@ export const Home = () => {
           {/* <!-- Carousel --> */}
           <div className="carousel-container">
             <div className="carousel">
-              {/* <!-- cards start --> */}
-              <div className="card">
-                <div className="card-body">
-                  <img src="../imgs/EDC_GFG.png" alt="" />
-                  <h4>
-                    Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                    Geeks )
-                  </h4>
-                  <div className="card-info">
-                    <ul>
-                      <li>
-                        <div>
-                          <img src="../imgs/calender.png" alt="" />
-                          <p>Friday, 10 Nov 2023</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/clock.png" alt="" />
-                          <p>03:45 PM - 04:45 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/location.png" alt="" />
-                          <p>Multi-Purpose Hall</p>
-                        </div>
-                        <button id="event_register">Register</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- card end --> */}
-
-              {/* <!-- cards start --> */}
-              <div className="card">
-                <div className="card-body">
-                  <img src="../imgs/EDC_Lakshya.png" alt="" />
-                  <h4>
-                    Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                    Geeks )
-                  </h4>
-                  <div className="card-info">
-                    <ul>
-                      <li>
-                        <div>
-                          <img src="../imgs/calender.png" alt="" />
-                          <p>Friday, 10 Nov 2023</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/clock.png" alt="" />
-                          <p>03:45 PM - 04:45 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/location.png" alt="" />
-                          <p>Multi-Purpose Hall</p>
-                        </div>
-                        <button>Read more</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- card end --> */}
-
-              {/* <!-- cards start --> */}
-              <div className="card">
-                <div className="card-body">
-                  <img src="../imgs/EDC_Stockgrow.png" alt="" />
-                  <h4>
-                    Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                    Geeks )
-                  </h4>
-                  <div className="card-info">
-                    <ul>
-                      <li>
-                        <div>
-                          <img src="../imgs/calender.png" alt="" />
-                          <p>Friday, 10 Nov 2023</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/clock.png" alt="" />
-                          <p>03:45 PM - 04:45 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/location.png" alt="" />
-                          <p>Multi-Purpose Hall</p>
-                        </div>
-                        <button>Read more</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- card end --> */}
-
-              {/* <!-- cards start --> */}
-              <div className="card">
-                <div className="card-body">
-                  <img src="../imgs/EDC_GFG.png" alt="" />
-                  <h4>
-                    Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                    Geeks )
-                  </h4>
-                  <div className="card-info">
-                    <ul>
-                      <li>
-                        <div>
-                          <img src="../imgs/calender.png" alt="" />
-                          <p>Friday, 10 Nov 2023</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/clock.png" alt="" />
-                          <p>03:45 PM - 04:45 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/location.png" alt="" />
-                          <p>Multi-Purpose Hall</p>
-                        </div>
-                        <button>Register</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- card end --> */}
-
-              {/* <!-- cards start --> */}
-              <div className="card">
-                <div className="card-body">
-                  <img src="../imgs/EDC_GFG.png" alt="" />
-                  <h4>
-                    Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                    Geeks )
-                  </h4>
-                  <div className="card-info">
-                    <ul>
-                      <li>
-                        <div>
-                          <img src="../imgs/calender.png" alt="" />
-                          <p>Friday, 10 Nov 2023</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/clock.png" alt="" />
-                          <p>03:45 PM - 04:45 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/location.png" alt="" />
-                          <p>Multi-Purpose Hall</p>
-                        </div>
-                        <button>Register</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- card end --> */}
-
-              {/* <!-- cards start --> */}
-              <div className="card">
-                <div className="card-body">
-                  <img src="../imgs/EDC_GFG.png" alt="" />
-                  <h4>
-                    Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                    Geeks )
-                  </h4>
-                  <div className="card-info">
-                    <ul>
-                      <li>
-                        <div>
-                          <img src="../imgs/calender.png" alt="" />
-                          <p>Friday, 10 Nov 2023</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/clock.png" alt="" />
-                          <p>03:45 PM - 04:45 PM</p>
-                        </div>
-                      </li>
-                      <li>
-                        <div>
-                          <img src="../imgs/location.png" alt="" />
-                          <p>Multi-Purpose Hall</p>
-                        </div>
-                        <button>Register</button>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              {/* <!-- card end --> */}
+              <EventCard
+                eventImage="../../public/imgs/EDC_GFG.png"
+                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+                eventDate="Friday, 10 Nov 2023"
+                eventTime="03:45 PM - 04:45 PM "
+                eventVenue="Multi-Purpose Hall"
+                eventPageLink="/events/mr.sandeepjain"
+              ></EventCard>
+              <EventCard
+                eventImage="../../public/imgs/EDC_Lakshya.png"
+                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+                eventDate="Friday, 10 Nov 2023"
+                eventTime="03:45 PM - 04:45 PM "
+                eventVenue="Multi-Purpose Hall"
+                eventPageLink="/events/lakshya"
+              ></EventCard>
+              <EventCard
+                eventImage="../../public/imgs/EDC_Stockgrow.png"
+                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+                eventDate="Friday, 10 Nov 2023"
+                eventTime="03:45 PM - 04:45 PM "
+                eventVenue="Multi-Purpose Hall"
+                eventPageLink="/events/stockgrow"
+              ></EventCard>
+              <EventCard
+                eventImage="../../public/imgs/EDC_GFG.png"
+                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+                eventDate="Friday, 10 Nov 2023"
+                eventTime="03:45 PM - 04:45 PM "
+                eventVenue="Multi-Purpose Hall"
+                eventPageLink="/events/mr.sandeepjain"
+              ></EventCard>
+              <EventCard
+                eventImage="../../public/imgs/EDC_Lakshya.png"
+                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+                eventDate="Friday, 10 Nov 2023"
+                eventTime="03:45 PM - 04:45 PM "
+                eventVenue="Multi-Purpose Hall"
+                eventPageLink="/events/lakshya"
+              ></EventCard>
+              <EventCard
+                eventImage="../../public/imgs/EDC_Stockgrow.png"
+                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+                eventDate="Friday, 10 Nov 2023"
+                eventTime="03:45 PM - 04:45 PM "
+                eventVenue="Multi-Purpose Hall"
+                eventPageLink="/events/stockgrow"
+              ></EventCard>
             </div>
-            <button
+            {/* <button
               className="arrow-button left-arrow"
-              onclick="myFunction(-310)"
+              onClick="myFunction(-310)"
             >
               <span>&#8249;</span>
             </button>
@@ -334,7 +207,7 @@ export const Home = () => {
               onclick="myFunction(310)"
             >
               <span>&#8250;</span>
-            </button>
+            </button> */}
           </div>
 
           {/* <!-- Society Info --> */}
@@ -413,7 +286,7 @@ export const Home = () => {
       {/* <!-- Code for Our Clothing Partner --> */}
       <section className="our_clothing_partner">
         <div className="container">
-          <div className="wwr_head" id="our_partner">
+          <div className="wwr_head" id="our_partners">
             <hr />
             <h2>Our Clothing Partner</h2>
             <hr />
@@ -450,44 +323,18 @@ export const Home = () => {
           <div className="sponsors">
             <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 1.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 2.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 3.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 4.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 5.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 6.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 7.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 8.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 9.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 10.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 11.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 12.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 13.png" alt="" />
-            </div>
-            <div className="sponsor">
               <img src="../imgs/OurCollaborations/19 14.png" alt="" />
             </div>
           </div>
@@ -503,39 +350,70 @@ export const Home = () => {
             <hr />
           </div>
           <div className="members">
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
-            <div className="member">
-              <img src="../imgs/Member.png" alt="" />
-            </div>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
+            <MemberCard
+              memberImage="../../public/imgs/SohailSir.png"
+              designation="President"
+              memberName="Sohail Ansari"
+            ></MemberCard>
           </div>
         </div>
       </section>
+      <hr />
     </>
   );
 };

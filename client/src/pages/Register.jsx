@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Register.css";
+import { EventCard } from "../components/EventCard.jsx";
 
 export const Register = () => {
   const [userRegistrationData, setUserRegistrationData] = useState({
@@ -41,7 +42,7 @@ export const Register = () => {
           admissionNo: "",
         });
       }
-      if(response.status === 400){
+      if (response.status === 400) {
         setUserRegistrationData({
           username: "",
           email: "",
@@ -49,7 +50,7 @@ export const Register = () => {
           year: "",
           admissionNo: "",
         });
-        alert("You Already Registered")
+        alert("You Already Registered");
       }
     } catch (error) {
       console.log("register", error);
@@ -59,6 +60,47 @@ export const Register = () => {
   return (
     <>
       <div className="container event-register">
+        <div className="event-info-container">
+          <EventCard
+            eventImage="../../public/imgs/EDC_GFG.png"
+            eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
+            eventDate="Friday, 10 Nov 2023"
+            eventTime="03:45 PM - 04:45 PM "
+            eventVenue="Multi-Purpose Hall"
+            eventPageLink="/events/mr.sandeepjain"
+          ></EventCard>
+          {/* <div className="card">
+            <div className="card-body">
+              <img src="../imgs/EDC_GFG.png" alt="" />
+              <h4>
+                Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
+                Geeks )
+              </h4>
+              <div className="card-info">
+                <ul>
+                  <li>
+                    <div>
+                      <img src="../imgs/calender.png" alt="" />
+                      <p>Friday, 10 Nov 2023</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="../imgs/clock.png" alt="" />
+                      <p>03:45 PM - 04:45 PM</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <img src="../imgs/location.png" alt="" />
+                      <p>Multi-Purpose Hall</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div> */}
+        </div>
         <div className="register-container">
           <h2>Register</h2>
           <form onSubmit={handleSubmit}>
@@ -130,44 +172,8 @@ export const Register = () => {
             </div>
           </form>
         </div>
-
-        <div className="event-info-container">
-          {/* <!-- cards start --> */}
-          <div className="card">
-            <div className="card-body">
-              <img src="../imgs/EDC_GFG.png" alt="" />
-              <h4>
-                Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                Geeks )
-              </h4>
-              <div className="card-info">
-                <ul>
-                  <li>
-                    <div>
-                      <img src="../imgs/calender.png" alt="" />
-                      <p>Friday, 10 Nov 2023</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <img src="../imgs/clock.png" alt="" />
-                      <p>03:45 PM - 04:45 PM</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <img src="../imgs/location.png" alt="" />
-                      <p>Multi-Purpose Hall</p>
-                    </div>
-                    {/* <button id="event_register">Register</button> */}
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          {/* <!-- card end --> */}
-        </div>
       </div>
+      <hr />
     </>
   );
 };

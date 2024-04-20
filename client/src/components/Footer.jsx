@@ -49,43 +49,51 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
+            <hr />
 
-            <div className="footer_container_middle">
-              <ul>
-                <h4>Quick Links</h4>
-                <li>Team Members</li>
-                <li>Events</li>
-                <li>Gallery</li>
-                <li>JSSATE Noida</li>
-                <li>Upcoming Event</li>
-                <li>Collaborate</li>
-                <li>Contact</li>
-              </ul>
-            </div>
+            <div className="tabletBottom">
+              <div className="footer_container_middle">
+                <ul>
+                  <h4>Quick Links</h4>
+                  <li>Team Members</li>
+                  <li>JSSATE Noida</li>
+                  <li>Upcoming Event</li>
+                  <li>Contact</li>
+                  <li>Events</li>
+                  <li>Collaborate</li>
+                  <li>Gallery</li>
+                </ul>
+              </div>
 
-            <div className="footer_container_right">
-              <form className="enquiry">
-                <label htmlFor="email">Join Newsletter</label>
-                <div className="enquiry_email">
-                  <input type="email" name="email" placeholder="Enter Email" />
-                  <button>&rarr;</button>
-                </div>
-                <label htmlFor="">Love to hear you...</label>
+              <div className="footer_container_right">
+                <form className="enquiry">
+                  <label htmlFor="email">Join Newsletter</label>
+                  <div className="enquiry_email">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter Email"
+                    />
+                    <button>&rarr;</button>
+                  </div>
+                  <label htmlFor="">Love to hear you...</label>
+                  <div>
+                    <button type="button">edc@gmail.com</button>
+                  </div>
+                </form>
                 <div>
-                  <button type="button">edc@gmail.com</button>
+                  <p>
+                    JSS Academy of Technical Education, Noida. C-20/1,
+                    Sector-62, U.P. INDIA-201301
+                  </p>
                 </div>
-              </form>
-              <div>
-                <p>
-                JSS Academy of Technical Education, Noida. C-20/1, Sector-62,
-                U.P. INDIA-201301
-                </p>
               </div>
             </div>
           </div>
 
-          <div className="divsion"><hr /></div>
-
+          <div className="divsion">
+            <hr />
+          </div>
           <div>
             <h4>Created By :</h4>
             <p>&copy;Ashish Gupta</p>

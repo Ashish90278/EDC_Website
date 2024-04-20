@@ -1,88 +1,89 @@
-.admin-users-section{
-    display: flex;
+.admin-users-section {
+  display: flex;
+  background-color: aliceblue;
 }
 
-.admin-users{
-    margin-top: 5vh;
-    width: 71%;
-    margin-left: 1rem;
-    /* border: 2px solid red; */
+.admin-users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 74%;
+  position: relative;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.4rem 1rem 1rem 1rem;
+  margin-top: 8vh;
+  margin-bottom: 4vh;
+  margin-left: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.admin-users div{
-    /* text-align: center; */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem 0.8rem 0.8rem 1.2rem;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    border-radius: 0.5rem;
-    background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+.admin-users div {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  position: absolute;
+  top: -1.5rem;
+  justify-content: space-between;
+  padding: 0.8rem 0.8rem 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
 }
-.admin-users h4{
-    color: white;
-}
-
-.admin-users table{
-    width: 100%;
+.admin-users h4 {
+  color: white;
 }
 
-.admin-users tr th{
-    margin-top: -1rem;
+.admin-users table {
+  width: 100%;
 }
 
-.admin-users tr{
-    display: flex;
-    height: 3rem;
-    /* width: 100%; */
-    /* justify-content: space-between; */
-    align-items: center;
-    margin-top: 1rem;
-    /* gap: 2rem; */
-    /* border: 2px solid red; */
+.admin-users tr th {
+  color: rgb(22, 21, 21);
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 600;
 }
 
+.admin-users tr {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  margin-top: 1rem;
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 400;
+}
 
 .admin-users tr :nth-child(1) {
-    width: 18%;
-    /* border: 2px solid pink; */
-    text-align: center;
-    text-wrap: wrap;
+  width: 18%;
+  text-align: center;
+  text-wrap: wrap;
 }
 .admin-users tr :nth-child(2) {
-    width: 28%;
-    text-align: center;
-    text-wrap: wrap;
-    /* border: 2px solid pink; */
+  width: 28%;
+  text-align: center;
+  text-wrap: wrap;
 }
 .admin-users tr :nth-child(3) {
-    width: 18%;
-    text-align: center;
-    text-wrap: wrap;
-    /* border: 2px solid pink; */
+  width: 18%;
+  text-align: center;
+  text-wrap: wrap;
 }
 .admin-users tr :nth-child(4) {
-    width: 8%;
-    text-align: center;
-    text-wrap: wrap;
-    /* border: 2px solid pink; */
+  width: 8%;
+  text-align: center;
+  text-wrap: wrap;
 }
 .admin-users tr :nth-child(5) {
-    width: 11%;
-    text-align: center;
-    text-wrap: wrap;
-    margin-left: 3%;
-    /* border: 2px solid pink; */
+  width: 11%;
+  text-align: center;
+  text-wrap: wrap;
+  margin-left: 3%;
 }
 
 .admin-users tr :nth-child(6) {
-    width: 11%;
-    text-align: center;
-    text-wrap: wrap;
-    margin-left: 3%;
-
-    /* border: 2px solid pink; */
+  width: 11%;
+  text-align: center;
+  text-wrap: wrap;
+  margin-left: 3%;
 }
- /* .admin-users */

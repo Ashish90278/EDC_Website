@@ -1,0 +1,173 @@
+.blogCard {
+  height: 21rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: linear-gradient(to bottom, rgb(0, 195, 255) 50%, #011627);
+  border-radius: 1rem 1rem 1rem 1rem;
+  position: relative;
+  margin: 1rem 0rem;
+  /* background: linear-gradient(135deg, rgba(69, 69, 69, 0.1)); */
+  /* border: bottomBar 1px solid rgba(255, 255, 255, 0.1); */
+  /* border-bottom: 1px solid rgba(0, 195, 255); */
+  box-shadow: 5px 6px 3px 0 rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  
+}
+
+.blogCard:hover {
+  border-bottom: 3px solid rgb(0, 195, 255);
+  border-right: 3px solid rgb(0, 195, 255);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.3s;
+}
+.blogImg {
+  width: 100%;
+  height: 60%;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+}
+.blogImg img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+  padding: 0%;
+  cursor: pointer;
+}
+.blogInfo {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.blogHead p {
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01rem;
+  word-spacing: 0.1rem;
+  text-align: center;
+  color: white;
+  font-size: 1.1rem;
+  padding: 0.1rem 1rem;
+}
+.blogHead p:hover {
+  /* color: #011627; */
+  text-decoration-line: underline;
+  transition: all ease 0.3s;
+}
+.cellTag {
+  width: 100%;
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: space-around;
+}
+.cellTag .logoTag {
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #011627;
+  border-radius: 50%;
+  overflow: hidden;
+  padding-bottom: 0.1rem;
+  padding-right: 0.1rem;
+}
+
+.cellTag .logoTag img {
+  height: 3rem;
+  width: 2.5rem;
+}
+.cellText h6 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+.cellText p {
+  color: #ffffff;
+  padding: 0.3rem 0rem;
+  font-size: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+}
+.cellButton {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.cellButton :first-child {
+  margin-right: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* media queries */
+@media screen and (max-width: 700px) {
+  .blogHead p {
+    font-size: 1rem;
+  }
+  .cellText h6 {
+    font-size: 0.9rem;
+  }
+  .cellText p {
+    font-size: 0.7rem;
+  }
+  .cellButton {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .blogHead p {
+    font-size: 0.9rem;
+  }
+  .cellText h6 {
+    font-size: 0.8rem;
+  }
+  .cellTag .logoTag {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+  .cellButton {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 520px) {
+  .blogHead p {
+    font-size: 1.1rem;
+    /* font-weight: 500; */
+  }
+  .cellText h6 {
+    font-size: 1.1rem;
+  }
+  .cellTag .logoTag {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+  .cellButton {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .blogHead p {
+    font-size: 1rem;
+    /* font-weight: 500; */
+  }
+  .cellText h6 {
+    font-size: 1rem;
+  }
+  .cellTag .logoTag {
+    height: 3rem;
+    width: 3rem;
+  }
+  .cellButton {
+    font-size: 1.7rem;
+  }
+}

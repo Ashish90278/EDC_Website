@@ -1,0 +1,112 @@
+.card {
+  display: flex;
+  justify-content: center;
+  height: 26rem;
+  min-width: 32.5%;
+  width: 50rem;
+  /* margin-right: 1rem; */
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-radius: 0rem 0rem 1rem 1rem;
+  background: linear-gradient(135deg, rgba(69, 69, 69, 0.1));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.card-body {
+  height: 100%;
+  width: 95%;
+}
+
+.card-body img {
+  height: 60%;
+  object-fit: fill;
+}
+
+.card-body h4 {
+  width: 100%;
+  padding: 0.5rem 0rem;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  text-wrap: wrap;
+}
+
+.card-info ul li div {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+}
+
+.card-info ul li div p {
+  font-size: small;
+  color: white;
+}
+
+.card-info ul li div img {
+  height: 1rem;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+
+.card-info ul li:last-child {
+  margin-top: 0.5rem;
+}
+
+.card-info ul:last-child div {
+  display: flex;
+  align-items: center;
+}
+
+.card-info ul li:last-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-info ul li:last-child button {
+  padding: 0.25rem 0.8rem 0.25rem 0.8rem;
+  width: 7rem;
+  height: 2rem;
+  border: 2px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  border: 2px solid rgba(0, 195, 255);
+  border-radius: 5rem;
+}
+
+.card-info ul li:last-child button:hover {
+  /* filter: drop-shadow(2px 2px 1px rgb(118, 114, 114)); */
+  transition: all zoom ease-in;
+  transition-duration: 500ms;
+}
+
+#event_register {
+  background-color: transparent;
+}
+
+#event_register a {
+  color: rgb(255, 255, 255);
+}
+
+#event_register:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(0, 195, 255);
+}
+
+@media screen and (max-width: 1024px) {
+  .card-info ul li:last-child {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+  }
+  .card-info ul li:last-child button {
+    padding: 0.25rem 0.4rem 0.4rem 0.4rem;
+    width: 6rem;
+    height: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+}
+/* @media screen and (max-width: 780px) {
+  #our_event > .card{
+    min-width: 50%;
+  }
+} */

@@ -12,10 +12,10 @@ export const Aboutus = () => {
 
           <div className="aboutus-groupimg">
             <div className="aboutus-groupimgleft">
-              <img src="../../public/imgs/aboutus-groupimg1.png" alt="" />
+              <img src="../imgs/aboutus-groupimg1.png" alt="" />
             </div>
             <div className="aboutus-groupimgright">
-              <img src="../../public/imgs/aboutus-groupimg.jpeg" alt="" />
+              <img src="../imgs/aboutus-groupimg.jpeg" alt="" />
             </div>
           </div>
 
@@ -46,7 +46,7 @@ export const Aboutus = () => {
           <div className="president-note">
             <h2>President's Note</h2>
             <div className="president-photo">
-              <img src="../../public/imgs/SohailSir.png" alt="" />
+              <img src="../imgs/SohailSir.png" alt="" />
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,

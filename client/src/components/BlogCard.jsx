@@ -19,7 +19,7 @@ export const BlogCard = (props) => {
           </div>
           <div className="cellTag">
             <div className="logoTag">
-              <img src="../../public/imgs/EDC_logo.png" alt="" />
+              <img src="../imgs/EDC_logo.png" alt="" />
             </div>
             <div className="cellText">
               <NavLink to="https://jssaten.ac.in" target="_blank"><h6>EDC JSSATEN</h6></NavLink>

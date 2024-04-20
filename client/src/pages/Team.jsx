@@ -35,48 +35,48 @@ export const Team = () => {
           </div>
           <hr />
           <div id="core_team">
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
           </div>
           <hr />
           <div id="leads">
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
           </div>
           <hr />
           <div id="executive">
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../../public/imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
           </div>
           <hr />
         </div>

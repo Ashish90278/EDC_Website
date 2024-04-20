@@ -351,62 +351,62 @@ export const Home = () => {
           </div>
           <div className="members">
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../imgs/SohailSir.png"
+              memberImage="../imgs/Sohailsir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>

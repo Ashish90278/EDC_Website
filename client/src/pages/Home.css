@@ -45,14 +45,13 @@
 .main_hero_section {
   display: flex;
   height: 27.7rem;
-  /* height: auto; */
   align-items: center;
   color: rgb(255, 255, 255);
   /* border: 2px solid red; */
 }
 
 .main_hero_section .left_hero_section {
-  /* border: 2px solid rgb(255, 255, 255); */
+  /* border: 2px solid rgb(246, 187, 187); */
   height: 100%;
   width: 50%;
   display: flex;

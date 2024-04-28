@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { GoArrowRight } from "react-icons/go";
+
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -52,14 +54,16 @@ export const Navbar = () => {
             <NavLink style={navActive} to="/contact" onClick={showNavbar}>
               CONTACT
             </NavLink>
-            <NavLink
-              to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs"
-              target="_blank"
-            >
-              <button id="communityButton">JOIN COMMUNITY</button>
-            </NavLink>
+            <button id="communityButton">
+              <NavLink
+                to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs"
+                target="_blank"
+              >
+                JOIN COMMUNITY
+              </NavLink>
+            </button>
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
-              <FaTimes />
+              <GoArrowRight />
             </button>
           </nav>
           <button className="nav-btn" onClick={showNavbar}>

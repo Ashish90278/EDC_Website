@@ -342,7 +342,7 @@ export const Home = () => {
       </section>
 
       {/* <!-- Code for Our Team Members --> */}
-      <section className="our_core_team_members">
+      {/* <section className="our_core_team_members">
         <div className="container">
           <div className="wwr_head" id="our_members">
             <hr />
@@ -412,7 +412,7 @@ export const Home = () => {
             ></MemberCard>
           </div>
         </div>
-      </section>
+      </section> */}
       <hr />
     </>
   );

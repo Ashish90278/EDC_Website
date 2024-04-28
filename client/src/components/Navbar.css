@@ -126,3 +126,22 @@ nav {
     padding: 1rem;
   }
 }
+@media only screen and (max-width: 500px){
+  header nav{
+    gap: 2rem;
+  }
+  nav a{
+    width: 100%;
+    font-size: 1rem;
+    padding-left: 1.5rem;
+  }
+  #communityButton {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 0rem;
+
+  }
+  nav a:nth-child(1){
+    margin-top: -21rem;
+  }
+}

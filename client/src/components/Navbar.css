@@ -138,10 +138,10 @@ nav {
   #communityButton {
     width: 100%;
     font-size: 1rem;
-    padding: 1rem 1rem 1rem 0rem;
+    padding: 1rem 0rem 1rem 0rem;
 
   }
   nav a:nth-child(1){
-    margin-top: -21rem;
+    margin-top: -16rem;
   }
 }

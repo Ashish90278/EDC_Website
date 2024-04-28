@@ -79,7 +79,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="right_hero_section">
-              <img src="../../public/imgs/y.svg" alt="" />
+              <img src="../imgs/y.svg" alt="" />
             </div>
           </div>
         </div>
@@ -105,10 +105,10 @@ export const Home = () => {
               <picture>
                 <source
                   media="(max-width:580px)"
-                  srcset="../../public/imgs/wwr_flowchart.png"
+                  srcset="../imgs/wwr_flowchart.png"
                 />
                 <img
-                  src="../../public/imgs/wwr_main.png"
+                  src="../imgs/wwr_main.png"
                   alt="Flowers"
                 />
               </picture>
@@ -148,7 +148,7 @@ export const Home = () => {
           <div className="carousel-container">
             <div className="carousel">
               <EventCard
-                eventImage="../../public/imgs/EDC_GFG.png"
+                eventImage="../imgs/EDC_GFG.png"
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
@@ -156,7 +156,7 @@ export const Home = () => {
                 eventPageLink="/events/mr.sandeepjain"
               ></EventCard>
               <EventCard
-                eventImage="../../public/imgs/EDC_Lakshya.png"
+                eventImage="../imgs/EDC_Lakshya.png"
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
@@ -164,7 +164,7 @@ export const Home = () => {
                 eventPageLink="/events/lakshya"
               ></EventCard>
               <EventCard
-                eventImage="../../public/imgs/EDC_Stockgrow.png"
+                eventImage="../imgs/EDC_Stockgrow.png"
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
@@ -172,7 +172,7 @@ export const Home = () => {
                 eventPageLink="/events/stockgrow"
               ></EventCard>
               <EventCard
-                eventImage="../../public/imgs/EDC_GFG.png"
+                eventImage="../imgs/EDC_GFG.png"
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
@@ -180,7 +180,7 @@ export const Home = () => {
                 eventPageLink="/events/mr.sandeepjain"
               ></EventCard>
               <EventCard
-                eventImage="../../public/imgs/EDC_Lakshya.png"
+                eventImage="../imgs/EDC_Lakshya.png"
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
@@ -188,7 +188,7 @@ export const Home = () => {
                 eventPageLink="/events/lakshya"
               ></EventCard>
               <EventCard
-                eventImage="../../public/imgs/EDC_Stockgrow.png"
+                eventImage="../imgs/EDC_Stockgrow.png"
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
@@ -351,62 +351,62 @@ export const Home = () => {
           </div>
           <div className="members">
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>
             <MemberCard
-              memberImage="../../public/imgs/SohailSir.png"
+              memberImage="../imgs/SohailSir.png"
               designation="President"
               memberName="Sohail Ansari"
             ></MemberCard>

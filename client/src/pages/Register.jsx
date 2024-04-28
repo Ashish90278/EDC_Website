@@ -62,7 +62,7 @@ export const Register = () => {
       <div className="container event-register">
         <div className="event-info-container">
           <EventCard
-            eventImage="../../public/imgs/EDC_GFG.png"
+            eventImage="../imgs/EDC_GFG.png"
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "

@@ -67,7 +67,7 @@ export const Contact = () => {
               <div className="contact-info-content">
                 <div className="contect-info-content-line">
                   <img
-                    src="../../public/imgs/contact-form-logo1.png"
+                    src="../imgs/contact-form-logo1.png"
                     className="icon"
                     alt="name-icon"
                   />
@@ -80,7 +80,7 @@ export const Contact = () => {
                 </div>
                 <div className="contect-info-content-line">
                   <img
-                    src="../../public/imgs/contact-form-logo2.png"
+                    src="../imgs/contact-form-logo2.png"
                     className="icon"
                     alt="location-icon"
                   />
@@ -97,7 +97,6 @@ export const Contact = () => {
           </div>
         </div>
       </section>
-      <hr />
     </>
   );
 };

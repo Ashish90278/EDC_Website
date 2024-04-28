@@ -46,7 +46,7 @@ export const Aboutus = () => {
           <div className="president-note">
             <h2>President's Note</h2>
             <div className="president-photo">
-              <img src="../imgs/SohailSir.png" alt="" />
+              <img src="../../public/imgs/SohailSir.png" alt="" />
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,

@@ -18,9 +18,10 @@ export const Navbar = () => {
         root[i].style.display = "block";
       }
     }
-    const navActive = ({ isActive }) => {
-      return { color: isActive ? "rgb(0, 195, 255" : "white" };
-    };
+  };
+
+  const navActive = ({ isActive }) => {
+    return { color: isActive ? "rgb(0, 195, 255" : "white" };
   };
 
   return (
@@ -33,12 +34,24 @@ export const Navbar = () => {
             </NavLink>
           </div>
           <nav ref={navRef}>
-            <NavLink to="/" onClick={showNavbar} >HOME</NavLink>
-            <NavLink to="/events" onClick={showNavbar} >EVENTS</NavLink>
-            <NavLink to="/team" onClick={showNavbar} >TEAM</NavLink>
-            <NavLink to="/blog" onClick={showNavbar} >BLOGS</NavLink>
-            <NavLink to="/aboutus" onClick={showNavbar} >ABOUT</NavLink>
-            <NavLink to="/contact" onClick={showNavbar} >CONTACT</NavLink>
+            <NavLink style={navActive} to="/" onClick={showNavbar}>
+              HOME
+            </NavLink>
+            <NavLink style={navActive} to="/events" onClick={showNavbar}>
+              EVENTS
+            </NavLink>
+            <NavLink style={navActive} to="/team" onClick={showNavbar}>
+              TEAM
+            </NavLink>
+            <NavLink style={navActive} to="/blog" onClick={showNavbar}>
+              BLOGS
+            </NavLink>
+            <NavLink style={navActive} to="/aboutus" onClick={showNavbar}>
+              ABOUT
+            </NavLink>
+            <NavLink style={navActive} to="/contact" onClick={showNavbar}>
+              CONTACT
+            </NavLink>
             <NavLink
               to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs"
               target="_blank"

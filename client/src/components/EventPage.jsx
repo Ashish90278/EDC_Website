@@ -13,7 +13,7 @@ export const EventPage = (props) => {
       <div className="container">
         <div className="blog-page">
           {/* <!-- Speaker session with Sandeep jain --> */}
-          <section className="blog-page">
+          {/* <section className="blog-page">
             <div className="speaker">
               <div className="speaker-info">
                 <h2>{props.eventName}</h2>
@@ -36,7 +36,7 @@ export const EventPage = (props) => {
                 <img src={`${props.eventPoster}`} alt="" />
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* <!-- Code for Inaugration Ceremony Section --> */}
           <section className="blog-page">
@@ -66,7 +66,7 @@ export const EventPage = (props) => {
           </section>
 
           {/* <!-- Code for Key Takeaways Section --> */}
-          <section className="blog-page">
+          {/* <section className="blog-page">
             <div className="keys">
               <h2>Key Takeaways</h2>
               <ul>
@@ -84,10 +84,10 @@ export const EventPage = (props) => {
                 </li>
               </ul>
             </div>
-          </section>
+          </section> */}
 
           {/* <!-- Code of Conclusion Section --> */}
-          <section className="blog-page">
+          {/* <section className="blog-page">
             <div className="conclusion">
               <h2>Conclusion</h2>
               <p>{props.eventConclusion}</p>
@@ -95,7 +95,7 @@ export const EventPage = (props) => {
                 <img src={`${props.eventConclusionImage}`} alt="" />
               </div>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
       <hr />

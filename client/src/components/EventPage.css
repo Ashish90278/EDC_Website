@@ -47,9 +47,14 @@ p {
   display: flex;
   width: 100%;
   height: 20rem;
-  padding: 1.5rem 0rem;
+  /* padding: 1.5rem 0rem; */
+  gap: 1rem;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  /* border: 2px solid red; */
+}
+.speech_images img{
+  width: 40%;
 }
 
 .keys {
@@ -200,5 +205,51 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
     }
     #blog_img2{
         border-radius: 0rem 0rem 0rem 3rem;
+        width: 50%;
+    }
+    #blog_img3{
+      width: 50%;
+    }
+
+    .ceremony{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: center; */
+      /* border: 2px solid red; */
+    }
+    .ceremony img{
+      width: 100%;
+      margin-bottom: 3rem;
+      /* border: 2px solid red; */
+    }
+    .ceremony_info{
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+    }
+    .ceremony .ceremony_info p {
+      padding: 1rem 0rem 2rem 0rem;
+      text-align: center;
+    }
+    .speech{
+      align-items: center;
+    }
+    .speech p{
+      text-align: center;
+      padding: 0rem 0rem 1rem 0rem;
+    }
+}
+@media screen and (max-width: 500px) {
+    #blog_img1{
+        display: none;
+    }
+    #blog_img2{
+      border-radius: 0;
+      width: 100%;
+  }
+    #blog_img3{
+       display: none;
     }
 }

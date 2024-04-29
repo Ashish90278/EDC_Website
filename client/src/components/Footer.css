@@ -38,7 +38,7 @@
 
 .footer_container_left .icon {
   display: flex;
-  width: 77%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -244,11 +244,10 @@ button {
 
   .footer_container_left .icon {
     height: 4rem;
-    width: 30%;
+    width: 35%;
     margin-top: -1rem;
-    padding: 0.5rem;
+    padding: 0rem;
     /* border: 2px solid red; */
-
     /* border: 2px solid white; */
     /* padding: 0.3rem 0rem; */
   }
@@ -275,6 +274,7 @@ button {
   .tabletBottom {
     display: flex;
     width: 100%;
+    align-items: center;
   }
 
   .footer_container_middle {
@@ -289,16 +289,16 @@ button {
 
 /* ------------------------------- Responsive CSS of Footer Section for Tablet view End ------------------------------------------*/
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 660px){
   .footer_img {
     display: none;
     /* border: 2px solid green; */
   }
   .footer_container_left{
-    justify-content: space-around;
+    justify-content: space-between;
   }
   .footer_container_left .icon{
-    width: 40%;
+    width: 50%;
   }
 }
 /* ------------------------------- Responsive CSS of Footer Section for Mobile view Start ------------------------------------------*/

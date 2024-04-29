@@ -5,12 +5,12 @@
 #contact {
   padding: 20px; /* Add some padding to improve visual appearance */
   background-color: #011627;
+  margin-top: 100px;
 }
 
 .contact-header {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
   height: auto;
   width: 100%;
   text-align: center;
@@ -23,7 +23,7 @@
   padding-bottom: 30px;
   padding-top: 30px;
   font-weight: 700;
-  /* border: 2px solid black; */
+  /* border: 2px solid red; */
 }
 .contact-header div {
   gap: 0.5rem;
@@ -318,65 +318,7 @@ form button {
   width: 4px;
 }
 
-/* input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-} */
 
-/* .contact {
-  display: flex;
-  position: absolute;
-  width: 10%;
-  right: 0;
-  top: 0;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 3;
-}
-
-.contact a {
-  z-index: 3;
-}
-
-.contact img {
-  margin: 10px;
-  height: 30px;
-  opacity: 0.6;
-  transition: all 0.4s ease;
-}
-
-.contact img:hover {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-#breaker {
-  height: 100vh;
-  width: 200%;
-  background-color: #c70039;
-  opacity: 1;
-  animation: breakeranimate 2s linear;
-  display: none;
-  transition: all 0.4s ease;
-  border-radius: 5px;
-  z-index: 10;
-  position: fixed;
-} */
-
-/* .contact-info::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #101010;
-  opacity: 0.8;
-  pointer-events: none;
-} */
 
 @media (max-width: 900px) {
   #contact .contact-address,
@@ -404,6 +346,9 @@ input::-webkit-inner-spin-button {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
   } */
+  .contact-header{
+    font-size: 35px;
+  }
   .input-line {
     width: 100%;
     height: auto;

@@ -3,7 +3,12 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 85px;
+  width: 100%;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background-color: #011627;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 header > .container {
   /* border: 2px solid pink; */

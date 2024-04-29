@@ -4,7 +4,7 @@
   /* width: 100%; */
   align-items: center;
   height: auto;
-  background: #001524;
+  background: #011627;
 }
 
 .footer_container {
@@ -186,6 +186,12 @@ button {
   width: 90%;
   color: white;
 }
+#policy{
+  height: 4rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
 /* -------------------------------------------- Footer Section End ------------------------------------------*/
 
 /* ------------------------------ Responsive CSS of Footer Section for Tablet view Start ------------------------------------------*/
@@ -361,6 +367,7 @@ button {
     text-align: center;
     /* border: 2px solid purple; */
     margin: 1rem 0rem;
+    display: none;
   }
   .footer_container_right{
     /* border: 2px solid white; */

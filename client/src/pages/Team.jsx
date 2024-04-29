@@ -7,6 +7,7 @@ export const Team = () => {
   return (
     <>
       <section className="teamMembers">
+        {/* <div>hii</div> */}
         <div className="container">
           <div className="team">
             <ul>
@@ -33,7 +34,7 @@ export const Team = () => {
               </NavLink>
             </ul>
           </div>
-          <hr />
+          <hr style={{border:"1px solid grey" }}/>
           <div id="core_team">
             <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
             <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
@@ -48,7 +49,7 @@ export const Team = () => {
             <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
             <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
           </div>
-          <hr />
+          <hr style={{border:"1px solid grey" }}/>
           <div id="leads">
             <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
             <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
@@ -63,7 +64,7 @@ export const Team = () => {
             <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
             <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
           </div>
-          <hr />
+          <hr style={{border:"1px solid grey" }}/>
           <div id="executive">
             <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
             <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
@@ -78,8 +79,8 @@ export const Team = () => {
             <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
             <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
           </div>
-          <hr />
         </div>
+        <hr style={{border:"1px solid grey" }}/>
       </section>
     </>
   );

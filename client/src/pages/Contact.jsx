@@ -97,6 +97,7 @@ export const Contact = () => {
           </div>
         </div>
       </section>
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

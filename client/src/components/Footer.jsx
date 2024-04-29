@@ -92,11 +92,11 @@ export const Footer = () => {
           </div>
 
           <div className="divsion">
-            <hr />
+          <hr style={{border:"1px solid grey" }}/>
           </div>
-          <div>
-            <h4>Created By :</h4>
-            <p>&copy;Ashish Gupta</p>
+          <div id="policy">
+            <h4>Created By :&nbsp;</h4>
+            <p>&copy; Ashish Gupta</p>
           </div>
         </div>
       </footer>

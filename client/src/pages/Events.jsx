@@ -57,7 +57,7 @@ export const Events = () => {
           ></EventCard>
         </section>
       </div>
-      <hr />
+      <hr style={{border:"1px solid grey" }}/>
       
     </>
   );

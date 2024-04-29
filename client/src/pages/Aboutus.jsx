@@ -65,7 +65,7 @@ export const Aboutus = () => {
           {/* President Note section End */}
         </div>
       </section>
-      <hr />
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

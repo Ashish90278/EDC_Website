@@ -413,7 +413,7 @@ export const Home = () => {
           </div>
         </div>
       </section> */}
-      <hr />
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

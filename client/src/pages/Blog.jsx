@@ -14,7 +14,7 @@ export const Blog = () => {
           <BlogCard blogImage="../imgs/Blog6.jpeg" blogTopic="ZARA's Secret to Its Popularity in India" />
         </div>
       </div>
-      <hr />
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

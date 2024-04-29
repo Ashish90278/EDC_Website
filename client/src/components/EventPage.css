@@ -37,6 +37,7 @@ p {
 .speech p {
   margin-top: 1rem;
   color: white;
+  margin-bottom: 2rem;
 }
 .speech h2 {
   margin-top: 1rem;
@@ -235,10 +236,30 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37)
     }
     .speech{
       align-items: center;
+      
     }
     .speech p{
       text-align: center;
       padding: 0rem 0rem 1rem 0rem;
+      margin-bottom: 1rem;
+    }
+    .speech_images{
+      height: 12rem;
+    }
+    .keys ul {
+      padding: 0rem 0rem 0rem 2rem;
+    }
+    .conclusion {
+      align-items: center;
+    }
+    
+    .conclusion_img {
+      height: 22rem;
+      padding: 0rem 0rem;
+    }
+    
+    .conclusion p {
+      text-align: center;
     }
 }
 @media screen and (max-width: 500px) {

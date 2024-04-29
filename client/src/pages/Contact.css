@@ -342,10 +342,6 @@ form button {
 }
 
 @media (max-width: 450px) {
-  /* #contact .contact-phone {
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-  } */
   .contact-header{
     font-size: 35px;
     padding-top: 25px;

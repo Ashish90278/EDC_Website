@@ -109,10 +109,10 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   }
 
   .our-vision p {
-    padding: 2rem 5rem;
+    padding: 2rem 2.5rem;
   }
   .president-note p {
-    padding: 0rem 5rem 2rem 5rem;
+    padding: 0rem 2.5rem 2rem 2.5rem;
     text-align: center;
   }
 }

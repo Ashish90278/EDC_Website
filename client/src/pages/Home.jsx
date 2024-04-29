@@ -25,7 +25,7 @@ export const Home = () => {
     <>
       <div className="sticky">
         <div className="stick_icons">
-          <NavLink to="#" target="_blank">
+          <NavLink to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs" target="_blank">
             <img src="../imgs/sticky_icons/whatsapp.png" alt="" />
           </NavLink>
         </div>

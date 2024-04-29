@@ -348,6 +348,7 @@ form button {
   } */
   .contact-header{
     font-size: 35px;
+    padding-top: 25px;
   }
   .input-line {
     width: 100%;

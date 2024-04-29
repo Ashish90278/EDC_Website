@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
+import { FaLinkedin, FaInstagram } from "react-icons/fa";
+import { AiOutlineYoutube } from "react-icons/ai";
+import { RiTwitterXFill } from "react-icons/ri";
 
 export const Footer = () => {
   return (
@@ -22,28 +25,32 @@ export const Footer = () => {
                 <p>Follow us on Social Media.</p>
                 <div className="footer_icons">
                   <div>
-                    <NavLink to="#">
-                      <img src="../imgs/footer_youtube.png" alt="" />
+                    <NavLink
+                      to="https://www.linkedin.com/company/edc-jssate/"
+                      target="_blank"
+                    >
+                      <FaLinkedin />
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="#">
-                      <img src="../imgs/footer_facebook.png" alt="" />
+                    <NavLink
+                      to="https://www.youtube.com/@edcjss9486"
+                      target="_blank"
+                    >
+                      <AiOutlineYoutube />
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="#">
-                      <img src="../imgs/footer_instagram.png" alt="" />
+                    <NavLink
+                      to="https://www.instagram.com/ecelljss/"
+                      target="_blank"
+                    >
+                      <FaInstagram />
                     </NavLink>
                   </div>
                   <div>
-                    <NavLink to="#">
-                      <img src="../imgs/footer_linkedin.png" alt="" />
-                    </NavLink>
-                  </div>
-                  <div>
-                    <NavLink to="#">
-                      <img src="../imgs/footer_twitter.png" alt="" />
+                    <NavLink to="https://twitter.com/cell_edc" target="_blank">
+                      <RiTwitterXFill />
                     </NavLink>
                   </div>
                 </div>
@@ -92,7 +99,7 @@ export const Footer = () => {
           </div>
 
           <div className="divsion">
-          <hr style={{border:"1px solid grey" }}/>
+            <hr style={{ border: "1px solid grey" }} />
           </div>
           <div id="policy">
             <h4>Created By :&nbsp;</h4>

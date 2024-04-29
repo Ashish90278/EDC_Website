@@ -41,6 +41,7 @@
   width: 77%;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-top: 2rem;
 }
 .footer_container_left .icon p {
@@ -49,19 +50,21 @@
 .footer_container_left .footer_icons {
   display: flex;
   justify-content: center;
+  gap: 1rem;
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   align-items: center;
-  padding: 0rem 2rem;
+  /* padding: 0rem 2rem; */
+  margin-top: 0.5rem;
 }
 .footer_container_left .footer_icons div {
   height: 100%;
   width: 100%;
+  font-size: 1.3rem;
 }
 
-.footer_container_left .footer_icons img {
-  object-fit: contain;
-  padding: 0.5rem;
+.footer_container_left .footer_icons a{
+  color: white;
 }
 
 .tabletBottom {
@@ -250,9 +253,9 @@ button {
     /* padding: 0.3rem 0rem; */
   }
 
-  .footer_container_left .icon :nth-child(2) {
+  /* .footer_container_left .icon :nth-child(2) {
     display: none;
-  }
+  } */
   .footer_container_left .icon p {
     color: white;
   }
@@ -305,15 +308,16 @@ button {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     /* border: 2px solid red; */
-    margin: 1rem 0rem 3rem 0rem;
+    margin: 0rem 0rem 3rem 0rem;
   }
 
   .footer_container hr {
-    display: block;
+    /* display: block;
     height: 1px;
     width: 100%;
     background-color: grey;
-    border: 1px solid transparent;
+    border: 1px solid transparent; */
+    margin-bottom: 1.5rem;
   }
 
   .footer_img {
@@ -329,17 +333,21 @@ button {
   }
 
   .footer_container .footer_logo{
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
+    /* border: 2px solid red; */
   }
 
+  .footer_container_left .footer_icons{
+    gap: 0.5rem;
+  }
   .footer_container_left .icon {
     width: 50%;
     margin-top: 0rem;
-    /* border: 2px solid white; */
     padding: 0.3rem 0rem;
+    /* border: 2px solid white; */
   }
 
-  .footer_container_left .icon :nth-child(2) {
+  .footer_container_left .icon >:nth-child(2) {
     display: none;
   }
   .footer_container_left .icon p {
@@ -372,10 +380,14 @@ button {
   .footer_container_right{
     /* border: 2px solid white; */
     padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .enquiry{
     align-items: center;
   }
+  
   .footer_container_right p{
     text-align: center;
   }

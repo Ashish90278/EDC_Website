@@ -2,8 +2,37 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Team.css";
 import { MemberCard } from "../components/MemberCard.jsx";
+import members from "./Json/Members.json";
+import { usestate, useEffect } from "react";
 
 export const Team = () => {
+  const [dept, setDept] = useState(" ");
+
+  useEffect(() => {}, [dept]);
+
+  const handleDeptChange = (newDept) => {
+    document.getElementById("core_team").style.display = "none";
+    document.getElementById("leads").style.display = "none";
+    document.getElementById("executive").style.display = "none";
+    setDept(newDept);
+  };
+
+  const memberFiltered = () => {
+    return members
+      .filter((member) => member.department.includes(dept))
+      .map((member, index) => (
+        <MemberCard
+          key={index}
+          memberImage={member.image}
+          designation={member.position}
+          memberName={member.name}
+          linkedIn={member.linkedIn}
+          instagram={member.instagram}
+          x={member.x}
+        />
+      ));
+  };
+
   return (
     <>
       <section className="teamMembers">
@@ -11,76 +40,86 @@ export const Team = () => {
         <div className="container">
           <div className="team">
             <ul>
-              <NavLink to="#core_team">
+              <button onClick={() => handleDeptChange("core")}>
                 <li>Core Team</li>
-              </NavLink>
-              <NavLink to="#tech_team">
+              </button>
+              <button onClick={() => handleDeptChange("technical")}>
                 <li>Tech Team</li>
-              </NavLink>
-              <NavLink to="#design_team">
+              </button>
+              <button onClick={() => handleDeptChange("design")}>
                 <li>Design Team</li>
-              </NavLink>
-              <NavLink to="#content_team">
+              </button>
+              <button onClick={() => handleDeptChange("content")}>
                 <li>Content Team</li>
-              </NavLink>
-              <NavLink to="#outreach_team">
-                <li>Outreach Team</li> 
-              </NavLink>
-              <NavLink to="#operation_team">
+              </button>
+              <button onClick={() => handleDeptChange("outreach")}>
+                <li>Outreach Team</li>
+              </button>
+              <button onClick={() => handleDeptChange("operations")}>
                 <li>Operation Team</li>
-              </NavLink>
-              <NavLink to="#marketing_team">
+              </button>
+              <button onClick={() => handleDeptChange("marketing")}>
                 <li>Marketing Team</li>
-              </NavLink>
+              </button>
             </ul>
           </div>
-          <hr style={{border:"1px solid grey" }}/>
+          <hr style={{ border: "1px solid grey" }} />
+          <div id="filterdiv">{memberFiltered()}</div>
           <div id="core_team">
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
-            <MemberCard memberImage="../imgs/Sohailsir.png" designation="President" memberName="Sohail Ansari"></MemberCard>
+            {members
+              .filter((member) => member.year === "4th")
+              .map((member, index) => {
+                return (
+                  <MemberCard
+                    key={index}
+                    memberImage={member.image}
+                    designation={member.position}
+                    memberName={member.name}
+                    linkedIn={member.linkedIn}
+                    instagram={member.instagram}
+                    x={member.x}
+                  ></MemberCard>
+                );
+              })}
           </div>
-          <hr style={{border:"1px solid grey" }}/>
+          <hr style={{ border: "1px solid grey" }} />
           <div id="leads">
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
-            <MemberCard memberImage="../imgs/PuneetSir.jpg" designation="Outreach Lead" memberName="Puneet Palial"></MemberCard>
+            {members
+              .filter((member) => member.year === "3rd")
+              .map((member, index) => {
+                return (
+                  <MemberCard
+                    key={index}
+                    memberImage={member.image}
+                    designation={member.position}
+                    memberName={member.name}
+                    linkedIn={member.linkedIn}
+                    instagram={member.instagram}
+                    x={member.x}
+                  ></MemberCard>
+                );
+              })}
           </div>
-          <hr style={{border:"1px solid grey" }}/>
+          <hr style={{ border: "1px solid grey" }} />
           <div id="executive">
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
-            <MemberCard memberImage="../imgs/Presidents.jpg" designation="Executive Member" memberName="Ashish Gupta"></MemberCard>
+            {members
+              .filter((member) => member.year === "2nd" || member.year === "2")
+              .map((member, index) => {
+                return (
+                  <MemberCard
+                    key={index}
+                    memberImage={member.image}
+                    designation={member.position}
+                    memberName={member.name}
+                    linkedIn={member.linkedIn}
+                    instagram={member.instagram}
+                    x={member.x}
+                  ></MemberCard>
+                );
+              })}
           </div>
         </div>
-        <hr style={{border:"1px solid grey" }}/>
+        <hr style={{ border: "1px solid grey" }} />
       </section>
     </>
   );

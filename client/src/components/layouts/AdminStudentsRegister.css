@@ -1,16 +1,17 @@
 .admin-registrations-section {
   display: flex;
-  background-color: aliceblue;
+  background-color: #011627;
+  margin-top: 100px;
 }
 
 .admin-registrations {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   width: 74%;
   position: relative;
-  background-color: white;
+  background-color: #011627;
   border-radius: 1rem;
   padding: 2.4rem 1rem 1rem 1rem;
   margin-top: 8vh;
@@ -18,6 +19,11 @@
   margin-left: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .admin-registrations div {
@@ -29,7 +35,9 @@
   justify-content: space-between;
   padding: 0.8rem 0.8rem 0.8rem 1.2rem;
   border-radius: 0.5rem;
-  background-image: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
+  /* background-image: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
+   */
+  background-color: rgb(0, 195, 255);
 }
 
 .admin-registrations h4 {
@@ -53,7 +61,7 @@
   margin-top: 1rem;
 }
 .admin-registrations tr th {
-  color: rgb(22, 21, 21);
+  color: white;
   font-family: "Open-Sans", sans-serif;
   font-weight: 600;
 }

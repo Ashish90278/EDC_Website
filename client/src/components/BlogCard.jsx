@@ -11,7 +11,7 @@ export const BlogCard = (props) => {
       />
       <div className="blogCard">
         <div className="blogImg">
-          <NavLink to="https://in.linkedin.com/company/edc-jssate" target="_blank"><img src={`${props.blogImage}`} alt="" /></NavLink>
+          <NavLink to={`${props.blogLink}`} target="_blank"><img src={`https://ik.imagekit.io/lbqkuzbjo/blogs/${props.blogImage}`} alt="" /></NavLink>
         </div>
         <div className="blogInfo">
           <div className="blogHead">

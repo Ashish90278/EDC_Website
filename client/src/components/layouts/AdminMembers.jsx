@@ -3,9 +3,10 @@ import { AdminSidebar } from "./AdminSidebar.jsx";
 import { Button } from "../Button.jsx";
 import { NavLink, Outlet } from "react-router-dom";
 import "./AdminMembers.css";
+import members from "../../pages/Json/Members.json";
 
 export const AdminMembers = () => {
-  const [members, setMembers] = useState([]);
+  // const [members, setMembers] = useState([]);
 
   // const getAllMembersData = async () => {
   //   try {
@@ -40,9 +41,8 @@ export const AdminMembers = () => {
             <tr>
               <th>Name</th>
               <th>Post</th>
-              <th>LinkedIn</th>
-              <th>Twitter</th>
-              <th>Instagram</th>
+              <th>Department</th>
+              <th>Image</th>
               <th>Update</th>
               <th>Delete</th>
             </tr>
@@ -51,10 +51,10 @@ export const AdminMembers = () => {
             {members.map((curUser, index) => {
               return (
                 <tr key={index}>
-                  <td>{curUser.username}</td>
-                  <td>{curUser.email}</td>
-                  <td>{curUser.phone}</td>
-                  <td>{curUser.isAdmin}</td>
+                  <td>{curUser.name}</td>
+                  <td>{curUser.position}</td>
+                  <td>{curUser.department.map((ele) => ele + ", ")}</td>
+                  <td>{curUser.image}</td>
 
                   <Button text="Edit" class="edit button" onClick="edit()" />
                   <Button

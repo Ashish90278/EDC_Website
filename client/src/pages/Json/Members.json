@@ -1,0 +1,562 @@
+[
+  {
+    "name": "Punit Palial",
+    "year": "4th",
+    "position": "President",
+    "image": "PuneetSir.jpg",
+    "department": ["core"],
+    "linkedIn": "https://www.linkedin.com/in/sohail--ansari",
+    "instagram": "",
+    "x": "https://x.com/ansa6064?t=p4iQtGOF8viw-MQx3ugqvA&s=09"
+  },
+  {
+    "name": "Mayank Majila",
+    "year": "4th",
+    "position": "CTC",
+    "image": "IMG_4310 - Mayank Majila.jpeg",
+    "department": ["core"],
+    "linkedIn": "linkedin/mayankmajila",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Samridh Pathela",
+    "year": "4th",
+    "position": "General Secretary",
+    "image": "IMG_8404 - Samridh Pathela.jpeg",
+    "department": ["core"],
+    "linkedIn": "https://in.linkedin.com/in/samridhpathela",
+    "instagram": "https://www.instagram.com/samridh002/",
+    "x": ""
+  },
+  {
+    "name": "Shwetansh Dixit",
+    "year": "4th",
+    "position": "Vice President",
+    "image": "IMG_8991 - Shwetansh Dixit.HEIC",
+    "department": ["core"],
+    "linkedIn": "https://www.linkedin.com/in/shwetanshdixit",
+    "instagram": "Shwetansh_dixit",
+    "x": ""
+  },
+  {
+    "name": "Sohail Ansari",
+    "year": "4th",
+    "position": "Operations Head",
+    "image": "Sohail_Sir.JPG",
+    "department": ["core", "operations"],
+    "linkedIn": "https://www.linkedin.com/in/sohail--ansari",
+    "instagram": "https://www.linkedin.com/in/sohail--ansari",
+    "x": "https://x.com/ansa6064?t=p4iQtGOF8viw-MQx3ugqvA&s=09"
+  },
+  {
+    "name": "Nitin Singh",
+    "year": "4th",
+    "position": "Media Head",
+    "image": "nitinPHOTO - Nitin Singh.jpg",
+    "department": ["core"],
+    "linkedIn": "www.linkedin.com/in/nitinsingh20",
+    "instagram": "@nitin.singh___",
+    "x": "https://twitter.com/home?lang=en"
+  },
+  {
+    "name": "Vikas Saroj",
+    "year": "3rd",
+    "position": "Outreach Lead",
+    "image": "Picsart_24-04-14_13-46-57-073%20-%20Vikas%20Saroj.jpg",
+    "department": ["outreach"],
+    "linkedIn": "https://www.linkedin.com/in/vikas-saroj",
+    "instagram": "https://www.instagram.com/__vikas.4/",
+    "x": "https://x.com/MrVikasSaroj1?t=6uoiRtiY8wIE03czRD62UQ&s=09"
+  },
+  {
+    "name": "Anushka Gupta",
+    "year": "3rd",
+    "position": "Outreach Lead",
+    "image": "IMG-20231013-WA0052%20-%20Anushka%20Gupta.jpg",
+    "department": ["outreach"],
+    "linkedIn": "https://www.linkedin.com/in/anushka-gupta22",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Vanshika Jain",
+    "year": "3rd",
+    "position": "Technical Lead",
+    "image": "VanshikaMam.jpg",
+    "department": ["technical"],
+    "linkedIn": "https://www.linkedin.com/in/ivanshikajain/",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Harsh Verma",
+    "year": "3rd",
+    "position": "Design Lead",
+    "image": "memberImages/Snapchat-1340318623%20-%20Harsh%20Verma.jpg",
+    "department": ["design"],
+    "linkedIn": "www.linkedin.com/stillharsha",
+    "instagram": "www.instagram.com/stillharsha",
+    "x": "NA"
+  },
+  {
+    "name": "Ashutosh Kumar",
+    "year": "3rd",
+    "position": "Operations Lead",
+    "image": "WhatsApp%20Image%202024-04-14%20at%205.10.04%20PM%20-%20Aashutosh%20Kumar.jpeg",
+    "department": ["operations"],
+    "linkedIn": "www.linkedin.com/in/iashutosh-kumar",
+    "instagram": "https://www.instagram.com/_.gattu._47/",
+    "x": ""
+  },
+  {
+    "name": "Aashish Singh",
+    "year": "3rd",
+    "position": "Operations lead",
+    "image": "IMG_20231217_113736_148%20-%20Aashish%20Singh.jpg",
+    "department": ["operations"],
+    "linkedIn": "https://www.linkedin.com/in/aashish-singh-33b512259?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Anammya R Vaish",
+    "year": "3rd",
+    "position": "Operations Lead",
+    "image": "IMG-20230719-WA0010%20-%20Anammya%20Vaish.jpg",
+    "department": ["operations"],
+    "linkedIn": "https://www.linkedin.com/in/anammya-vaish-854681223",
+    "instagram": "@anammyavaish",
+    "x": ""
+  },
+  {
+    "name": "Aryan Malik",
+    "year": "3rd",
+    "position": "Content Lead",
+    "image": "IMG_20240414_100601%20-%20Aryan%20Malik.jpg",
+    "department": ["content"],
+    "linkedIn": "https://www.linkedin.com/in/aryanmalik-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Rudrani Dutt",
+    "year": "3rd",
+    "position": "Marketing Lead",
+    "image": "1713159169657%20-%20Rudrani%20Dutt.jpg",
+    "department": ["marketing"],
+    "linkedIn": "https://www.linkedin.com/in/rudrani-dutt",
+    "instagram": "https://www.instagram.com/rudrani_dutt?igsh=aXVsdWl1MjQzY2hm",
+    "x": ""
+  },
+  {
+    "name": "Sandhya Gupta",
+    "year": "3rd",
+    "position": "Content lead",
+    "image": "sandhya%20-%20Sandhya%20Gupta.jpg",
+    "department": ["content"],
+    "linkedIn": "https://www.linkedin.com/in/sandhya-gupta-7a022a234",
+    "instagram": "gupta_sandhya617",
+    "x": ""
+  },
+  {
+    "name": "Yash Sonkar",
+    "year": "3rd",
+    "position": "Outreach Lead",
+    "image": "IMG_3308%20-%20Yash%20Sonkar.jpeg",
+    "department": ["outreach"],
+    "linkedIn": "https://www.linkedin.com/in/yashsonkar",
+    "instagram": "_yashsonkar_",
+    "x": ""
+  },
+  {
+    "name": "Sahil Rai",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "",
+    "department": ["design"],
+    "linkedIn": "",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Ashish Gupta",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "Ashish",
+    "department": ["technical", "operations"],
+    "linkedIn": "https://www.linkedin.com/in/ashishgupta195/",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Alok Kumar Gupta",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "",
+    "department": ["technical"],
+    "linkedIn": "",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Prince Kumar",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "Profile%20picture%20-%20Prince%20kumar.png",
+    "department": ["outreach"],
+    "linkedIn": "www.linkedin.com/in/princeperspect",
+    "instagram": "https://www.instagram.com/princeperspect",
+    "x": "https://x.com/princeperspect"
+  },
+  {
+    "name": "Suraj Srivastava",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "IMG_0010%20-%20Suraj%20Srivastava.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/suraj-srivastava-301648280?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/suraj_0991?utm_source=qr&igsh=MXR2azE0aTFtNWwzNw==",
+    "x": ""
+  },
+  {
+    "name": "Aryan Aditya Bansal",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "photo%20-%20Aryan%20BANSAL.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/aryanadityabansal125",
+    "instagram": "https://instagram.com/aryanbansal39?igshid=OGQ5ZDc2ODk2ZA==",
+    "x": "https://x.com/its_Aryandutt?t=J7RBskGy1pZhzE5l6MQ3sg&s=09"
+  },
+  {
+    "name": "Sparsh Rathore",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "SAVE_20240416_242900%20-%2022CS054%20Sparsh%20Rathore.jpg",
+    "department": [],
+    "linkedIn": "Hack hogaya hai, kal prince ko bhejdunga",
+    "instagram": "instagram.com/i.sparshh",
+    "x": "https://x.com/rsparshh?s=08"
+  },
+  {
+    "name": "Harsh jha",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "IMG-20240415-WA0037(1)%20-%20Maansi%20Bharti.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/harsh-jha-72a6562a6/",
+    "instagram": "https://www.instagram.com/harsh_2004",
+    "x": "ig-harsh"
+  },
+  {
+    "name": "Prakhar Verma",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "WhatsApp%20Image%202024-04-15%20at%2002.09.35_3fe3b816%20-%20Prakhar%20Verma.jpg",
+    "department": "operations",
+    "linkedIn": "linkedin.com/in/prakharverma057",
+    "instagram": "https://www.instagram.com/_.prakhar_verma._/",
+    "x": "https://twitter.com/_prakhar_verma_"
+  },
+  {
+    "name": "Akanksha Bharti",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "1713119574893%20-%20Akansha.webp",
+    "department": [],
+    "linkedIn": "https://www.linkdin.com/akshu___1673?igsh=MTNqMG94dXVsd2Fhaw==",
+    "instagram": "https://www.instagram.com/akshu___1673?igsh=MTNqMG94dXVsd2Fhaw==",
+    "x": "Nf"
+  },
+  {
+    "name": "Ayush Kumar",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "Snapchat-1080468115%20-%20AYUSH%20KUMAR.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/ayush-kumar-21720124b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "_.ayush30._",
+    "x": ""
+  },
+  {
+    "name": "Palak Singh",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "Palak%20-%20Palak.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/palaksingh7",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Pranjal Vijayvargiy",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "IMG_20240405_171617_490%20-%20Pranjal%20Vijayvargiy.jpg",
+    "department": [],
+    "linkedIn": "Pranjal Vijayvargiy",
+    "instagram": "https://www.instagram.com/pranjal_vv",
+    "x": ""
+  },
+  {
+    "name": "Kirtika goyal",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "IMG_20240319_114744142%20-%20Kirtika%20Goyal.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/kirtika-goyal?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/_kirtikagoyal_?igsh=bmU4Y3V2OG0zYTlu",
+    "x": "https://x.com/kirtikastwt?t=Fe5NS-Iso7dYSAL-rarjQw&s=09"
+  },
+  {
+    "name": "Tathagat Tripathi",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "1000022397-01%20-%20Tathagat%20Tripathi.jpeg",
+    "department": [],
+    "linkedIn": "https://in.linkedin.com/in/tathagat-tripathi-837104206",
+    "instagram": "https://www.instagram.com/tathagat.arjit.tripathi?igsh=dGlhaG9zeG1jMTU3",
+    "x": ""
+  },
+  {
+    "name": "Sneha Gupta",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "SNEHA%20-%20SNEHA%20GUPTA.jpg",
+    "department": "content",
+    "linkedIn": "http://linkedin.com/in/sneha-gupta-1a866b258",
+    "instagram": "_snehagpt_",
+    "x": ""
+  },
+  {
+    "name": "Rishika Saxena",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "IMG_20240415_000420_789%20-%20Rishika%20Saxena.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/rishikasaxena24?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/rishika_saxena24?igsh=MWhzcXc2MHBqNmw5Mg==",
+    "x": "https://x.com/RishikaSaxena16?t=o5KcOl0j_dBjAnFxCpFtEw&s=09"
+  },
+  {
+    "name": "Ayushi Agrawal",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "Screenshot_2024-04-14-14-29-24-317_com.google.android.apps.photos%20-%20ayushi%20agrawal.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/ayushiagarwalj",
+    "instagram": "",
+    "x": "https://x.com/AyushiAgra88645"
+  },
+  {
+    "name": "Yashi Upadhyay",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "Snapchat-1232098221%20-%20Yashi%20Upadhyay.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/yashi-upadhyay?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/yxhiix?igsh=MTB0MHIwN3NqejN5Mg==",
+    "x": "https://x.com/Yashiupadhyay15?t=LJW04jrgMlzqWPgR3WrBSw&s=09"
+  },
+  {
+    "name": "Somiya Gupta",
+    "year": "2nd",
+    "position": "Executive Member",
+    "image": "20240212_115953%20-%20Somiya%20Gupta.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/somiyag07",
+    "instagram": "https://www.instagram.com/somiiyyaaaa?igsh=MWJsd2p4NnZtZHExcA==",
+    "x": "https://x.com/somiyaIT?t=S9F-Q5SARF62DK33mS2AkA&s=09"
+  },
+  {
+    "name": "Harsh pratap singh",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG_20240217_174011%20-%20Harsh%20pratap%20singh.jpg",
+    "department": "technical",
+    "linkedIn": "https://in.linkedin.com/in/harsh-pratap-ba23241a0",
+    "instagram": "https://www.instagram.com/harshh2.10?igsh=Z2o4M3cyczZ0cWhr",
+    "x": ""
+  },
+  {
+    "name": "Vyom sehgal",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "20240211_203944%20-%20Vyom%20Sehgal.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/vyom-sehgal-3b50332b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/sehgalvyom_?igsh=MXJ5NWJwMHh5NmVpNw==",
+    "x": ""
+  },
+  {
+    "name": "Prajjwal Singh",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG-20230928-WA0000%20-%20Prajjwal%20Singh.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/prajjwal-singh-a755122a5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/_prajjwal_singh?igsh=MThoZG94MmgyeHJhNg==",
+    "x": "https://x.com/SinghPrajj33243?t=ys1a4wQW9I0crer8qfQAUQ&s=08"
+  },
+  {
+    "name": "Ishaan Chaturvedi",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG-20240303-WA0011-removebg-preview%20-%20Ishaan%20Chaturvedi.png",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/ishaan-chaturvedi-693815290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/ishaan_chaturvedi__?igsh=MXZ5NXhoNWkzMnYwZQ==",
+    "x": ""
+  },
+  {
+    "name": "Jigyasa Rajput",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG-20231001-WA0000%20-%20Jigyasa%20Rajpoot.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/jigyasa-rajpoot-754936302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Jyoti Sharma",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "1712476300832%20-%20Jyoti%20Sharma.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/jyoti-sharma-04279728b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/_jyotisharma1240_?igsh=d3AyYmwwN3Z4ejlv",
+    "x": ""
+  },
+  {
+    "name": "Ankur Dwivedi",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "PSX_20240308_022219_edited%20-%20Ankur%20Dwivedi.jpg",
+    "department": [],
+    "linkedIn": "/ankur-dwivedi02",
+    "instagram": "@ankur_dwivedi.02",
+    "x": "@AnkurConnects"
+  },
+  {
+    "name": "Apurv banerjee",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "edcimg%20-%20Apurv%20Banerjee.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/apurvabanerjee?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Sudhanshu Sharma",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "DSC_0177%20-%20Sudhanshu%20Sharma.JPG",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/sudanshushrma",
+    "instagram": "https://www.instagram.com/sudanshushrma",
+    "x": "https://x.com/sudanshushrma"
+  },
+  {
+    "name": "Ananya Bhatt",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "Snapchat-29586178%20-%20ANANYA.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/ananya-bhatt-4a6b0a302?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "",
+    "x": ""
+  },
+  {
+    "name": "Namrata varshney",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG_20240414_163257%20-%20Namrata%20Varshney.jpg",
+    "department": [],
+    "linkedIn": "Namrata varshney",
+    "instagram": "namratavarshney22",
+    "x": ""
+  },
+  {
+    "name": "Vaishnavi",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG20240406132341%20-%20vaishnavi.jpg",
+    "department": [],
+    "linkedIn": "Vaishnavi Rajput",
+    "instagram": "vaishnaviiii02__",
+    "x": ""
+  },
+  {
+    "name": "Yash Agarwal",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG_20240414_151308%20-%2023CSE087_Yash%20Agarwal.jpg",
+    "department": [],
+    "linkedIn": "www.linkedin.com/in/yash-agarwal-b0709a2a5",
+    "instagram": "https://www.instagram.com/__yash__agarwal__77?igsh=c2gzMWZoZ2EyMDcw",
+    "x": "https://x.com/ProgrammerYash1?t=95UqA8slqbVPNk4LyJytHg&s=09"
+  },
+  {
+    "name": "Kuldeep",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG-20231128-WA0069%20-%20Kuldeep%20Sharma.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/kuldeep-sharma-a8982728b",
+    "instagram": "Kuldeep._sharma_09",
+    "x": ""
+  },
+  {
+    "name": "Rohit Sharma",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "pp-removebg-preview%20(2)%20-%20Rohit%20Sharma.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/irohitsharma21/",
+    "instagram": "https://www.instagram.com/i_rohitsharma_21/",
+    "x": "https://twitter.com/irohitsharma21"
+  },
+  {
+    "name": "Anirudh Singh Rawat",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "Screenshot_2024-04-14-12-03-02-98_6012fa4d4ddec268fc5c7112cbb265e7%20-%20Anirudh%20Rawat.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/anirudh-singh-rawat?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "",
+    "x": "https://x.com/anirudh_rawat_?t=J0xmTczSngV-pnl2U7MUqA&s=09"
+  },
+  {
+    "name": "Prateek Pathak",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "IMG_20240225_174033_902%20-%20Pratteek%20Pathak.jpg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/in/pratteek-pathak-4b9285204?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "instagram": "https://www.instagram.com/cardioid10?igsh=NzJheTZkdngxMmdw",
+    "x": "https://x.com/PathakPratteek?t=S-OSatKZFaJL0sY_yAqSIg&s=09"
+  },
+  {
+    "name": "Vernika Singhal",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "New%20Doc%2004-14-2024%2010.42%20-%20Vernika%20Singhal.jpg",
+    "department": [],
+    "linkedIn": "Vernika Singhal",
+    "instagram": "vernika_singhal_",
+    "x": ""
+  },
+  {
+    "name": "Navya Verma",
+    "year": "1st",
+    "position": "Executive Member",
+    "image": "photo1713070117%20-%20Navya%20Verma.jpeg",
+    "department": [],
+    "linkedIn": "https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit",
+    "instagram": "https://www.instagram.com/navzwithrizz?igsh=cXE2MGo4cjVoam8x",
+    "x": ""
+  }
+]

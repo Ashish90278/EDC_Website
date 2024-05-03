@@ -1,0 +1,32 @@
+[
+    {
+        "image":"Blog1.jpeg",
+        "topic":"Everthing about Tesla entering India",
+        "link": "https://www.linkedin.com/company/edc-jssate/"
+    },
+    {
+        "image":"Blog2.jpeg",
+        "topic":"The humongous scale of Apple",
+        "link": "https://www.linkedin.com/company/edc-jssate/"
+    },
+    {
+        "image":"Blog3.jpeg",
+        "topic":"How Decathlon is outcompeting giants",
+        "link": "https://www.linkedin.com/company/edc-jssate/"
+    },
+    {
+        "image":"Blog4.jpeg",
+        "topic":"India's own financial powerhouse: GIFT CITY",
+        "link": "https://www.linkedin.com/company/edc-jssate/"
+    },
+    {
+        "image":"Blog5.jpeg",
+        "topic":"How Yahoo! failed to buy Google(twice!)",
+        "link": "https://www.linkedin.com/company/edc-jssate/"
+    },
+    {
+        "image":"Blog6.jpeg",
+        "topic":"ZARA's Secret to Its Popularity in India",
+        "link": "https://www.linkedin.com/company/edc-jssate/"
+    }
+]

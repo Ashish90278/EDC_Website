@@ -11,25 +11,33 @@ export const MemberCard = (props) => {
     <>
       <div className="memberContainer">
         <div className="memberCard">
-          <div className="front" style={{backgroundImage: `url(${props.memberImage})`}}>
+          <div
+            className="front"
+            style={{
+              backgroundImage: `url('https://ik.imagekit.io/lbqkuzbjo/memberImages/${props.memberImage}')`,
+            }}
+          >
             <div className="designation">
               <h3>{props.designation}</h3>
               <p>{props.memberName}</p>
             </div>
           </div>
-          <div className="back" style={{backgroundImage: `url(${props.memberImage})`}}>
+          <div
+            className="back"
+            style={{
+              backgroundImage: `url('https://ik.imagekit.io/lbqkuzbjo/memberImages/${props.memberImage}')`,
+            }}
+          >
             <div className="overlay">
-              <IconContext.Provider value={{ className: "react-icons" }}>
-                <NavLink to="">
-                  <FaLinkedin />
-                </NavLink>
-                <NavLink to="#">
-                  <FaInstagram />
-                </NavLink>
-                <NavLink to="#">
-                  <RiTwitterXFill />
-                </NavLink>
-              </IconContext.Provider>
+              <NavLink to={props.linkedIn} target="_blank">
+                <FaLinkedin />
+              </NavLink>
+              <NavLink to={props.instagram} target="_blank">
+                <FaInstagram />
+              </NavLink>
+              <NavLink to={props.x} target="_blank">
+                <RiTwitterXFill />
+              </NavLink>
             </div>
           </div>
         </div>

@@ -240,7 +240,7 @@ export const Home = () => {
       </section>
 
       {/* <!-- Code for Our Prestigious Speakers --> */}
-      <section className="our_prestigious_speakers">
+      {/* <section className="our_prestigious_speakers">
         <div className="container">
           <div className="wwr_head" id="our_speakers">
             <hr />
@@ -281,7 +281,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <!-- Code for Our Clothing Partner --> */}
       <section className="our_clothing_partner">

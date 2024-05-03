@@ -57,9 +57,7 @@
   font-weight: 400;
 }
 
-.admin-registrations tr {
-  margin-top: 1rem;
-}
+
 .admin-registrations tr th {
   color: white;
   font-family: "Open-Sans", sans-serif;
@@ -91,14 +89,14 @@
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(6) {
-  width: 12%;
+  width: 15%;
   text-align: center;
   text-wrap: wrap;
-  margin-left: 3%;
+  margin-left: 2%;
 }
 
 .admin-registrations tr :nth-child(7) {
-  width: 12%;
+  width: 15%;
   text-align: center;
-  margin-left: 3%;
+  margin-left: 2%;
 }

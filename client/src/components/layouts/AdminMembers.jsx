@@ -5,7 +5,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import "./AdminMembers.css";
 import members from "../../pages/Json/Members.json";
 
-export const AdminMembers = () => {
+export  const AdminMembers = () => {
   // const [members, setMembers] = useState([]);
 
   // const getAllMembersData = async () => {
@@ -56,7 +56,7 @@ export const AdminMembers = () => {
                   <td>{curUser.department.map((ele) => ele + ", ")}</td>
                   <td>{curUser.image}</td>
 
-                  <Button text="Edit" class="edit button" onClick="edit()" />
+                  <Button text="Edit" class="edit button"  />
                   <Button
                     text="Delete"
                     class="delete button"

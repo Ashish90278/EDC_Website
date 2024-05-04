@@ -25,7 +25,7 @@ header > .container {
   height: 3.5rem;
 }
 nav {
-  /* border: 2px solid pink; */
+  border: 2px solid pink;
   width: 60%;
   height: 100%;
   display: flex;
@@ -80,9 +80,17 @@ nav {
     align-items: center;
     justify-content: space-between;
   }
+  nav p{
+    position: absolute;
+    /* display: flex; */
+    /* border: 2px solid red; */
+    bottom: 5%;
+    /* justify-items: baseline; */
+    /* align-self: center; */
+  }
   #version{
     display: block;
-    color: white;
+    color: grey;
   }
   header .nav-btn {
     display: flex;

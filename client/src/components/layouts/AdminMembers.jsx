@@ -72,6 +72,7 @@ export const AdminMembers = () => {
                   <td
                     onClick={() => {
                       setShowModal(true);
+                      console.log(index);
                     }}
                   >
                     <Button text="Edit" class="edit button" />

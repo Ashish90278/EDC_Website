@@ -4,8 +4,9 @@ import { Button } from "../Button.jsx";
 import { NavLink, Outlet } from "react-router-dom";
 import "./AdminMembers.css";
 import members from "../../pages/Json/Members.json";
+import { Modal } from "../Modal.jsx";
 
-export  const AdminMembers = () => {
+export const AdminMembers = () => {
   // const [members, setMembers] = useState([]);
 
   // const getAllMembersData = async () => {
@@ -25,6 +26,10 @@ export  const AdminMembers = () => {
   // useEffect(() => {
   //   getAllMembersData();
   // }, []);
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => setShowModal(false);
+  const memberTableHeadings = ["Member Name", "Year", "Position", "Image URL", "Department", "LinkedIn", "Instagram","X"];
 
   return (
     <>
@@ -33,12 +38,19 @@ export  const AdminMembers = () => {
         <div className="admin-members">
           <div>
             <h4>EDC Members</h4>
-            <Button text="Add" class="add button" />
+            <span
+              onClick={() => {
+                setShowModal(true);
+              }}
+            >
+              <Button text="Add" class="add button" />
+            </span>
           </div>
           {/* <hr /> */}
           {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
           <table>
             <tr>
+              <th>S No.</th>
               <th>Name</th>
               <th>Post</th>
               <th>Department</th>
@@ -51,28 +63,31 @@ export  const AdminMembers = () => {
             {members.map((curUser, index) => {
               return (
                 <tr key={index}>
+                  <td>{index+1}</td>
                   <td>{curUser.name}</td>
                   <td>{curUser.position}</td>
                   <td>{curUser.department.map((ele) => ele + ", ")}</td>
                   <td>{curUser.image}</td>
 
-                  <Button text="Edit" class="edit button"  />
-                  <Button
-                    text="Delete"
-                    class="delete button"
-                    // onClick={delete curUser._id}
-                  />
+                  <td
+                    onClick={() => {
+                      setShowModal(true);
+                    }}
+                  >
+                    <Button text="Edit" class="edit button" />
+                  </td>
+                  <td>
+                    <Button text="Delete" class="delete button" />
+                  </td>
                 </tr>
               );
             })}
           </table>
         </div>
-        {/* <div className="admin-users-heading">
-        </div>
-        <div className="admin-users">
-          
-        </div> */}
+
+        {showModal && <Modal onClick={closeModal} tableHeadings={memberTableHeadings} />}
       </section>
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

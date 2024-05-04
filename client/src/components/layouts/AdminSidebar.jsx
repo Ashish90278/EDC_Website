@@ -8,6 +8,11 @@ import { PiStudent } from "react-icons/pi";
 import { MdAdminPanelSettings } from "react-icons/md";
 
 export const AdminSidebar = () => {
+
+  const navActive = ({ isActive }) => {
+    return { backgroundColor: isActive ? "rgb(0, 195, 255" : "transparent", borderRadius: "0.5rem", color: isActive ? "#011627" : "white" };
+  };
+
   return (
     <>
       <aside className="sidebar">
@@ -21,25 +26,25 @@ export const AdminSidebar = () => {
           </div>
           <div className="aside-components">
             <ul>
-              <NavLink to="/admin/users">
+              <NavLink style={navActive} to="/admin/users">
                 <li>
                   <FaRegUser />
                   Users
                 </li>
               </NavLink>
-              <NavLink to="/admin/students-register">
+              <NavLink style={navActive} to="/admin/students-register">
                 <li>
                   <PiStudent />
                   Students Register
                 </li>
               </NavLink>
-              <NavLink to="/admin/members">
+              <NavLink style={navActive} to="/admin/members">
                 <li>
                   <FiUsers />
                   Members
                 </li>
               </NavLink>
-              <NavLink to="/admin/events">
+              <NavLink style={navActive} to="/admin/events">
                 <li>
                   <CiCalendarDate />
                   Events

@@ -3,9 +3,14 @@ import { AdminSidebar } from "./AdminSidebar.jsx";
 import { useEffect, useState } from "react";
 import { Button } from "../Button.jsx";
 import "./AdminStudentsRegister.css";
+import { Modal } from "../Modal.jsx";
 
 export const AdminStudentsRegister = () => {
   const [registrations, setRegistrations] = useState([]);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => setShowModal(false);
 
   const getAllRegistrationData = async () => {
     try {
@@ -27,6 +32,9 @@ export const AdminStudentsRegister = () => {
     getAllRegistrationData();
   }, []);
 
+  
+  const studentRegisterTableHeadings = ["Name", "Email", "Branch", "Year", "Addmission No."];
+
   return (
     <>
       <section className="admin-registrations-section">
@@ -34,11 +42,18 @@ export const AdminStudentsRegister = () => {
         <div className="admin-registrations">
           <div>
             <h4>Registered Students</h4>
-            <Button text="Add" class="add button" />
+            <span
+              onClick={() => {
+                setShowModal(true);
+              }}
+            >
+              <Button text="Add" class="add button" />
+            </span>
           </div>
 
           <table>
             <tr>
+              <th>S No.</th>
               <th>Name</th>
               <th>Email</th>
               <th>Branch</th>
@@ -51,26 +66,33 @@ export const AdminStudentsRegister = () => {
             {registrations.map((curUser, index) => {
               return (
                 <tr key={index}>
+                  <td>{index+1}</td>
                   <td>{curUser.username}</td>
                   <td>{curUser.email}</td>
                   <td>{curUser.branch}</td>
                   <td>{curUser.year}</td>
                   <td>{curUser.admissionNo}</td>
-                  <Button text="Edit" class="edit button" />
-
-                  <Button text="Delete" class="delete button" />
+                  <td
+                    onClick={() => {
+                      setShowModal(true);
+                    }}
+                  >
+                    <Button text="Edit" class="edit button" />
+                  </td>
+                  <td>
+                    <Button text="Delete" class="delete button" />
+                  </td>
                 </tr>
               );
             })}
           </table>
         </div>
-        {/* <div className="admin-users-heading">
-        </div>
-        <div className="admin-users">
-          
-        </div> */}
+
+        {showModal && <Modal onClick={closeModal} tableHeadings={studentRegisterTableHeadings} />}
+
       </section>
       {/* <Outlet/> */}
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

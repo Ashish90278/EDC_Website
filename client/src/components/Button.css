@@ -11,17 +11,18 @@
   color: white;
 }
 .add {
-    background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
+    background-color: #011627;
   color: rgb(255, 255, 255);
 }
 .edit {
-  background-color: white;
-  color: rgb(216,27,96);
+  background-color: #011627;
+  color: rgb(0,195,255);
   /* border: 1px solid rgb(216,27,96); */
 }
 .delete {
-  background: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
+  background: #011627;
   color: white;
+  border: 2px solid rgb(0,195,255);
 }
 .submit {
   background: rgb(0, 195, 255);
@@ -34,9 +35,9 @@
   transition: all ease-in-out 0.2s;
 }
 .add:hover {
-  background: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border: 1px solid black;
+  background: transparent;
+  color: #011627;
+  border: 2px solid #011627;
   transition: all ease-in-out 0.1s;
 }
 .edit:hover {
@@ -45,10 +46,10 @@
   transition: all ease-in-out 0.2s;
 }
 .delete:hover {
-  background: white;
-  color: rgb(216,27,96);
+  background: rgb(0, 195, 255);
+  color: rgb(255, 255, 255);
   transition: all ease-in-out 0.1s;
-  border: 1px solid rgb(216,27,96);
+  /* border: 1px solid rgb(216,27,96); */
 }
 .submit:hover {
   background: transparent;

@@ -1,5 +1,5 @@
 .sidebar {
-  height: 100vh;
+  height: 82vh;
   width: 23%;
   background-color: #011627;
   /* border-radius: 0.8rem;
@@ -7,12 +7,12 @@
     background-image: linear-gradient(195deg, #42424a 0%, #191919 100%); */
   /* position: -webkit-sticky; */
   position: sticky;
-  top: 0;
+  top: 20%;
 }
 
 .innerSidebar {
   border-radius: 0.8rem;
-  height: 94vh;
+  height: 75vh;
   margin: 3vh 5% 3vh 5%;
   /* background-image: linear-gradient(195deg, #42424a 0%, #191919 100%); */
   background-color: #011627;
@@ -30,6 +30,9 @@
   padding: 2rem 0rem;
 }
 .aside-heading h6 {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
   color: rgb(0, 195, 255);
   background-color: transparent;
   margin-bottom: 1rem;
@@ -43,7 +46,7 @@
   width: 100%;
   /* height: 0.1rem; */
   /* margin: 0rem -0.7rem 0rem -0.8rem; */
-  margin: 2rem 0rem;
+  margin: 1.3rem 0rem;
   border: 1px solid grey;
 }
 .aside-components ul {
@@ -52,12 +55,14 @@
   justify-content: center;
   /* border: 2px solid red; */
   padding: 2rem 1rem 0rem 1rem;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
 }
 
 .aside-components ul li {
-  border: 2px solid rgb(0, 195, 255);
-  padding: 1rem 0rem;
+  display: flex;
+  gap: 0.8rem;
+  /* border: 2px solid rgb(0, 195, 255); */
+  padding: 0.8rem 0rem;
   border-radius: 0.5rem;
   background: transparent;
   padding-left: 1rem;
@@ -70,7 +75,7 @@
 .aside-components ul li:hover {
   /* background: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
    */
-   background-color: rgb(0, 195, 255);
+   /* background-color: rgb(0, 195, 255); */
 }
 
 .aside-components ul a {

@@ -3,9 +3,15 @@ import { useEffect, useState } from "react";
 import { AdminSidebar } from "./AdminSidebar.jsx";
 import { Button } from "../Button.jsx";
 import "./AdminUsers.css";
+import { Modal } from "../Modal.jsx";
 
 export const AdminUsers = () => {
   const [users, setUsers] = useState([]);
+  
+  const [showModal, setShowModal] = useState(false);
+
+  const closeModal = () => setShowModal(false);
+
   // const edit = async() => {
   //   try {
 
@@ -26,21 +32,7 @@ export const AdminUsers = () => {
   //   }
   // }
 
-  // const openModal = () => {
-  //   const modal = document.getElementById("myModal");
-  //   console.log(modal);
-  //   modal.style.display = "block";
-  // };
-  // const closeModal = () => {
-  //   const modal = document.querySelector(".modal");
-
-  //   modal.style.display = "none";
-  // };
-  // window.onclick = function(event) {
-  //   if (event.target == modal) {
-  //     modal.style.display = "none";
-  //   }
-  // }
+  
 
   const getAllUsersData = async () => {
     try {
@@ -48,7 +40,6 @@ export const AdminUsers = () => {
         method: "GET",
       });
       const data = await response.json();
-      console.log(data);
       setUsers(data);
     } catch (error) {
       console.log(error);
@@ -59,6 +50,8 @@ export const AdminUsers = () => {
     getAllUsersData();
   }, []);
 
+  const usersTableHeadings = ["Username", "Email", "Phone", "isAdmin"]
+
   return (
     <>
       <section className="admin-users-section">
@@ -66,12 +59,19 @@ export const AdminUsers = () => {
         <div className="admin-users">
           <div>
             <h4>All Users</h4>
-            <Button text="Add" class="add button" />
+            {/* <span
+              onClick={() => {
+                setShowModal(true);
+              }}
+            >
+              <Button text="Add" class="add button" />
+            </span> */}
           </div>
           {/* <hr /> */}
           {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
           <table>
             <tr>
+              <th>S No.</th>
               <th>Username</th>
               <th>Email</th>
               <th>Phone</th>
@@ -84,29 +84,31 @@ export const AdminUsers = () => {
             {users.map((curUser, index) => {
               return (
                 <tr key={index}>
+                  <td>{index+1}</td>
                   <td>{curUser.username}</td>
                   <td>{curUser.email}</td>
                   <td>{curUser.phone}</td>
                   <td>{curUser.isAdmin}</td>
 
-                  <Button text="Edit" class="edit button" onClick="edit()" />
-                  <Button
-                    text="Delete"
-                    class="delete button"
-                    onClick={delete curUser._id}
-                  />
+                  <td
+                    onClick={() => {
+                      setShowModal(true);
+                    }}
+                  >
+                    <Button text="Edit" class="edit button" />
+                  </td>
+                  <td>
+                    <Button text="Delete" class="delete button" />
+                  </td>
                 </tr>
                 // <hr />
               );
             })}
           </table>
         </div>
-        {/* <div className="admin-users-heading">
-        </div>
-        <div className="admin-users">
-          
-        </div> */}
+        {showModal && <Modal onClick={closeModal} tableHeadings={usersTableHeadings} />}
       </section>
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

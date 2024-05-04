@@ -24,7 +24,7 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .admin-members div {
@@ -34,16 +34,24 @@
   position: absolute;
   top: -1.5rem;
   justify-content: space-between;
+  align-items: center;
   padding: 0.8rem 0.8rem 0.8rem 1.2rem;
   border-radius: 0.5rem;
   /* background-image: linear-gradient(195deg, #ec407a 0%, #d81b60 100%);
    */
+   /* right: 0; */
   background-color: rgb(0, 195, 255);
   /* border: 2px solid red; */
 }
+
 .admin-members h4 {
-  color: white;
+  color: #011627;
+  font-weight: 800;
 }
+.admin-members span{
+  width: auto;
+}
+
 
 .admin-members table {
   width: 100%;
@@ -57,7 +65,7 @@
   align-items: center;
   margin-top: 1rem;
   font-family: "Open-Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   color:white;  
   /* width: 11%; */
   /* border: 2px solid rgb(16, 164, 41); */
@@ -73,33 +81,40 @@
 .admin-members tr td{
   font-size: 0.9rem;
   /* text-align: center; */
+    /* border: 2px solid rgb(16, 164, 41); */
+}
+.admin-members tr td :nth-child(1){
+  width: 100%;
 }
 
 .admin-members tr :nth-child(1) {
-  width: 15%;
+  width: 5%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-members tr :nth-child(2) {
-  width: 17%;
+  width: 15%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-members tr :nth-child(3) {
-  width: 18%;
+  width: 17%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-members tr :nth-child(4) {
-  width: 22%;
+  width: 19%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-members tr :nth-child(5) {
-  width: 12%;
-  margin-left: 2%;
+  width: 20%;
+  text-align: center;
+  text-wrap: wrap;
 }
 .admin-members tr :nth-child(6) {
   width: 12%;
-  margin-left: 2%;
+}
+.admin-members tr :nth-child(7) {
+  width: 12%;
 }

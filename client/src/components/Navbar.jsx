@@ -65,6 +65,7 @@ export const Navbar = () => {
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
               <GoArrowRight />
             </button>
+            <p id="version">Version 1.0.0</p>
           </nav>
           <button className="nav-btn" onClick={showNavbar}>
             <FaBars />

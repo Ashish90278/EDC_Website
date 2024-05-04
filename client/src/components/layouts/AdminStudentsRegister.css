@@ -41,7 +41,12 @@
 }
 
 .admin-registrations h4 {
-  color: white;
+  color: #011627;
+  font-weight: 800;
+}
+
+.admin-registrations span{
+  width: auto;
 }
 
 .admin-registrations table {
@@ -54,7 +59,8 @@
   align-items: center;
   margin-top: 1rem;
   font-family: "Open-Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
+  color: white;
 }
 
 
@@ -63,18 +69,23 @@
   font-family: "Open-Sans", sans-serif;
   font-weight: 600;
 }
+.admin-registrations tr td :nth-child(1){
+  width: 100%;
+}
+
+
 .admin-registrations tr :nth-child(1) {
-  width: 13%;
+  width: 5%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(2) {
-  width: 23%;
+  width: 14%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(3) {
-  width: 10%;
+  width: 25%;
   text-align: center;
   text-wrap: wrap;
 }
@@ -84,7 +95,7 @@
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(5) {
-  width: 15%;
+  width: 9%;
   text-align: center;
   text-wrap: wrap;
 }
@@ -92,11 +103,16 @@
   width: 15%;
   text-align: center;
   text-wrap: wrap;
-  margin-left: 2%;
+}
+.admin-registrations tr :nth-child(7) {
+  width: 12%;
+  text-align: center;
+  text-wrap: wrap;
+  /* margin-left: 2%; */
 }
 
-.admin-registrations tr :nth-child(7) {
-  width: 15%;
+.admin-registrations tr :nth-child(8) {
+  width: 12%;
   text-align: center;
-  margin-left: 2%;
+  /* margin-left: 2%; */
 }

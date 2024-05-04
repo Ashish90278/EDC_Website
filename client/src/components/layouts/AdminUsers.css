@@ -31,6 +31,7 @@
   display: flex;
   align-items: center;
   width: 95%;
+  height: 4.5rem;
   position: absolute;
   top: -1.5rem;
   justify-content: space-between;
@@ -40,7 +41,11 @@
   background-color: rgb(0,195,255);
 }
 .admin-users h4 {
-  color: white;
+  color: #011627;
+  font-weight: 800;
+}
+.admin-users span{
+  width: auto;
 }
 
 .admin-users table {
@@ -59,39 +64,47 @@
   align-items: center;
   margin-top: 1rem;
   font-family: "Open-Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 100;
+  color: white;  
 }
-
+.admin-users tr td :nth-child(1){
+  width: 100%;
+}
 .admin-users tr :nth-child(1) {
-  width: 18%;
+  width: 5%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-users tr :nth-child(2) {
-  width: 28%;
-  text-align: center;
-  text-wrap: wrap;
-}
-.admin-users tr :nth-child(3) {
   width: 18%;
   text-align: center;
   text-wrap: wrap;
 }
+.admin-users tr :nth-child(3) {
+  width: 28%;
+  text-align: center;
+  text-wrap: wrap;
+}
 .admin-users tr :nth-child(4) {
-  width: 8%;
+  width: 17%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-users tr :nth-child(5) {
-  width: 11%;
+  width: 8%;
   text-align: center;
   text-wrap: wrap;
-  margin-left: 3%;
+}
+.admin-users tr :nth-child(6) {
+  width: 12%;
+  text-align: center;
+  text-wrap: wrap;
+  /* margin-left: 3%; */
 }
 
-.admin-users tr :nth-child(6) {
-  width: 11%;
+.admin-users tr :nth-child(7) {
+  width: 12%;
   text-align: center;
   text-wrap: wrap;
-  margin-left: 3%;
+  /* margin-left: 3%; */
 }

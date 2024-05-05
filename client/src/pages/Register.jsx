@@ -41,6 +41,7 @@ export const Register = () => {
           year: "",
           admissionNo: "",
         });
+        alert("Thank You for Registering");
       }
       if (response.status === 400) {
         setUserRegistrationData({
@@ -69,37 +70,6 @@ export const Register = () => {
             eventVenue="Multi-Purpose Hall"
             eventPageLink="/events/mr.sandeepjain"
           ></EventCard>
-          {/* <div className="card">
-            <div className="card-body">
-              <img src="../imgs/EDC_GFG.png" alt="" />
-              <h4>
-                Speaker session with Mr. Sandeep Jain ( Founder of Geeks for
-                Geeks )
-              </h4>
-              <div className="card-info">
-                <ul>
-                  <li>
-                    <div>
-                      <img src="../imgs/calender.png" alt="" />
-                      <p>Friday, 10 Nov 2023</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <img src="../imgs/clock.png" alt="" />
-                      <p>03:45 PM - 04:45 PM</p>
-                    </div>
-                  </li>
-                  <li>
-                    <div>
-                      <img src="../imgs/location.png" alt="" />
-                      <p>Multi-Purpose Hall</p>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div> */}
         </div>
         <div className="register-container">
           <h2>Register</h2>
@@ -143,7 +113,7 @@ export const Register = () => {
               </div>
               <div className="input-data">
                 <input
-                  type="number"
+                  type="text"
                   name="year"
                   required
                   autoComplete="off"

@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   width: 95%;
+  height: 4.5rem;
   position: absolute;
   top: -1.5rem;
   justify-content: space-between;
@@ -85,7 +86,7 @@
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(3) {
-  width: 25%;
+  width: 27%;
   text-align: center;
   text-wrap: wrap;
 }
@@ -100,12 +101,12 @@
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(6) {
-  width: 15%;
+  width: 17%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-registrations tr :nth-child(7) {
-  width: 12%;
+  width: 5%;
   text-align: center;
   text-wrap: wrap;
   /* margin-left: 2%; */
@@ -114,5 +115,5 @@
 .admin-registrations tr :nth-child(8) {
   width: 12%;
   text-align: center;
-  /* margin-left: 2%; */
+  margin-left: 3%;
 }

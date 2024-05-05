@@ -14,6 +14,33 @@ const getAllUsers = async (req, res) => {
     return res.status(500).json(error);
   }
 };
+
+const deleteUser = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await User.deleteOne({ _id: id });
+    return res.status(200).json({ message: "User Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const updateUser = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedUserData = req.body;
+    const updatedData = await User.updateOne(
+      { _id: id },
+      {
+        $set: updatedUserData,
+      }
+    );
+    return res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const getRegisterStudents = async (req, res) => {
   try {
     const students = await registerStudents.find();
@@ -26,14 +53,89 @@ const getRegisterStudents = async (req, res) => {
   }
 };
 
+const deleteRegistration = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await registerStudents.deleteOne({ _id: id });
+    return res
+      .status(200)
+      .json({ message: "Registration Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const updateRegistration = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedUserData = req.body;
+    const updatedData = await registerStudents.updateOne(
+      { _id: id },
+      {
+        $set: updatedUserData,
+      }
+    );
+    return res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 const getAllMembers = async (req, res) => {
   try {
     const members = await Member.find();
 
     if (!members || members.length === 0) {
-        return res.status(404).json({ message: "No members Found" });
+      return res.status(404).json({ message: "No members Found" });
+    }
+    return res.status(200).json(members);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const addMember = async (req, res) => {
+  try {
+    const { name, year, post, department, image, linkedIn, instagram, x } =
+      req.body;
+    await Member.create({
+      name,
+      year,
+      post,
+      department,
+      image,
+      linkedIn,
+      instagram,
+      x,
+    });
+    return res.status(200).json(req.body);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteMember = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Member.deleteOne({ _id: id });
+    return res.status(200).json({ message: "Member Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+const updateMember = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedUserData = req.body;
+    const updatedData = await Member.updateOne(
+      { _id: id },
+      {
+        $set: updatedUserData,
       }
-      return res.status(200).json(members);
+    );
+    return res.status(200).json(updatedData);
   } catch (error) {
     console.log(error);
   }
@@ -44,13 +146,63 @@ const getAllEvents = async (req, res) => {
     const events = await Event.find();
 
     if (!events || events.length === 0) {
-        return res.status(404).json({ message: "No events Found" });
-      }
+      return res.status(404).json({ message: "No events Found" });
+    }
     return res.status(200).json(events);
-
   } catch (error) {
     console.log(error);
   }
 };
 
-export { getAllUsers, getRegisterStudents, getAllMembers, getAllEvents };
+const addEvent = async (req, res) => {
+  try {
+    const { eventName, description, date, time, venue } = req.body;
+    await Event.create({ eventName, description, date, time, venue });
+    return res.status(200).json(req.body);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteEvent = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Event.deleteOne({ _id: id });
+    return res.status(200).json({ message: "Event Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const updateEvent = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedUserData = req.body;
+    const updatedData = await Event.updateOne(
+      { _id: id },
+      {
+        $set: updatedUserData,
+      }
+    );
+    return res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export {
+  getAllUsers,
+  getRegisterStudents,
+  getAllMembers,
+  getAllEvents,
+  deleteUser,
+  deleteRegistration,
+  addMember,
+  deleteMember,
+  addEvent,
+  deleteEvent,
+  updateUser,
+  updateRegistration,
+  updateMember,
+  updateEvent,
+};

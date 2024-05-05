@@ -7,7 +7,8 @@ import { Modal } from "../Modal.jsx";
 
 export const AdminStudentsRegister = () => {
   const [registrations, setRegistrations] = useState([]);
-
+  const [userEdit, setUserEdit] = useState({});
+  const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => setShowModal(false);
@@ -28,12 +29,33 @@ export const AdminStudentsRegister = () => {
     }
   };
 
+  const deleteRegistration = async (id) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8000/api/admin/registrations/delete/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      console.log("hii");
+      if (response.ok) {
+        getAllRegistrationData();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     getAllRegistrationData();
   }, []);
 
-  
-  const studentRegisterTableHeadings = ["Name", "Email", "Branch", "Year", "Addmission No."];
+  const studentRegisterTableHeadings = [
+    "username",
+    "email",
+    "branch",
+    "year",
+    "admissionNo",
+  ];
 
   return (
     <>
@@ -47,7 +69,7 @@ export const AdminStudentsRegister = () => {
                 setShowModal(true);
               }}
             >
-              <Button text="Add" class="add button" />
+              {/* <Button text="Add" class="add button" /> */}
             </span>
           </div>
 
@@ -63,36 +85,49 @@ export const AdminStudentsRegister = () => {
               <th>Delete</th>
             </tr>
             <hr />
-            {registrations.map((curUser, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index+1}</td>
-                  <td>{curUser.username}</td>
-                  <td>{curUser.email}</td>
-                  <td>{curUser.branch}</td>
-                  <td>{curUser.year}</td>
-                  <td>{curUser.admissionNo}</td>
-                  <td
-                    onClick={() => {
-                      setShowModal(true);
-                    }}
-                  >
-                    <Button text="Edit" class="edit button" />
-                  </td>
-                  <td>
-                    <Button text="Delete" class="delete button" />
-                  </td>
-                </tr>
-              );
-            })}
+            {!registrations[0] ? (
+              <article className="message">No Register Students Found</article>
+            ) : (
+              registrations.map((curUser, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{curUser.username}</td>
+                    <td>{curUser.email}</td>
+                    <td>{curUser.branch}</td>
+                    <td>{curUser.year}</td>
+                    <td>{curUser.admissionNo}</td>
+                    <td
+                      onClick={() => {
+                        setShowModal(true);
+                        setUserEdit(curUser);
+                        setButtonClick("edit");
+                      }}
+                    >
+                      <Button text="Edit" class="edit button" />
+                    </td>
+                    <td onClick={() => deleteRegistration(curUser._id)}>
+                      <Button text="Delete" class="delete button" />
+                    </td>
+                  </tr>
+                );
+              })
+            )}
           </table>
         </div>
 
-        {showModal && <Modal onClick={closeModal} tableHeadings={studentRegisterTableHeadings} />}
-
+        {showModal && (
+          <Modal
+            onClick={closeModal}
+            tableHeadings={studentRegisterTableHeadings}
+            page="registrations"
+            data={userEdit}
+            button={buttonClick}
+          />
+        )}
       </section>
       {/* <Outlet/> */}
-      <hr style={{border:"1px solid grey" }}/>
+      <hr style={{ border: "1px solid grey" }} />
     </>
   );
 };

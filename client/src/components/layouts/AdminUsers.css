@@ -91,12 +91,12 @@
   text-wrap: wrap;
 }
 .admin-users tr :nth-child(5) {
-  width: 8%;
+  width: 12%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-users tr :nth-child(6) {
-  width: 12%;
+  width: 5%;
   text-align: center;
   text-wrap: wrap;
   /* margin-left: 3%; */
@@ -106,5 +106,5 @@
   width: 12%;
   text-align: center;
   text-wrap: wrap;
-  /* margin-left: 3%; */
+  margin-left: 3%;
 }

@@ -14,7 +14,7 @@ const registrationSchema = new mongoose.Schema({
         require: true
     },
     year: {
-        type: Number,
+        type: String,
         require: true
     },
     admissionNo:  {

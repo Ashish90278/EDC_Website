@@ -1,69 +1,86 @@
-.login-container{
-    display: flex;
-    flex-direction: column;
-    height: 20rem;
-    margin: 5% 25%;
-    align-items: center;
-    justify-content: space-evenly;
-    box-shadow: 0.2px 0.2px 3px whitesmoke;
-    background-color: rgba(37, 104, 132, 1);
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 2rem;
-    color:rgb(255, 255, 255);
+.login-container {
+  display: flex;
+  flex-direction: column;
+  height: 25rem;
+  margin: 5% 30%;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  margin-top: 110px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-.login-container h3{
-    margin:3rem 0rem;
-    /* border: 2px solid black; */
+.login-container h3 {
+  color: rgb(0, 195, 255);
+  margin-top: 2rem;
 }
 
-
-.login-container form{
-    display: flex;
-    flex-direction: column;
-    height: 45vh;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: -15px;
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  height: 45vh;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -15px;
 }
 
-.login-container input{
-    outline: none;
-    padding: 3%;
-    margin: 0.1rem 0rem;
-    width: 25vw;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 2rem;
+.login-container input {
+  outline: none;
+  padding: 3%;
+  margin: 0.7rem 0rem;
+  width: 25vw;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  border: 1px solid rgb(0, 195, 255);
+  border-radius: 0.3rem;
 }
 
-.login-container form .btnSection{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items:center;
-    /* border: 2px solid rgb(137, 32, 32); */
+.login-container form .btnSection {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px solid rgb(137, 32, 32); */
 }
 
-.login-container form .btnSection p{
-    font-size: small;
-    margin-right: 3px;
-
+.login-container form .btnSection p {
+  font-size: small;
+  margin-right: 5px;
 }
 
-.login-container form .btnSection a{
-    font-size: medium;
-    text-decoration: none;
-    color: rgba(199, 73, 58, 1);
+.login-container form .btnSection a {
+  font-size: medium;
+  text-decoration: none;
+  color: rgba(0, 195, 255, 1);
 }
 
-.login-container form button{
-    padding: 2%;
-    width: 30%;
-    margin-top: 5px;
-    background-color: rgba(199, 73, 58, 1);
-    color: rgb(255, 255, 255);
-    border-radius: 0.7rem;
-    cursor: pointer;
-    border:0.1rem solid transparent;
+.login-container form button {
+    width: 45%;
+    height: 2.7rem;
+    padding: 0;
+    font-size: 1rem;
 }
+
+@media screen and (max-width: 900px) {
+    .login-container {
+      height: 30rem;
+      /* width: 100%; */
+      margin: 115px 30px 30px 30px;
+    }
+    form div{
+        width: 100%;
+    }
+  
+    .login-container form input {
+      width: 70%;
+      /* padding: 5%; */
+    }
+    .login-container form button {
+      width: 35%;
+    }
+  }

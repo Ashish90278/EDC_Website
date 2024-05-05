@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Login.css";
+import { Button } from "../components/Button.jsx";
+
 
 export const Login = () => {
   const [user, setUser] = useState({
@@ -19,6 +21,7 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("hello");
+    navigate("/");
   };
 
   return (
@@ -51,7 +54,7 @@ export const Login = () => {
                 onChange={handleInput}
               />
             </div>
-            <button type="submit">Login</button>
+            <Button text="Login" class="submit button" />
             <div className="btnSection">
               <p>Sign Up as Admin</p>
               <NavLink to="/signup">SignUp</NavLink>
@@ -59,6 +62,7 @@ export const Login = () => {
           </form>
         </div>
       </div>
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

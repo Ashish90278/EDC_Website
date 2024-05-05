@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
+import client from "../../package.json";
 
 import "./Navbar.css";
 
@@ -65,7 +66,7 @@ export const Navbar = () => {
             <button className="nav-btn nav-close-btn" onClick={showNavbar}>
               <GoArrowRight />
             </button>
-            <p id="version">Version 1.1.0</p>
+            <p id="version">Version {client.version}</p>
           </nav>
           <button className="nav-btn" onClick={showNavbar}>
             <FaBars />

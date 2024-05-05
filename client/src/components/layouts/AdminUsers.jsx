@@ -7,7 +7,8 @@ import { Modal } from "../Modal.jsx";
 
 export const AdminUsers = () => {
   const [users, setUsers] = useState([]);
-  
+  const [userEdit, setUserEdit] = useState({});
+  const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
 
   const closeModal = () => setShowModal(false);
@@ -32,8 +33,6 @@ export const AdminUsers = () => {
   //   }
   // }
 
-  
-
   const getAllUsersData = async () => {
     try {
       const response = await fetch("http://localhost:8000/api/admin/users", {
@@ -46,11 +45,26 @@ export const AdminUsers = () => {
     }
   };
 
+  const deleteUser = async (id) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8000/api/admin/users/delete/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (response.ok) {
+        getAllUsersData();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
     getAllUsersData();
   }, []);
 
-  const usersTableHeadings = ["Username", "Email", "Phone", "isAdmin"]
+  const usersTableHeadings = ["username", "email", "phone", "isAdmin"];
 
   return (
     <>
@@ -59,13 +73,6 @@ export const AdminUsers = () => {
         <div className="admin-users">
           <div>
             <h4>All Users</h4>
-            {/* <span
-              onClick={() => {
-                setShowModal(true);
-              }}
-            >
-              <Button text="Add" class="add button" />
-            </span> */}
           </div>
           {/* <hr /> */}
           {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
@@ -81,34 +88,48 @@ export const AdminUsers = () => {
             </tr>
             <hr />
 
-            {users.map((curUser, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index+1}</td>
-                  <td>{curUser.username}</td>
-                  <td>{curUser.email}</td>
-                  <td>{curUser.phone}</td>
-                  <td>{curUser.isAdmin}</td>
+            {!users[0] ? (
+              <article className="message">No User Found</article>
+            ) : (
+              users.map((curUser, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{curUser.username}</td>
+                    <td>{curUser.email}</td>
+                    <td>{curUser.phone}</td>
+                    <td>{curUser.isAdmin ? "Admin" : "--"}</td>
 
-                  <td
-                    onClick={() => {
-                      setShowModal(true);
-                    }}
-                  >
-                    <Button text="Edit" class="edit button" />
-                  </td>
-                  <td>
-                    <Button text="Delete" class="delete button" />
-                  </td>
-                </tr>
-                // <hr />
-              );
-            })}
+                    <td
+                      onClick={() => {
+                        setUserEdit(curUser);
+                        setButtonClick("edit");
+                        setShowModal(true);
+                      }}
+                    >
+                      <Button text="Edit" class="edit button" />
+                    </td>
+                    <td onClick={() => deleteUser(curUser._id)}>
+                      <Button text="Delete" class="delete button" />
+                    </td>
+                  </tr>
+                  // <hr />
+                );
+              })
+            )}
           </table>
         </div>
-        {showModal && <Modal onClick={closeModal} tableHeadings={usersTableHeadings} />}
+        {showModal && (
+          <Modal
+            onClick={closeModal}
+            tableHeadings={usersTableHeadings}
+            page="users"
+            data={userEdit}
+            button={buttonClick}
+          />
+        )}
       </section>
-      <hr style={{border:"1px solid grey" }}/>
+      <hr style={{ border: "1px solid grey" }} />
     </>
   );
 };

@@ -7,10 +7,14 @@ import { Modal } from "../Modal.jsx";
 
 export const AdminEvents = () => {
   const [events, setEvents] = useState([]);
-
+  const [userEdit, setUserEdit] = useState({});
+  const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => setShowModal(false);
+  const closeModal = () => {
+    setShowModal(false);
+    getAllEventsData();
+  };
 
   const getAllEventsData = async () => {
     try {
@@ -20,7 +24,22 @@ export const AdminEvents = () => {
 
       const data = await response.json();
       setEvents(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  const deleteEvent = async (id) => {
+    try {
+      const response = await fetch(
+        `http://localhost:8000/api/admin/events/delete/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (response.ok) {
+        getAllEventsData();
+      }
     } catch (error) {
       console.log(error);
     }
@@ -30,8 +49,13 @@ export const AdminEvents = () => {
     getAllEventsData();
   }, []);
 
-
-  const eventsTableHeadings = ["Event Name", "Description", "Date", "Time", "Venue"];
+  const eventsTableHeadings = [
+    "eventName",
+    "description",
+    "date",
+    "time",
+    "venue",
+  ];
 
   return (
     <>
@@ -43,6 +67,7 @@ export const AdminEvents = () => {
             <span
               onClick={() => {
                 setShowModal(true);
+                setButtonClick("add");
               }}
             >
               <Button text="Add" class="add button" />
@@ -62,35 +87,48 @@ export const AdminEvents = () => {
               <th>Delete</th>
             </tr>
             <hr />
+            {!events[0] ? (
+              <article className="message">No Event Found</article>
+            ) : (
+              events.map((curUser, index) => {
+                return (
+                  <tr key={index}>
+                    <td>{index + 1}</td>
+                    <td>{curUser.eventName}</td>
+                    <td>{curUser.description}</td>
+                    <td>{curUser.date}</td>
+                    <td>{curUser.time}</td>
+                    <td>{curUser.venue}</td>
 
-            {/* {events.map((curEvent, index) => {
-              return (
-                <tr key={index}>
-                  <td>{index+1}</td>
-                  <td>{curEvent.eventName}</td>
-                  <td>{curEvent.description}</td>
-                  <td>{curEvent.date}</td>
-                  <td>{curEvent.time}</td>
-                  <td>{curEvent.venue}</td>
-
-                  <td
-                    onClick={() => {
-                      setShowModal(true);
-                    }}
-                  >
-                    <Button text="Edit" class="edit button" />
-                  </td>
-                  <td>
-                    <Button text="Delete" class="delete button" />
-                  </td>
-                </tr>
-              );
-            })} */}
+                    <td
+                      onClick={() => {
+                        setShowModal(true);
+                        setUserEdit(curUser);
+                        setButtonClick("edit");
+                      }}
+                    >
+                      <Button text="Edit" class="edit button" />
+                    </td>
+                    <td onClick={() => deleteEvent(curUser._id)}>
+                      <Button text="Delete" class="delete button" />
+                    </td>
+                  </tr>
+                );
+              })
+            )}
           </table>
         </div>
-        {showModal && <Modal onClick={closeModal} tableHeadings={eventsTableHeadings} />}
+        {showModal && (
+          <Modal
+            onClick={closeModal}
+            tableHeadings={eventsTableHeadings}
+            page="events"
+            data={userEdit}
+            button={buttonClick}
+          />
+        )}
       </section>
-      <hr style={{border:"1px solid grey" }}/>
+      <hr style={{ border: "1px solid grey" }} />
     </>
   );
 };

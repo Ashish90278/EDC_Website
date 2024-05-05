@@ -5,7 +5,18 @@ const memberSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  year: {
+    type: String,
+    require: true,
+  },
   post: {
+    type: String,
+    require: true,
+  },
+  department: {
+    type: String
+  },
+  image: {
     type: String,
     require: true,
   },
@@ -13,11 +24,11 @@ const memberSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  twitter: {
+  instagram: {
     type: String,
     require: true,
   },
-  instagram: {
+  x: {
     type: String,
     require: true,
   },

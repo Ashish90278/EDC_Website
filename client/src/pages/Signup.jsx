@@ -1,6 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Signup.css";
+import { Button } from "../components/Button.jsx";
 
 export const Signup = () => {
 
@@ -54,7 +55,6 @@ export const Signup = () => {
       }
     } catch (error) {
       console.log("signup", error)
-      // console.error("signup", error)
     }
   };
 
@@ -88,7 +88,7 @@ export const Signup = () => {
             </div>
             <div>
               <input
-                type="number"
+                type="string"
                 name="phone"
                 placeholder="Enter your Phone No."
                 required
@@ -108,7 +108,7 @@ export const Signup = () => {
                 onChange={handleInput}
               />
             </div>
-            <button type="submit">Sign Up</button>
+            <Button text="Sign Up" class="submit button" />
             <div className="btnSection">
               <p>If Account already exists</p>
               <NavLink to="/login">Login</NavLink>
@@ -116,6 +116,7 @@ export const Signup = () => {
           </form>
         </div>
       </div>
+      <hr style={{border:"1px solid grey" }}/>
     </>
   );
 };

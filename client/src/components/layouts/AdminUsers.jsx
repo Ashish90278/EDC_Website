@@ -41,7 +41,7 @@ export const AdminUsers = () => {
         method: "GET",
       });
       console.log("hello");
-      const data = await response.json();
+      const data = await response;
       console.log(data);
       setUsers(data);
     } catch (error) {

@@ -39,7 +39,7 @@ export const Modal = (props) => {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/admin/${page}/add`,
+        `https://edc-website-server-api.onrender.com/api/admin/${page}/add`,
         {
           method: "POST",
           headers: {
@@ -61,7 +61,7 @@ export const Modal = (props) => {
 
   const handleUpdate = async() => {
     try {
-      const response = await fetch(`http://localhost:8000/api/admin/${page}/update/${data._id}`, {
+      const response = await fetch(`https://edc-website-server-api.onrender.com/api/admin/${page}/update/${data._id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

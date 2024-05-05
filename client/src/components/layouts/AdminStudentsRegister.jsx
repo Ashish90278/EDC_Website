@@ -16,7 +16,7 @@ export const AdminStudentsRegister = () => {
   const getAllRegistrationData = async () => {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/admin/registrations",
+        "https://edc-website-server-api.onrender.com/api/admin/registrations",
         {
           method: "GET",
         }
@@ -32,7 +32,7 @@ export const AdminStudentsRegister = () => {
   const deleteRegistration = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/admin/registrations/delete/${id}`,
+        `https://edc-website-server-api.onrender.com/api/admin/registrations/delete/${id}`,
         {
           method: "DELETE",
         }

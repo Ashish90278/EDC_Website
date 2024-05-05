@@ -23,7 +23,7 @@ export const AdminUsers = () => {
 
   // const delete = async(id) => {
   //   try {
-  //     const response = await fetch("http://localhost:8000/api/admin/users", {
+  //     const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
   //       method: "DELETE",
   //     });
   //     console.log(id);
@@ -35,7 +35,7 @@ export const AdminUsers = () => {
 
   const getAllUsersData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/admin/users", {
+      const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
         method: "GET",
       });
       const data = await response.json();
@@ -48,7 +48,7 @@ export const AdminUsers = () => {
   const deleteUser = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/admin/users/delete/${id}`,
+        `https://edc-website-server-api.onrender.com/api/admin/users/delete/${id}`,
         {
           method: "DELETE",
         }

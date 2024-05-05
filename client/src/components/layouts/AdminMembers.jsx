@@ -11,7 +11,7 @@ export const AdminMembers = () => {
   const [buttonClick, setButtonClick] = useState("");
   const getAllMembersData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/admin/members", {
+      const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/members", {
         method: "GET",
       });
 
@@ -25,7 +25,7 @@ export const AdminMembers = () => {
   const deleteMember = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/admin/members/delete/${id}`,
+        `https://edc-website-server-api.onrender.com/api/admin/members/delete/${id}`,
         {
           method: "DELETE",
         }

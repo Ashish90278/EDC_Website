@@ -18,7 +18,7 @@ export const AdminEvents = () => {
 
   const getAllEventsData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/admin/events", {
+      const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/events", {
         method: "GET",
       });
 
@@ -32,7 +32,7 @@ export const AdminEvents = () => {
   const deleteEvent = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/admin/events/delete/${id}`,
+        `https://edc-website-server-api.onrender.com/api/admin/events/delete/${id}`,
         {
           method: "DELETE",
         }

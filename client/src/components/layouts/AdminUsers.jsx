@@ -37,7 +37,7 @@ export const AdminUsers = () => {
   const getAllUsersData = async () => {
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
-        mode: 'no-cors',
+        mode: 'cors',
         method: "GET",
       });
       console.log("hello");

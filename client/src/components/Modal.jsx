@@ -27,10 +27,22 @@ export const Modal = (props) => {
   const handleModalData = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    setUserData({
-      ...userData,
-      [name]: value,
-    });
+    if(name==="department"){
+      let deptt = value.split(" ")
+      setUserData({
+        ...userData,
+        [name]: deptt,
+  
+      });
+    }
+    else{
+      setUserData({
+        ...userData,
+        [name]: value,
+  
+      });
+    }
+    
   };
   console.log(userData);
 

@@ -14,7 +14,7 @@ const memberSchema = new mongoose.Schema({
     require: true,
   },
   department: {
-    type: String
+    type: []
   },
   image: {
     type: String,

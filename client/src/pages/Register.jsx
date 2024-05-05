@@ -25,6 +25,7 @@ export const Register = () => {
     e.preventDefault();
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/auth/register", {
+        mode: 'no-cors',
         method: "POST",
         headers: {
           "Content-Type": "application/json",

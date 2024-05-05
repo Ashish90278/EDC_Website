@@ -27,6 +27,7 @@ export const Signup = () => {
     e.preventDefault();
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/auth/signup", {
+        mode: 'no-cors',
         method: "POST",
         headers: {
           "Content-Type": "application/json",

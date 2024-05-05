@@ -24,6 +24,7 @@ export const AdminUsers = () => {
   // const delete = async(id) => {
   //   try {
   //     const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
+  //       mode: 'no-cors',
   //       method: "DELETE",
   //     });
   //     console.log(id);
@@ -36,6 +37,7 @@ export const AdminUsers = () => {
   const getAllUsersData = async () => {
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
+        mode: 'no-cors',
         method: "GET",
       });
       const data = await response.json();
@@ -50,6 +52,7 @@ export const AdminUsers = () => {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/users/delete/${id}`,
         {
+          mode: 'no-cors',
           method: "DELETE",
         }
       );

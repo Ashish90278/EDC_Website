@@ -12,7 +12,7 @@ export const AdminMembers = () => {
   const getAllMembersData = async () => {
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/members", {
-        mode: 'no-cors',
+        mode: 'cors',
         method: "GET",
       });
 
@@ -28,7 +28,7 @@ export const AdminMembers = () => {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/members/delete/${id}`,
         {
-          mode: 'no-cors',
+          mode: 'cors',
           method: "DELETE",
         }
       );

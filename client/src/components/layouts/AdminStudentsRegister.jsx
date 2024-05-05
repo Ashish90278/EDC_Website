@@ -18,7 +18,7 @@ export const AdminStudentsRegister = () => {
       const response = await fetch(
         "https://edc-website-server-api.onrender.com/api/admin/registrations",
         {
-          mode: 'no-cors',
+          mode: 'cors',
           method: "GET",
         }
       );
@@ -35,7 +35,7 @@ export const AdminStudentsRegister = () => {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/registrations/delete/${id}`,
         {
-          mode: 'no-cors',
+          mode: 'cors',
           method: "DELETE",
         }
       );

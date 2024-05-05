@@ -41,7 +41,7 @@ export const Modal = (props) => {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/${page}/add`,
         {
-          mode: 'no-cors',
+          mode: 'cors',
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -63,7 +63,7 @@ export const Modal = (props) => {
   const handleUpdate = async() => {
     try {
       const response = await fetch(`https://edc-website-server-api.onrender.com/api/admin/${page}/update/${data._id}`, {
-        mode: 'no-cors',
+        mode: 'cors',
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

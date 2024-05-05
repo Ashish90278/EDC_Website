@@ -19,7 +19,7 @@ export const AdminEvents = () => {
   const getAllEventsData = async () => {
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/events", {
-        mode: 'no-cors',
+        mode: 'cors',
         method: "GET",
       });
 
@@ -35,7 +35,7 @@ export const AdminEvents = () => {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/events/delete/${id}`,
         {
-          mode: 'no-cors',
+          mode: 'cors',
           method: "DELETE",
         }
       );

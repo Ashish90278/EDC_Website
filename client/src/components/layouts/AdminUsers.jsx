@@ -40,7 +40,7 @@ export const AdminUsers = () => {
         mode: 'no-cors',
         method: "GET",
       });
-      const data = await response.json();
+      const data = await response;
       setUsers(data);
     } catch (error) {
       console.log(error);

@@ -13,13 +13,13 @@ dotenv.config({
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-// const corsOptions = {
-//     origin: 'https://www.edcjss.com/',
-//     methods:"GET, POST, DELETE, PUT, PATCH, HEAD",
-//     creadentials: true,
-// }
+const corsOptions = {
+    origin: '*',
+    methods:"GET, POST, DELETE, PUT, PATCH, HEAD",
+    creadentials: true,
+}
 
-// app.use(cors(corsOptions));
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/admin", adminRoute);

@@ -1,4 +1,4 @@
-/*------------------------------------------ Sticky Section Start ------------------------------------------ */
+/*------------------------------------------- Sticky Section Start ------------------------------------------- */
 
 .sticky {
   display: flex;
@@ -28,7 +28,7 @@
   height: 95%;
 }
 
-/*------------------------------------------- Sticky Section End ------------------------------------------ */
+/*-------------------------------------------- Sticky Section End ------------------------------------------- */
 
 /*-------------------------------------------- Hero Section Start  --------------------------------------------- */
 
@@ -82,10 +82,6 @@
   filter: drop-shadow(0 0 0.75rem rgb(0, 195, 255));
   /* border: 2px solid red; */
 }
-
-/* .right_hero_section img{
-  height: 10rem;
-} */
 /*-------------------------------------------- Hero Section End  --------------------------------------------- */
 
 /* ----------------------------------------- Who we are Section  Start ------------------------------------*/
@@ -95,7 +91,6 @@
   flex-direction: column;
   align-items: center;
   /* border: 2px solid red; */
-  /* height: auto; */
 }
 
 .flowchart {
@@ -201,7 +196,6 @@
   border-radius: 2.2rem;
   border: 2px solid rgb(0, 195, 255);
   background: transparent;
-  /* color: rgb(0, 195, 255); */
   font-family: "Open Sans", sans-serif;
   font-size: medium;
   font-weight: 600;
@@ -216,7 +210,6 @@
   color: #011627;
   transition: all zoom ease-in;
   transition-duration: 500ms;
-  /* filter: drop-shadow(2px 2px 2px darkgrey); */
 }
 
 /* --------------------------------------- E_Summit Section End ------------------------------------ */
@@ -240,7 +233,7 @@
   width: 100%;
   position: relative;
   scrollbar-width: none;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;  
 }
 
 .arrow-button {
@@ -435,6 +428,14 @@ span {
 
 /* ------------------------------------- Our Collaborations Section End ---------------------------------------- */
 
+
+
+
+
+
+
+/* ---------------------------------------- Media Query Starts from Here --------------------------------------- */
+
 @media screen and (max-width: 1220px) {
   .wwr_head hr {
     width: 35%;
@@ -515,10 +516,10 @@ span {
 }
 @media screen and (max-width: 920px) {
   .main_hero_section .left_hero_section {
-    /* border: 2px solid rgb(255, 255, 255); */
     width: 60%;
     padding-top: 7rem;
     margin-right: 2rem;
+    /* border: 2px solid rgb(255, 255, 255); */
   }
 
   .left_hero_section h3 {
@@ -564,7 +565,6 @@ span {
 
   .prop p {
     position: absolute;
-    /* margin-bottom: 10%; */
     font-size: 1rem;
     bottom: 20%;
   }
@@ -576,7 +576,6 @@ span {
 
 @media screen and (max-width: 780px) {
   .sticky {
-    /* z-index: 1; */
     display: none;
   }
   .e_summit {
@@ -586,9 +585,6 @@ span {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .wwr_head h2 {
-    /* color: rgb(0, 195, 255); */
   }
   .wwr_head hr {
     display: none;
@@ -670,7 +666,6 @@ span {
     padding-top: 6rem;
     margin-right: 2rem;
     padding-left: 1rem;
-    /* margin-left: 0rem; */
   }
 
   .left_hero_section h3 {
@@ -686,16 +681,13 @@ span {
   .wwr p {
     color: rgb(255, 255, 255);
     text-align: center;
-    /* color: rgb(0, 195, 255); */
   }
 
   .wwr_main {
     padding: 0rem;
     margin-top: -4rem;
   }
-  /* --------------------------------------- E_Summit Section Start ------------------------------------ */
   .e_summit {
-    /* margin: 0; */
     margin-top: -3rem;
   }
   .e_summit_top {
@@ -710,7 +702,6 @@ span {
     padding: 0rem 2rem 1rem 0rem;
     /* border: 2px solid red; */
   }
-  /* --------------------------------------- E_Summit Section End ------------------------------------ */
 
   .carousel-container {
     margin-bottom: 3.5rem;
@@ -761,7 +752,6 @@ span {
   }
 
   .clothes {
-    /* width: 100%; */
     display: flex;
     justify-content: center;
     /* border: 2px solid red; */
@@ -788,7 +778,6 @@ span {
   .hanger {
     top: 1.4rem;
     left: 37%;
-    /* display: none; */
   }
 
   .sponsor {
@@ -811,9 +800,6 @@ span {
   .left_hero_section h3 {
     top: -35%;
     left: 16%;
-  }
-  .left_hero_section p {
-    /* text-align: center; */
   }
   .right_hero_section {
     display: none;
@@ -906,7 +892,7 @@ span {
     margin-bottom: 18%;
     font-size: 0.9rem;
   }
-  
+
   .hanger {
     top: 1.3rem;
     left: 35%;
@@ -966,10 +952,7 @@ span {
 
   .prop {
     height: 5rem;
-    
-    /* margin-top: 0.5rem; */
     margin-bottom: 1.5rem;
-    /* height: 100%; */
     width: 80%;
   }
 
@@ -990,36 +973,7 @@ span {
   }
   .prop:hover {
     height: 5.5rem;
-    /* transform: none;
-    animation: none; */
   }
-  /* 
-  
-  .prop {
-    
-  }
-  
-  .prop:hover {
-    height: 100%;
-    transform: scale(1.06);
-    transition-duration: 300ms;
-  }
-  
-  .prop img {
-    height: 60%;
-    width: 50%;
-  }
-  
-  .prop h4 {
-    margin-top: -4%;
-    font-size: 1.8rem;
-  }
-  
-  .prop p {
-    margin-bottom: 10%;
-    font-weight: 600;
-    font-size: 1.1rem;
-  } */
   .hanger img {
     width: 6rem;
   }
@@ -1029,4 +983,4 @@ span {
   }
 }
 
-/* ---------------------------------Media Queries----------------------------------- */
+/* -------------------------------------------------- Media Queries Ends Here ------------------------------------------------------ */

@@ -66,22 +66,7 @@
   font-size: 1rem;
 }
 
-@media screen and (max-width: 900px) {
-  .login-container {
-    height: 30rem;
-    /* width: 100%; */
-    margin: 115px 30px 30px 30px;
-  }
-  form div {
-    width: 100%;
-  }
-  .login-container form input {
-    width: 70%;
-  }
-  .login-container form button {
-    width: 35%;
-  }
-}
+
 
 @media screen and (max-width: 1200px) {
   .login-container h3 {
@@ -92,5 +77,20 @@
   }
   .login-container form{
     margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .login-container {
+    height: 25rem;
+    padding: 0;
+    margin: 115px 10px 30px 10px;
+  }
+  .login-container input {
+    /* margin: 0rem; */
+    width: 70%;
+  }
+  .login-container form button{
+    width: 30%;
   }
 }

@@ -120,3 +120,18 @@
     width: 35%;
   }
 }
+@media screen and (max-width: 400px) {
+  .form-container {
+    height: 25rem;
+    /* width: 100%; */
+    margin: 115px 10px 30px 10px;
+  }
+
+  .form-container form input {
+    width: 70%;
+    /* padding: 5%; */
+  }
+  .form-container form button {
+    width: 35%;
+  }
+}

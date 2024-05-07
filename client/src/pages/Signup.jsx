@@ -63,7 +63,7 @@ export const Signup = () => {
     <>
       <div className="container">
         <div className="form-container">
-          <h3>Sign Up as Admin</h3>
+          <h3>Sign Up</h3>
           <form onSubmit={handleSubmit}>
             <div>
               <input

@@ -34,10 +34,6 @@
   color: rgb(255, 255, 255);
   text-wrap: wrap;
 }
-.card-info{
-  /* border: 2px solid red; */
-  /* height: 28%; */
-}
 .card-info ul li div {
   display: flex;
   align-items: center;
@@ -58,10 +54,7 @@
 }
 
 .card-info ul li:last-child {
-  
   margin-top: 0.5rem;
-  /* border: 2px solid red; */
-  /* margin-bottom:; */
 }
 
 .card-info ul:last-child div {
@@ -86,7 +79,6 @@
 }
 
 .card-info ul li:last-child button:hover {
-  /* filter: drop-shadow(2px 2px 1px rgb(118, 114, 114)); */
   transition: all zoom ease-in;
   transition-duration: 500ms;
 }
@@ -104,7 +96,7 @@
   background-color: rgb(0, 195, 255);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1080px) {
   .card-info ul li:last-child {
     margin-top: 0rem;
     margin-bottom: 1rem;
@@ -115,19 +107,25 @@
     height: 1.8rem;
     margin-bottom: 0.5rem;
   }
+}
 
+@media screen and (max-width: 750px){
+  .card-info ul li:last-child {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 550px) {
   .card-info ul li:last-child {
     margin-top: 0rem;
-    margin-bottom: -2rem;
+    margin-bottom: 2rem;
   }
 
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 500px) {
   .card-info ul li:last-child {
     margin-top: 0rem;
-    margin-bottom: 1rem;
+    margin-bottom: -2rem;
   }
 
 }

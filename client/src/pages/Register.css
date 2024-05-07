@@ -97,7 +97,6 @@
     flex-direction: column;
   } 
   .event-info-container{
-    display: none;
     padding: 0rem;
     margin-bottom: 2rem;
     height: 55vh;

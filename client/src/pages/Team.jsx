@@ -65,6 +65,7 @@ export const Team = () => {
           </div>
           <hr style={{ border: "1px solid grey" }} />
           <div id="filterdiv">{memberFiltered()}</div>
+          <h2>Core Team</h2>
           <div id="core_team">
             {members
               .filter((member) => member.year === "4th")
@@ -82,7 +83,8 @@ export const Team = () => {
                 );
               })}
           </div>
-          <hr style={{ border: "1px solid grey" }} />
+          {/* <hr style={{ border: "1px solid grey" }} /> */}
+          <h2>Team Leads</h2>
           <div id="leads">
             {members
               .filter((member) => member.year === "3rd")
@@ -100,7 +102,8 @@ export const Team = () => {
                 );
               })}
           </div>
-          <hr style={{ border: "1px solid grey" }} />
+          {/* <hr style={{ border: "1px solid grey" }} /> */}
+          <h2>Executive Members</h2>
           <div id="executive">
             {members
               .filter((member) => member.year === "2nd" || member.year === "2")

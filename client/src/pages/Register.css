@@ -1,8 +1,8 @@
 .event-register {
   display: flex;
   justify-content: space-evenly;
-  padding: 0rem 0rem; 
-  margin-top: 130px; 
+  padding: 0rem 0rem;
+  margin-top: 130px;
 }
 
 .register-container {
@@ -32,7 +32,6 @@
   height: 85%;
 }
 
-
 .register-container button {
   outline: none;
   padding: 0.5rem 1rem;
@@ -43,7 +42,7 @@
   border: 2px solid rgb(0, 195, 255);
   font-size: 1rem;
 }
-.register-container button:hover{
+.register-container button:hover {
   background-color: rgb(0, 195, 255);
 }
 
@@ -63,41 +62,35 @@
   padding: 1rem 0rem;
 }
 
-@media screen and (max-width: 950px){
-  .event-info-container{
+@media screen and (max-width: 950px) {
+  .event-info-container {
     /* display: none; */
     padding: 0rem;
     margin-bottom: 2rem;
     height: 60vh;
-  width: 35vw;
+    width: 35vw;
   }
 }
-@media screen and (max-width: 750px){
-  .event-register{
+@media screen and (max-width: 750px) {
+  .event-register {
     display: flex;
     flex-direction: column;
   }
-  .event-info-container{
+  .event-info-container {
     padding: 0rem;
     margin-bottom: 2rem;
-    height: 55vh;
-  width: 100%;
+    height: 50vh;
+    width: 100%;
   }
-  .register-container{
+  .register-container {
     width: 100%;
   }
 }
-@media screen and (max-width: 500px){
-  .register-container form{
+@media screen and (max-width: 500px) {
+  .register-container form {
     padding: 0rem 2rem;
   }
-  .event-info-container{
+  .event-info-container {
     display: none;
   }
 }
-
-
-
-
-
-

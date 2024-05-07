@@ -14,22 +14,20 @@
   gap: 2rem;
 }
 
-/* media queries */
-
-/* tablet  */
 @media screen and (max-width: 950px){
   
   .Section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    /* margin: 0rem; */
-    /* gap: 4rem; */
   }
 }
 @media screen and (max-width: 700px){
+  .blogContainer{
+    padding: 0rem;
+  }
   .Section{
-    gap: 2rem;
+    gap: 2rem;   
   }
 }
 @media screen and (max-width: 600px){
@@ -37,18 +35,16 @@
     gap: 1rem;
   }
 }
-/* mobile - l & m */
 @media screen and (max-width:520px){
   .Section{
     display: grid;
     grid-template-columns: 1fr;
   }
 }
-/* mobile - s */
 @media screen and (max-width:400px){
   .blogContainer{
     padding: 1rem;
-    margin-top: -1rem;
+    margin-top: 70px;
   }
 }
 

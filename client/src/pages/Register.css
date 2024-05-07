@@ -3,6 +3,7 @@
   justify-content: space-evenly;
   padding: 0rem 0rem;
   margin-top: 130px;
+  height: 40rem;
 }
 
 .register-container {
@@ -79,7 +80,7 @@
   .event-info-container {
     padding: 0rem;
     margin-bottom: 2rem;
-    height: 50vh;
+    height: 45vh;
     width: 100%;
   }
   .register-container {

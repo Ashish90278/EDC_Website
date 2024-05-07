@@ -98,10 +98,10 @@
   /* height: auto; */
 }
 
-.flowchart{
+.flowchart {
   height: fit-content;
 }
-.flowchart img{
+.flowchart img {
   height: 25rem;
   width: 100%;
 }
@@ -235,7 +235,6 @@
   display: flex;
   overflow-x: scroll;
   gap: 1rem;
-  /* overflow-y: hidden; */
   padding: 1rem;
   height: 25rem;
   width: 100%;
@@ -338,82 +337,6 @@ span {
 
 /* -------------------------------------- Our Event Carousel Section End -------------------------------------- */
 
-/* -------------------------------------------- Speaker Section Start ---------------------------------------- */
-
-#our_speakers hr {
-  width: 31%;
-}
-
-.speakers {
-  display: grid;
-  grid-template-columns: 37.5% 62.5%;
-  margin: 2rem 0rem;
-}
-
-.past_speakers {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
-.past_speaker {
-  width: 100%;
-  position: relative;
-}
-
-.past_speaker img {
-  /* z-index: 0; */
-}
-
-.past_speaker button {
-  width: 4rem;
-  height: 1.2rem;
-  bottom: 10%;
-  left: 6.4%;
-  position: absolute;
-  /* z-index: 1; */
-  border: 1.8px solid rgba(199, 73, 58, 1);
-  border-radius: 0.25rem;
-  background: white;
-  color: rgba(199, 73, 58, 1);
-  font-family: "Open Sans", sans-serif;
-  font-size: x-small;
-  font-weight: 700;
-}
-
-.past_speaker button:hover {
-  filter: drop-shadow(2px 2px 5px rgb(205, 197, 197));
-}
-
-.recent_speaker {
-  position: relative;
-}
-
-
-.recent_speaker button {
-  width: 6rem;
-  height: 1.7rem;
-  position: absolute;
-  right: 5%;
-  bottom: 6%;
-  /* z-index: 1; */
-  border: 1.8px solid rgba(199, 73, 58, 1);
-  border-radius: 0.25rem;
-  background: white;
-  color: rgba(199, 73, 58, 1);
-  font-family: "Open Sans", sans-serif;
-  font-size: small;
-  font-weight: 700;
-  padding: 0.1rem 0.5rem 0.2rem 0.5rem;
-  letter-spacing: 0px;
-}
-
-.recent_speaker button:hover {
-  filter: drop-shadow(2px 2px 5px rgb(205, 197, 197));
-}
-
-/* -------------------------------------------- Speaker Section End ---------------------------------------- */
-
 /* ------------------------------------- Our Clothing_Partner Section Start ---------------------------------------- */
 
 #our_partners hr {
@@ -428,7 +351,7 @@ span {
   display: grid;
   grid-template-columns: 10% 70% 20%;
   margin: 3rem 0rem 2rem 0rem;
-  /* border: 2px solid red; */
+  /* border: 2px solid rgb(255, 255, 255); */
 }
 
 .cloth_container {
@@ -441,6 +364,13 @@ span {
 .cloth {
   width: 100%;
   aspect-ratio: 9/11.5;
+  /* border: 2px solid red; */
+  margin-top: -1rem;
+}
+.cloth_empty_divv {
+  width: 100%;
+  aspect-ratio: 9/11.5;
+  /* border: 2px solid rgb(0, 148, 79); */
   margin-top: -1rem;
 }
 
@@ -505,21 +435,6 @@ span {
 
 /* ------------------------------------- Our Collaborations Section End ---------------------------------------- */
 
-/* ---------------------------------------- Our Team Members Section Start ----------------------------------------*/
-
-#our_members hr {
-  width: 31%;
-}
-
-.members {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin: 3% 0%;
-  gap: 1rem;
-}
-
-/* ----------------------------------------- Our Team Members Section End ------------------------------------*/
-
 @media screen and (max-width: 1220px) {
   .wwr_head hr {
     width: 35%;
@@ -545,7 +460,7 @@ span {
     padding-top: 8rem;
     margin-right: 2rem;
   }
-  
+
   .left_hero_section h3 {
     top: -35%;
     left: 14%;
@@ -557,12 +472,12 @@ span {
   }
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
   .main_hero_section .left_hero_section {
     /* border: 2px solid rgb(255, 255, 255); */
     width: 50%;
   }
-  
+
   .left_hero_section h3 {
     top: -35%;
     left: 15%;
@@ -590,23 +505,22 @@ span {
   #our_members hr {
     width: 20%;
   }
-  .prop{
+  .prop {
     height: 11rem;
   }
-  .prop:hover{
+  .prop:hover {
     transform: scaleY(1.00001);
     transform: scaleX(1.01);
   }
 }
-@media screen and (max-width: 920px){
-  
+@media screen and (max-width: 920px) {
   .main_hero_section .left_hero_section {
     /* border: 2px solid rgb(255, 255, 255); */
     width: 60%;
     padding-top: 7rem;
     margin-right: 2rem;
   }
-  
+
   .left_hero_section h3 {
     top: -35%;
     left: 15%;
@@ -616,10 +530,10 @@ span {
     padding-top: 0rem;
     margin-bottom: -2rem;
   }
-  .carousel > .card{
+  .carousel > .card {
     min-width: 40%;
   }
-  .props{
+  .props {
     justify-items: center;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 2rem;
@@ -627,14 +541,14 @@ span {
     height: auto;
     margin-top: 2rem;
   }
-  
-  .prop{
+
+  .prop {
     height: 7rem;
     width: 80%;
     margin-bottom: 1rem;
     position: relative;
   }
-  
+
   .prop img {
     height: 50%;
     width: 50%;
@@ -642,28 +556,25 @@ span {
     top: -25%;
   }
 
-  
   .prop h4 {
     position: absolute;
     font-size: 1.2rem;
     bottom: 15%;
   }
-  
+
   .prop p {
     position: absolute;
     /* margin-bottom: 10%; */
     font-size: 1rem;
     bottom: 20%;
-
   }
-
 }
 
 @media screen and (max-width: 780px) {
-  .sticky{
+  .sticky {
     z-index: 1;
   }
-  .e_summit{
+  .e_summit {
     z-index: 0;
   }
   .wwr_head {
@@ -682,7 +593,7 @@ span {
   #our_events hr {
     display: none;
   }
-  .carousel > .card{
+  .carousel > .card {
     min-width: 50%;
   }
   #our_speakers {
@@ -742,7 +653,7 @@ span {
     text-decoration: underline;
   }
 
-  .main_hero_section{
+  .main_hero_section {
     margin-bottom: 2rem;
   }
   .main_hero_section .left_hero_section {
@@ -751,7 +662,7 @@ span {
     padding-top: 7rem;
     margin-right: 2rem;
   }
-  
+
   .left_hero_section h3 {
     top: -35%;
     left: 20%;
@@ -762,16 +673,16 @@ span {
     margin-bottom: -2rem;
   }
 
-  .wwr h4{
+  .wwr h4 {
     text-align: center;
   }
-  .wwr_main{
-    padding: 0rem ;
+  .wwr_main {
+    padding: 0rem;
     margin-top: -2rem;
   }
   /* --------------------------------------- E_Summit Section Start ------------------------------------ */
 
-  .e_summit_top{
+  .e_summit_top {
     padding: 1rem 1rem 0rem 3rem;
   }
   .e_summit_mid {
@@ -785,153 +696,95 @@ span {
   }
   /* --------------------------------------- E_Summit Section End ------------------------------------ */
 
-  .props{
+  .carousel-container{
+    margin-bottom: 3.5rem;
+  }
+  .carousel {
+    padding: 0rem;
+    height: 23.5rem;
+  }
+
+  .props {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 2rem;
-    gap: 1rem;
+    gap: 2rem 0rem;
     height: auto;
   }
-  
-  
+
   .prop img {
-    height: 40%;
-    width: 50%;
+    height: 70%;
+    width: 70%;
+    top: -35%;
     margin-bottom: 0.4rem;
   }
-  
+
   .prop h4 {
     margin-top: 0%;
     font-size: 1.1rem;
   }
-  
+
   .prop p {
     margin-bottom: 10%;
     font-size: 0.9rem;
   }
 
+  .prop:hover {
+    height: 100%;
+    animation: zoomin 2000ms ease-out;
+  }
+  @keyframes zoomin {
+    0%{
+      transform: scale(0);
+    }
+    50%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+
   .clothes {
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     /* border: 2px solid red; */
     align-items: center;
-    /* height: 5rem; */
   }
-  
+
   .cloth_container {
     display: grid;
-    grid-template-columns: 45% 10% 45%;
-    /* border: 2px solid red; */
-    margin-right: 10rem;
+    grid-template-columns: 48% 4% 48%;
   }
-  .brand{
+  
+  .cloth {
+    width: 100%;
+    aspect-ratio: 9/18;
+    /* border: 2px solid red; */
+    margin-top: -1rem;
+  }
+  .cloth_empty_divv {
+    display: none;
+  }
+  .brand {
     display: none;
   }
   .hanger {
     top: 1.7rem;
     left: 45%;
-  }
-  /* -------------------------------------------- Speaker Section Start ---------------------------------------- */
-
-  .speakers {
-    display: flex;
-    flex-direction: column;
-
+    /* display: none; */
   }
 
-  .recent_speaker{
-    height: 19rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .recent_speaker img{
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    object-fit: fill;
-  }
-
-  .past_speakers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-
-  .past_speaker {
-    width: 100%;
-    position: relative;
-  }
-
-  .past_speaker button {
-    width: 4rem;
-    height: 1.2rem;
-    bottom: 10%;
-    left: 6.4%;
-    position: absolute;
-    /* z-index: 1; */
-    border: 1.8px solid rgba(199, 73, 58, 1);
-    border-radius: 0.25rem;
-    background: white;
-    color: rgba(199, 73, 58, 1);
-    font-family: "Open Sans", sans-serif;
-    font-size: x-small;
-    font-weight: 700;
-  }
-
-  .past_speaker button:hover {
-    filter: drop-shadow(2px 2px 5px rgb(205, 197, 197));
-  }
-
-  .recent_speaker {
-    position: relative;
-  }
-
-  .recent_speaker button {
-    width: 6rem;
-    height: 1.7rem;
-    position: absolute;
-    right: 5%;
-    bottom: 6%;
-    /* z-index: 1; */
-    border: 1.8px solid rgba(199, 73, 58, 1);
-    border-radius: 0.25rem;
-    background: white;
-    color: rgba(199, 73, 58, 1);
-    font-family: "Open Sans", sans-serif;
-    font-size: small;
-    font-weight: 700;
-    padding: 0.1rem 0.5rem 0.2rem 0.5rem;
-  }
-
-  .recent_speaker button:hover {
-    filter: drop-shadow(2px 2px 5px rgb(205, 197, 197));
-  }
-
-  /* -------------------------------------------- Speaker Section End ---------------------------------------- */
-
-  .sponsor{
+  .sponsor {
     animation: slide 5s linear infinite;
     margin: 2rem 0rem;
   }
-  /* ---------------------------------------- Our Team Members Section Start ----------------------------------------*/
-
-  .card-info ul li:last-child {
-    margin: 0;
-  }
-  .members {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    margin: 3% 0%;
-  }
-
-  /* ----------------------------------------- Our Team Members Section End ------------------------------------*/
 }
 @media screen and (max-width: 580px) {
   .main_hero_section .left_hero_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     /* border: 2px solid rgb(255, 255, 255); */
     width: 100%;
     padding-top: 0rem;
@@ -943,7 +796,7 @@ span {
     top: -35%;
     left: 16%;
   }
-  .left_hero_section p{
+  .left_hero_section p {
     /* text-align: center; */
   }
   .right_hero_section {
@@ -965,10 +818,10 @@ span {
   #our_events hr {
     display: none;
   }
-  .carousel{
+  .carousel {
     gap: 0.3rem;
   }
-  .carousel> .card{
+  .carousel > .card {
     min-width: 65%;
   }
   #our_speakers {
@@ -1033,80 +886,62 @@ span {
   }
 }
 @media screen and (max-width: 450px) {
-
-  .main_hero_section{
-    /* height: auto; */
-    /* margin-bottom: 2rem; */
+  .main_hero_section {
     margin: -2rem 0rem 0rem 0rem;
   }
-  .left_hero_section{
-    
+  .left_hero_section {
   }
-  .left_hero_section div{
+  .left_hero_section div {
     font-size: 1.5rem;
   }
-  .left_hero_section span{
+  .left_hero_section span {
     font-size: 2.2rem;
   }
   .left_hero_section h3 {
     top: -40%;
     left: 17%;
   }
-  .e_summit_bottom{
+  .e_summit_bottom {
     display: flex;
     justify-content: center;
     padding: 0rem 0rem 2rem 0rem;
   }
-  
-  .carousel > .card{
+
+  .carousel > .card {
     min-width: 100%;
   }
-  .props{
+  .props {
     height: auto;
     grid-template-columns: repeat(1, 1fr);
     padding: 1rem 2rem;
     gap: 1rem;
   }
-  
-  .prop{
+
+  .prop {
     height: 4.5rem;
   }
-  
+
   .prop img {
-    height: 40%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     margin-bottom: 0.4rem;
   }
-  
+
   .prop h4 {
     margin-top: 0%;
     font-size: 1.1rem;
   }
-  
+
   .prop p {
     margin-bottom: 10%;
     font-size: 0.9rem;
   }
-  .members{
+  .prop:hover{
+    animation: zoomin 500ms ease-out;
+  }
+  .members {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media screen and (max-width: 376px) {
-  /* ---------------------------------------- Our Team Members Section Start ----------------------------------------*/
-  .main_hero_section{
-    /* height: auto; */
-    margin: -4rem 0rem 1rem 0rem ;
-  }
-  .carousel {
-    height: 27rem;
-  }
-  .members {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
-
-  /* ----------------------------------------- Our Team Members Section End ------------------------------------*/
-}
 /* ---------------------------------Media Queries----------------------------------- */

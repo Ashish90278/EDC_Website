@@ -1,7 +1,7 @@
 .card {
   display: flex;
   justify-content: center;
-  height: 26rem;
+  height: 100%;
   min-width: 32.5%;
   width: 50rem;
   /* margin-right: 1rem; */
@@ -105,8 +105,3 @@
   }
 
 }
-/* @media screen and (max-width: 780px) {
-  #our_event > .card{
-    min-width: 50%;
-  }
-} */

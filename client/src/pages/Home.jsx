@@ -5,27 +5,15 @@ import Typewriter from "typewriter-effect";
 import { MemberCard } from "../components/MemberCard.jsx";
 import { EventCard } from "../components/EventCard.jsx";
 export const Home = () => {
-  // const navigate = useNavigate();
-  // const redirect = () => {
-  //   let path = "/register";
-  //   navigate(path);
-  // }
-
-  // new Typewriter("#typewriter", {
-  //   strings: ["Hello", "World"],
-  //   autoStart: true,
-  //   loop: true,
-  // });
-
-  // useEffect(() => {
-  //   Typewriter();
-  // }, [])
 
   return (
     <>
       <div className="sticky">
         <div className="stick_icons">
-          <NavLink to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs" target="_blank">
+          <NavLink
+            to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs"
+            target="_blank"
+          >
             <img src="../imgs/sticky_icons/whatsapp.png" alt="" />
           </NavLink>
         </div>
@@ -51,7 +39,7 @@ export const Home = () => {
           </NavLink>
         </div>
       </div>
-
+      {/* <!-- Code for Hero section --> */}
       <section className="hero_section">
         <div className="container">
           <div className="main_hero_section">
@@ -84,6 +72,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
+
       {/* <hr /> */}
       {/* <!-- Code for Who we are section --> */}
       <section className="who_we_are">
@@ -107,10 +96,7 @@ export const Home = () => {
                   media="(max-width:580px)"
                   srcset="../imgs/wwr_flowchart.png"
                 />
-                <img
-                  src="../imgs/wwr_main.png"
-                  alt="Flowers"
-                />
+                <img src="../imgs/wwr_main.png" alt="Flowers" />
               </picture>
             </div>
           </div>
@@ -152,7 +138,7 @@ export const Home = () => {
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
-                eventVenue="Multi-Purpose Hall"
+                eventVenue="MPH"
                 eventPageLink="/events/mr.sandeepjain"
               ></EventCard>
               <EventCard
@@ -160,7 +146,7 @@ export const Home = () => {
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
-                eventVenue="Multi-Purpose Hall"
+                eventVenue="MPH"
                 eventPageLink="/events/lakshya"
               ></EventCard>
               <EventCard
@@ -168,7 +154,7 @@ export const Home = () => {
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
-                eventVenue="Multi-Purpose Hall"
+                eventVenue="MPH"
                 eventPageLink="/events/stockgrow"
               ></EventCard>
               <EventCard
@@ -176,7 +162,7 @@ export const Home = () => {
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
-                eventVenue="Multi-Purpose Hall"
+                eventVenue="MPH"
                 eventPageLink="/events/mr.sandeepjain"
               ></EventCard>
               <EventCard
@@ -184,7 +170,7 @@ export const Home = () => {
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
-                eventVenue="Multi-Purpose Hall"
+                eventVenue="MPH"
                 eventPageLink="/events/lakshya"
               ></EventCard>
               <EventCard
@@ -192,7 +178,7 @@ export const Home = () => {
                 eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                 eventDate="Friday, 10 Nov 2023"
                 eventTime="03:45 PM - 04:45 PM "
-                eventVenue="Multi-Purpose Hall"
+                eventVenue="MPH"
                 eventPageLink="/events/stockgrow"
               ></EventCard>
             </div>
@@ -239,50 +225,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* <!-- Code for Our Prestigious Speakers --> */}
-      {/* <section className="our_prestigious_speakers">
-        <div className="container">
-          <div className="wwr_head" id="our_speakers">
-            <hr />
-            <h2>Our Prestigious Speakers</h2>
-            <hr />
-          </div>
-
-          <div className="speakers">
-            <div className="recent_speaker">
-              <img src="../imgs/recent_speaker.png" alt="" />
-              <button>Read more</button>
-            </div>
-            <div className="past_speakers">
-              <div className="past_speaker">
-                <img src="../imgs/past_speaker.png" alt="" />
-                <button>Read more</button>
-              </div>
-              <div className="past_speaker">
-                <img src="../imgs/past_speaker.png" alt="" />
-                <button>Read more</button>
-              </div>
-              <div className="past_speaker">
-                <img src="../imgs/past_speaker.png" alt="" />
-                <button>Read more</button>
-              </div>
-              <div className="past_speaker">
-                <img src="../imgs/past_speaker.png" alt="" />
-                <button>Read more</button>
-              </div>
-              <div className="past_speaker">
-                <img src="../imgs/past_speaker.png" alt="" />
-                <button>Read more</button>
-              </div>
-              <div className="past_speaker">
-                <img src="../imgs/past_speaker.png" alt="" />
-                <button>Read more</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* <!-- Code for Our Clothing Partner --> */}
       <section className="our_clothing_partner">
         <div className="container">
@@ -295,7 +237,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="clothes">
-            <div className="cloth"></div>
+            <div className="cloth_empty_divv"></div>
             <div className="cloth_container">
               <div className="cloth">
                 <img src="../imgs/cloths/Group 230.png" alt="" />
@@ -305,7 +247,7 @@ export const Home = () => {
                 <img src="../imgs/cloths/Group 231.png" alt="" />
               </div>
             </div>
-            <div className="cloth brand">
+            <div className="cloth_empty_divv brand">
               <img src="../imgs/cloths/brand.png" alt="" />
             </div>
           </div>
@@ -340,80 +282,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* <!-- Code for Our Team Members --> */}
-      {/* <section className="our_core_team_members">
-        <div className="container">
-          <div className="wwr_head" id="our_members">
-            <hr />
-            <h2>Our Core Team Members</h2>
-            <hr />
-          </div>
-          <div className="members">
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-            <MemberCard
-              memberImage="../imgs/SohailSir.png"
-              designation="President"
-              memberName="Sohail Ansari"
-            ></MemberCard>
-          </div>
-        </div>
-      </section> */}
-      <hr style={{border:"1px solid grey" }}/>
+      <hr style={{ border: "1px solid grey" }} />
     </>
   );
 };

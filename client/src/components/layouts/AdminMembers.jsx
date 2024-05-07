@@ -99,7 +99,7 @@ export const AdminMembers = () => {
                     <td>{index + 1}</td>
                     <td>{curUser.name}</td>
                     <td>{curUser.post}</td>
-                    <td>{curUser.department}</td>
+                    <td>{curUser.department.map((e)=> e+" ")}</td>
                     <td>{curUser.image}</td>
 
                     <td

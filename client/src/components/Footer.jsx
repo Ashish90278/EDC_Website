@@ -103,7 +103,7 @@ export const Footer = () => {
           </div>
           <div id="policy">
             <h4>Created By :&nbsp;</h4>
-            <p>&copy; Ashish Gupta</p>
+            <p>&copy; EDC JSS</p>
           </div>
         </div>
       </footer>

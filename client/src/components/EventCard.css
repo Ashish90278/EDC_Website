@@ -4,20 +4,17 @@
   height: 100%;
   min-width: 32.5%;
   width: 50rem;
-  /* margin-right: 1rem; */
   align-items: center;
   backdrop-filter: blur(10px);
   border-radius: 0rem 0rem 1rem 1rem;
   background: linear-gradient(135deg, rgba(69, 69, 69, 0.1));
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  
 }
 
 .card-body {
   height: 100%;
   width: 95%;
-  /* border: 2px solid red; */
 }
 
 .card-body img {
@@ -28,7 +25,6 @@
 
 .card-body h4 {
   width: 100%;
-
   padding: 0.5rem 0rem;
   font-size: 1rem;
   color: rgb(255, 255, 255);
@@ -38,11 +34,9 @@
   display: flex;
   align-items: center;
   padding: 0.3rem;
-  /* border: 2px solid red; */
 }
 
 .card-info ul li div p {
-  /* align-items: center; */
   font-size: small;
   color: white;
 }
@@ -120,12 +114,10 @@
     margin-top: 0rem;
     margin-bottom: 2rem;
   }
-
 }
 @media screen and (max-width: 500px) {
   .card-info ul li:last-child {
     margin-top: 0rem;
     margin-bottom: -2rem;
   }
-
 }

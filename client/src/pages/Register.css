@@ -75,7 +75,7 @@
     /* display: none; */
     padding: 0rem;
     margin-bottom: 2rem;
-    height: 30vh;
+    height: 25vh;
   width: 100%;
   }
   .register-container{
@@ -88,7 +88,7 @@
     padding: 0rem;
     margin-bottom: 2rem;
     height: 40vh;
-  width: 35vw;
+  /* width: 35vw; */
   }
 }
 @media screen and (max-width: 750px){

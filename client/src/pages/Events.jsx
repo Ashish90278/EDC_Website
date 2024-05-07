@@ -12,7 +12,7 @@ export const Events = () => {
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
+            eventVenue="MPH"
             eventPageLink="/events/mr.sandeepjain"
           ></EventCard>
           <EventCard
@@ -20,7 +20,7 @@ export const Events = () => {
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
+            eventVenue="MPH"
             eventPageLink="/events/lakshya"
           ></EventCard>
           <EventCard
@@ -28,7 +28,7 @@ export const Events = () => {
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
+            eventVenue="MPH"
             eventPageLink="/events/stockgrow"
           ></EventCard>
           <EventCard
@@ -36,7 +36,7 @@ export const Events = () => {
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
+            eventVenue="MPH"
             eventPageLink="/events/mr.sandeepjain"
           ></EventCard>
           <EventCard
@@ -44,7 +44,7 @@ export const Events = () => {
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
+            eventVenue="MPH"
             eventPageLink="/events/lakshya"
           ></EventCard>
           <EventCard
@@ -52,7 +52,7 @@ export const Events = () => {
             eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
             eventDate="Friday, 10 Nov 2023"
             eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
+            eventVenue="MPH"
             eventPageLink="/events/stockgrow"
           ></EventCard>
         </section>

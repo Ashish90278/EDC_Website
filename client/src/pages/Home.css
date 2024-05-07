@@ -175,7 +175,7 @@
   font-family: "Open Sans", sans-serif;
   /* background-color: chartreuse; */
   padding: 1rem 2rem 0rem 3rem;
-  color: rgba(199, 73, 58, 1);
+  color: rgba(0, 195, 255, 1);
 }
 
 .e_summit_top h4 {
@@ -572,7 +572,8 @@ span {
 
 @media screen and (max-width: 780px) {
   .sticky {
-    z-index: 1;
+    /* z-index: 1; */
+    display: none;
   }
   .e_summit {
     z-index: 0;
@@ -580,7 +581,10 @@ span {
   .wwr_head {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+  }
+  .wwr_head h2{
+    /* color: rgb(0, 195, 255); */
   }
   .wwr_head hr {
     display: none;
@@ -654,13 +658,15 @@ span {
   }
 
   .main_hero_section {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
   }
   .main_hero_section .left_hero_section {
     /* border: 2px solid rgb(255, 255, 255); */
     width: 60%;
-    padding-top: 7rem;
+    padding-top: 6rem;
     margin-right: 2rem;
+    padding-left: 1rem;
+    /* margin-left: 0rem; */
   }
 
   .left_hero_section h3 {
@@ -673,17 +679,23 @@ span {
     margin-bottom: -2rem;
   }
 
-  .wwr h4 {
+  .wwr p {
+    color: rgb(255, 255, 255);
     text-align: center;
+    /* color: rgb(0, 195, 255); */
   }
+  
   .wwr_main {
     padding: 0rem;
-    margin-top: -2rem;
+    margin-top: -4rem;
   }
   /* --------------------------------------- E_Summit Section Start ------------------------------------ */
-
+.e_summit{
+  /* margin: 0; */
+  margin-top: -3rem;
+}
   .e_summit_top {
-    padding: 1rem 1rem 0rem 3rem;
+    padding: 1rem 1rem 0rem 2.5rem;
   }
   .e_summit_mid {
     padding: 4rem 2rem;
@@ -700,7 +712,7 @@ span {
     margin-bottom: 3.5rem;
   }
   .carousel {
-    padding: 0rem;
+    padding: 0rem 1rem;
     height: 23.5rem;
   }
 
@@ -887,7 +899,7 @@ span {
 }
 @media screen and (max-width: 450px) {
   .main_hero_section {
-    margin: -2rem 0rem 0rem 0rem;
+    margin: 5rem 0rem 0rem 0rem;
   }
   .left_hero_section {
   }
@@ -901,12 +913,20 @@ span {
     top: -40%;
     left: 17%;
   }
+  .e_summit_top {
+    padding: 1rem 0rem 0rem 2rem;
+  }
+  .e_summit_top h4{
+    font-size: 0.9rem;
+  }
+  .e_summit_top img{
+    height: 2rem;
+  }
   .e_summit_bottom {
     display: flex;
     justify-content: center;
     padding: 0rem 0rem 2rem 0rem;
   }
-
   .carousel > .card {
     min-width: 100%;
   }
@@ -937,7 +957,8 @@ span {
     font-size: 0.9rem;
   }
   .prop:hover{
-    animation: zoomin 500ms ease-out;
+    transform: none;
+    animation: none ;
   }
   .members {
     grid-template-columns: repeat(2, 1fr);

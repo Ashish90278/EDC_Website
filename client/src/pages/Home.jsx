@@ -83,10 +83,10 @@ export const Home = () => {
               <h2>Who we are?</h2>
               <hr />
             </div>
-            <h4>
+            <p>
               We are team EDC (Entrepreneurship Development Cell) of JSS Academy
               of Technical Education, Noida.
-            </h4>
+            </p>
           </div>
           <div className="wwr_main">
             <div className="flowchart">

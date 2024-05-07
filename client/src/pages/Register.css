@@ -1,15 +1,12 @@
 .event-register {
   display: flex;
-  height: 93vh;
   justify-content: space-evenly;
   padding: 0rem 0rem; 
   margin-top: 130px; 
 }
 
 .register-container {
-  /* height: 100%; */
   width: 50%;
-  /* background-color: aqua; */
   border: 2px solid rgb(0, 195, 255);
   border-radius: 0.5rem;
   display: flex;
@@ -81,7 +78,6 @@
     flex-direction: column;
   }
   .event-info-container{
-    /* display: none; */
     padding: 0rem;
     margin-bottom: 2rem;
     height: 55vh;

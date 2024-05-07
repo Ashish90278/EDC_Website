@@ -128,7 +128,7 @@
   font-weight: 600;
   color: white;
 }
-.wwr h4 {
+.wwr p {
   color: rgb(255, 255, 255);
 }
 
@@ -392,12 +392,12 @@ span {
 
 .hanger {
   position: absolute;
-  top: 2.9rem;
-  left: 41.6%;
+  top: 1.6rem;
+  left: 39.5%;
 }
 
 .hanger img {
-  width: 4rem;
+  width: 9rem;
 }
 
 /* ------------------------------------- Our Clothing_Partner Section Start ---------------------------------------- */
@@ -545,21 +545,21 @@ span {
   .prop {
     height: 7rem;
     width: 80%;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     position: relative;
   }
 
   .prop img {
-    height: 50%;
-    width: 50%;
+    height: 70%;
+    width: 70%;
     position: absolute;
-    top: -25%;
+    top: -38%;
   }
 
   .prop h4 {
     position: absolute;
     font-size: 1.2rem;
-    bottom: 15%;
+    bottom: 10%;
   }
 
   .prop p {
@@ -567,6 +567,10 @@ span {
     /* margin-bottom: 10%; */
     font-size: 1rem;
     bottom: 20%;
+  }
+  .hanger {
+    top: 1.4rem;
+    left: 35%;
   }
 }
 
@@ -581,9 +585,9 @@ span {
   .wwr_head {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
   }
-  .wwr_head h2{
+  .wwr_head h2 {
     /* color: rgb(0, 195, 255); */
   }
   .wwr_head hr {
@@ -684,16 +688,16 @@ span {
     text-align: center;
     /* color: rgb(0, 195, 255); */
   }
-  
+
   .wwr_main {
     padding: 0rem;
     margin-top: -4rem;
   }
   /* --------------------------------------- E_Summit Section Start ------------------------------------ */
-.e_summit{
-  /* margin: 0; */
-  margin-top: -3rem;
-}
+  .e_summit {
+    /* margin: 0; */
+    margin-top: -3rem;
+  }
   .e_summit_top {
     padding: 1rem 1rem 0rem 2.5rem;
   }
@@ -708,7 +712,7 @@ span {
   }
   /* --------------------------------------- E_Summit Section End ------------------------------------ */
 
-  .carousel-container{
+  .carousel-container {
     margin-bottom: 3.5rem;
   }
   .carousel {
@@ -719,14 +723,14 @@ span {
   .props {
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem 2rem;
-    gap: 2rem 0rem;
+    gap: 1rem 0rem;
     height: auto;
   }
 
   .prop img {
-    height: 70%;
-    width: 70%;
-    top: -35%;
+    height: 60%;
+    width: 60%;
+    top: -30%;
     margin-bottom: 0.4rem;
   }
 
@@ -736,7 +740,7 @@ span {
   }
 
   .prop p {
-    margin-bottom: 10%;
+    margin-bottom: 15%;
     font-size: 0.9rem;
   }
 
@@ -745,13 +749,13 @@ span {
     animation: zoomin 2000ms ease-out;
   }
   @keyframes zoomin {
-    0%{
+    0% {
       transform: scale(0);
     }
-    50%{
+    50% {
       transform: scale(0.5);
     }
-    100%{
+    100% {
       transform: scale(1);
     }
   }
@@ -768,7 +772,7 @@ span {
     display: grid;
     grid-template-columns: 48% 4% 48%;
   }
-  
+
   .cloth {
     width: 100%;
     aspect-ratio: 9/18;
@@ -782,8 +786,8 @@ span {
     display: none;
   }
   .hanger {
-    top: 1.7rem;
-    left: 45%;
+    top: 1.4rem;
+    left: 37%;
     /* display: none; */
   }
 
@@ -821,6 +825,12 @@ span {
   }
   .wwr_head hr {
     display: none;
+  }
+  .wwr_main {
+    margin-top: 0rem;
+  }
+  .e_summit {
+    margin-top: 0;
   }
   #our_events {
     display: flex;
@@ -892,40 +902,57 @@ span {
     font-size: 1.3rem;
     text-decoration: underline;
   }
-  .members {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5 rem;
+  .prop p {
+    margin-bottom: 18%;
+    font-size: 0.9rem;
+  }
+  
+  .hanger {
+    top: 1.3rem;
+    left: 35%;
   }
 }
 @media screen and (max-width: 450px) {
   .main_hero_section {
-    margin: 5rem 0rem 0rem 0rem;
+    margin: 4rem 0rem 0rem 0rem;
   }
   .left_hero_section {
+    padding-left: 0rem;
+    margin-left: -0.5rem;
   }
-  .left_hero_section div {
+  .left_hero_section > div {
     font-size: 1.5rem;
+    /* border: 2px solid red; */
   }
   .left_hero_section span {
     font-size: 2.2rem;
   }
   .left_hero_section h3 {
-    top: -40%;
+    top: -30%;
     left: 17%;
+  }
+  .left_hero_section p {
+    text-align: justify;
+  }
+  .wwr_main {
+    padding: 0rem;
   }
   .e_summit_top {
     padding: 1rem 0rem 0rem 2rem;
   }
-  .e_summit_top h4{
+  .e_summit_top h4 {
     font-size: 0.9rem;
   }
-  .e_summit_top img{
+  .e_summit_top img {
     height: 2rem;
   }
   .e_summit_bottom {
     display: flex;
     justify-content: center;
     padding: 0rem 0rem 2rem 0rem;
+  }
+  .carousel {
+    padding: 0;
   }
   .carousel > .card {
     min-width: 100%;
@@ -938,7 +965,12 @@ span {
   }
 
   .prop {
-    height: 4.5rem;
+    height: 5rem;
+    
+    /* margin-top: 0.5rem; */
+    margin-bottom: 1.5rem;
+    /* height: 100%; */
+    width: 80%;
   }
 
   .prop img {
@@ -948,20 +980,52 @@ span {
   }
 
   .prop h4 {
-    margin-top: 0%;
+    margin-top: 0rem;
     font-size: 1.1rem;
   }
 
   .prop p {
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     font-size: 0.9rem;
   }
-  .prop:hover{
-    transform: none;
-    animation: none ;
+  .prop:hover {
+    height: 5.5rem;
+    /* transform: none;
+    animation: none; */
   }
-  .members {
-    grid-template-columns: repeat(2, 1fr);
+  /* 
+  
+  .prop {
+    
+  }
+  
+  .prop:hover {
+    height: 100%;
+    transform: scale(1.06);
+    transition-duration: 300ms;
+  }
+  
+  .prop img {
+    height: 60%;
+    width: 50%;
+  }
+  
+  .prop h4 {
+    margin-top: -4%;
+    font-size: 1.8rem;
+  }
+  
+  .prop p {
+    margin-bottom: 10%;
+    font-weight: 600;
+    font-size: 1.1rem;
+  } */
+  .hanger img {
+    width: 6rem;
+  }
+  .hanger {
+    top: 1.6rem;
+    left: 34%;
   }
 }
 

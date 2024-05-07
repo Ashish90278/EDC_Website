@@ -52,19 +52,16 @@
   justify-content: center;
   gap: 1rem;
   height: 100%;
-  /* width: 100%; */
   align-items: center;
-  /* padding: 0rem 2rem; */
   margin-top: 0.5rem;
 }
 .footer_container_left .footer_icons div {
   height: 100%;
-  width: 100%;
   font-size: 1.3rem;
 }
 
 .footer_container_left .footer_icons a{
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .tabletBottom {
@@ -194,6 +191,7 @@ button {
   height: 4rem;
   color: white;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 /* -------------------------------------------- Footer Section End ------------------------------------------*/

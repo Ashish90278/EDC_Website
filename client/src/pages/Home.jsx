@@ -45,7 +45,7 @@ export const Home = () => {
           <div className="main_hero_section">
             <div className="left_hero_section">
               <div>
-                We
+                <div>We</div>
                 <h3>
                   <Typewriter
                     options={{
@@ -233,7 +233,7 @@ export const Home = () => {
             <h2>Our Clothing Partner</h2>
             <hr />
             <div className="hanger">
-              <img src="../imgs/cloths/hanger.png" alt="" />
+              <img src="../imgs/cloths/hanger.svg" alt="" />
             </div>
           </div>
           <div className="clothes">

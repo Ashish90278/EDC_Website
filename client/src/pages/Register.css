@@ -103,9 +103,7 @@
     height: 55vh;
   width: 100%;
   }
-  .register-container{
-    width: 100%;
-  } */
+   */
 }
 @media screen and (max-width: 500px){
   .register-container form{
@@ -113,6 +111,9 @@
   }
   .event-info-container{
     display: none;
+  }
+  .register-container{
+    width: 100%;
   }
 }
 

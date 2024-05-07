@@ -46,7 +46,7 @@ export const Aboutus = () => {
           <div className="president-note">
             <h2>President's Note</h2>
             <div className="president-photo">
-              <img src="../../public/imgs/SohailSir.png" alt="" />
+              <img src="https://ik.imagekit.io/lbqkuzbjo/memberImages/PuneetSir.jpg" alt="" />
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
@@ -55,10 +55,7 @@ export const Aboutus = () => {
               possimus iusto iure incidunt odio repellendus doloribus delectus
               ea dolorem praesentium debitis? Id explicabo hic quia beatae saepe
               ea ipsa unde corrupti maiores, repudiandae a, tenetur eius fugiat
-              enim dolore natus doloremque nobis blanditiis itaque! Fugit
-              placeat mollitia praesentium quaerat, necessitatibus quas quidem
-              sunt cumque ipsam quo vel obcaecati vitae doloribus, consectetur
-              rem, error ab
+              enim dolore natus doloremque nobis blanditiis itaque!
             </p>
           </div>
 

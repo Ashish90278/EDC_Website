@@ -92,18 +92,18 @@
   }
 }
 @media screen and (max-width: 750px){
-  /* .event-register{
+  .event-register{
     display: flex;
     flex-direction: column;
-  } */
-  /* .event-info-container{
+  } 
+  .event-info-container{
     display: none;
     padding: 0rem;
     margin-bottom: 2rem;
     height: 55vh;
   width: 100%;
   }
-   */
+  
    .register-container{
     width: 100%;
   }

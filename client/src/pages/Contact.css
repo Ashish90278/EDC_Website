@@ -342,6 +342,9 @@ form button {
 }
 
 @media (max-width: 450px) {
+  #contact{
+    padding: 0;
+  }
   .contact-header{
     font-size: 35px;
     padding-top: 25px;

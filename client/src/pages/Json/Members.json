@@ -55,9 +55,19 @@
     "position": "Media Head",
     "image": "nitinPHOTO - Nitin Singh.jpg",
     "department": ["core"],
-    "linkedIn": "www.linkedin.com/in/nitinsingh20",
-    "instagram": "@nitin.singh___",
+    "linkedIn": "https://www.linkedin.com/in/nitinsingh20",
+    "instagram": "https://instagram.com/nitin.singh___",
     "x": "https://twitter.com/home?lang=en"
+  },
+  {
+    "name": "Sahil Mishra",
+    "year": "4th",
+    "position": "Administrative Head",
+    "image": "SahilSir.jpg",
+    "department": ["core"],
+    "linkedIn": "https://www.linkedin.com/in/sahil-mishra-1628b420a",
+    "instagram": "https://www.instagram.com/mishra_sahil2001",
+    "x": ""
   },
   {
     "name": "Vikas Saroj",

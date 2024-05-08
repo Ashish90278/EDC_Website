@@ -13,27 +13,6 @@ export const AdminUsers = () => {
 
   const closeModal = () => setShowModal(false);
 
-  // const edit = async() => {
-  //   try {
-
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
-  // const delete = async(id) => {
-  //   try {
-  //     const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
-  //       mode: 'cors',
-  //       method: "DELETE",
-  //     });
-  //     console.log(id);
-
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
   const getAllUsersData = async () => {
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/users", {
@@ -78,8 +57,6 @@ export const AdminUsers = () => {
           <div>
             <h4>All Users</h4>
           </div>
-          {/* <hr /> */}
-          {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
           <table>
             <tr>
               <th>S No.</th>

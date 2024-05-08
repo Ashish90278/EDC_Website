@@ -109,11 +109,121 @@
   width: 5%;
   text-align: center;
   text-wrap: wrap;
-  /* margin-left: 2%; */
 }
 
 .admin-registrations tr :nth-child(8) {
   width: 12%;
   text-align: center;
   margin-left: 3%;
+}
+
+@media screen and (max-width: 950px) {
+  .admin-registrations-section {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .admin-registrations {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: scroll;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .admin-registrations div {
+    position: sticky;
+    top: -4.5rem;
+    left: 1rem;
+  }
+  .admin-registrations tr{
+    margin-left: 28rem;
+    width: 150vw;
+  }
+  .admin-registrations tr :nth-child(1) {
+    width: 5%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-registrations tr :nth-child(2) {
+    width: 18%;
+  }
+  .admin-registrations tr :nth-child(3) {
+    width: 20%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-registrations tr :nth-child(4) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-registrations tr :nth-child(5) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-registrations tr :nth-child(6) {
+    width: 15%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .admin-registrations tr :nth-child(7) {
+    width: 6%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+  }
+  .admin-registrations tr :nth-child(8) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .admin-registrations tr{
+    margin-left: 24rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .admin-registrations tr{
+    width: 200vw;
+    margin-left: 40.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .admin-registrations tr{
+    margin-left: 35rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .admin-registrations tr{
+    width: 220vw;
+    margin-left: 37rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .admin-registrations tr{
+    width: 250vw;
+    margin-left: 42rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .admin-registrations tr{
+    width: 280vw;
+    margin-left: 46rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .admin-registrations tr{
+    width: 300vw;
+    margin-left: 45.5rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .admin-registrations tr{
+    width: 300vw;
+    margin-left: 41rem;
+  }
 }

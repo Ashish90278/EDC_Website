@@ -106,3 +106,110 @@
   width: 12%;
   margin-left: 3%;
 }
+
+
+@media screen and (max-width: 950px) {
+  .admin-members-section {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .admin-members {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: scroll;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .admin-members div {
+    position: sticky;
+    top: -4.5rem;
+    left: 1rem;
+  }
+  .admin-members tr{
+    margin-left: 24rem;
+    width: 150vw;
+  }
+  .admin-members tr :nth-child(1) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-members tr :nth-child(2) {
+    width: 15%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-members tr :nth-child(3) {
+    width: 15%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-members tr :nth-child(4) {
+    width: 18%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-members tr :nth-child(5) {
+    width: 24%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-members tr :nth-child(6) {
+    width: 5%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .admin-members tr :nth-child(7) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .admin-members tr{
+    margin-left: 20.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .admin-members tr{
+    width: 170vw;
+    margin-left: 25.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .admin-members tr{
+    width: 185vw;
+    margin-left: 27rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .admin-members tr{
+    width: 200vw;
+    margin-left: 28rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .admin-members tr{
+    width: 220vw;
+    margin-left: 31rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .admin-members tr{
+    width: 260vw;
+    margin-left: 38rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .admin-members tr{
+    width: 280vw;
+    margin-left: 38rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .admin-members tr{
+    margin-left: 34rem;
+  }
+}

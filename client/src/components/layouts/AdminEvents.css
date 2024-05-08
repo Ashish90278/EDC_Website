@@ -119,3 +119,115 @@
   text-align: center;
   margin-left: 3%;
 }
+
+@media screen and (max-width: 950px) {
+  .admin-events-section {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .admin-events {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: scroll;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .admin-events div {
+    position: sticky;
+    top: -4.5rem;
+    left: 1rem;
+  }
+  .admin-events tr{
+    margin-left: 24rem;
+    width: 150vw;
+  }
+  .admin-events tr :nth-child(1) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-events tr :nth-child(2) {
+    width: 16%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-events tr :nth-child(3) {
+    width: 30%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-events tr :nth-child(4) {
+    width: 8%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-events tr :nth-child(5) {
+    width: 8%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-events tr :nth-child(6) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .admin-events tr :nth-child(7) {
+    width: 5%;
+    text-align: center;
+    text-wrap: wrap;
+    /* margin-left: 3%; */
+  }
+  .admin-events tr :nth-child(8) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .admin-events tr{
+    margin-left: 20.5rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .admin-events tr{
+    width: 170vw;
+    margin-left: 25.5rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .admin-events tr{
+    width: 220vw;
+    margin-left: 37.5rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .admin-events tr{
+    width: 240vw;
+    margin-left: 39rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .admin-events tr{
+    margin-left: 36rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .admin-events tr{
+    width: 260vw;
+    margin-left: 38rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .admin-events tr{
+    width: 270vw;
+    margin-left: 36rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .admin-events tr{
+    width: 300vw;
+    margin-left: 38rem;
+  }
+}

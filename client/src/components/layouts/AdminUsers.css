@@ -20,11 +20,11 @@
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter:blur(10px);
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .admin-users div {
@@ -38,13 +38,13 @@
   padding: 0.8rem 0.8rem 0.8rem 1.2rem;
   border-radius: 0.5rem;
   /* background-image: linear-gradient(195deg, #ec407a 0%, #d81b60 100%); */
-  background-color: rgb(0,195,255);
+  background-color: rgb(0, 195, 255);
 }
 .admin-users h4 {
   color: #011627;
   font-weight: 800;
 }
-.admin-users span{
+.admin-users span {
   width: auto;
 }
 
@@ -65,9 +65,9 @@
   margin-top: 1rem;
   font-family: "Open-Sans", sans-serif;
   font-weight: 100;
-  color: white;  
+  color: white;
 }
-.admin-users tr td :nth-child(1){
+.admin-users tr td :nth-child(1) {
   width: 100%;
 }
 .admin-users tr :nth-child(1) {
@@ -108,3 +108,111 @@
   text-wrap: wrap;
   margin-left: 3%;
 }
+
+@media screen and (max-width: 950px) {
+  .admin-users-section {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .admin-users {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: scroll;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  .admin-users div {
+    position: sticky;
+    top: -4.5rem;
+    left: 1rem;
+  }
+  .admin-users tr{
+    margin-left: 28rem;
+    width: 150vw;
+  }
+  .admin-users tr :nth-child(1) {
+    width: 5%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-users tr :nth-child(2) {
+    width: 20%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-users tr :nth-child(3) {
+    width: 20%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-users tr :nth-child(4) {
+    width: 17%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-users tr :nth-child(5) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+  .admin-users tr :nth-child(6) {
+    width: 10%;
+    text-align: center;
+    text-wrap: wrap;
+  }
+
+  .admin-users tr :nth-child(7) {
+    width: 15%;
+    text-align: center;
+    text-wrap: wrap;
+    margin-left: 3%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .admin-users tr{
+    margin-left: 24rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .admin-users tr{
+    width: 170vw;
+    margin-left: 29rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .admin-users tr{
+    width: 200vw;
+    margin-left: 35rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .admin-users tr{
+    width: 220vw;
+    margin-left: 37rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .admin-users tr{
+    width: 240vw;
+    margin-left: 39.5rem;
+  }
+}
+@media screen and (max-width: 410px) {
+  .admin-users tr{
+    width: 260vw;
+    margin-left: 41rem;
+  }
+}
+@media screen and (max-width: 370px) {
+  .admin-users tr{
+    width: 270vw;
+    margin-left: 39rem;
+  }
+}
+@media screen and (max-width: 330px) {
+  .admin-users tr{
+    width: 300vw;
+    margin-left: 41rem;
+  }
+}
+

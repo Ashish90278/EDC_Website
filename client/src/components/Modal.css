@@ -5,18 +5,16 @@
     top: 0;
     bottom: 0;
     background-color: rgba(189, 189, 189, 0.9);
+    z-index: 1;
 }
 .modal{
     position: fixed;
     width: 100%;
     height: 70%;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
-    /* align-items: center; */
     margin-top: 2rem;
     z-index: 1;
-
 }
 .modal-container{
     position: relative;
@@ -26,14 +24,11 @@
     align-items: center;
     background-color: #011627;
     width: 50%;
-    /* border: 2px solid red; */
     gap: 0.5rem;
 }
 .modal-container> button{
     position: absolute;
     color: rgb(255, 255, 255);
-    /* width: 2rem; */
-    /* transform: scale(1.5); */
     font-size: 2rem;
     height: 2rem;
     top: 0;
@@ -41,12 +36,10 @@
     background: transparent;
     border: 1px solid transparent;
 }
-.modal-container span{
-    width: auto;
-    height: auto;
-    border: 2px solid red;
-}
 
+.modal-container div button{
+    width: auto;
+}
 .modal-container input{
     outline: none;
     color: white;
@@ -57,4 +50,10 @@
 
 .modal-container p{
     color: grey;
+}
+
+@media only screen and (max-width:950px){
+    .modal{
+        top: 20%;
+    }
 }

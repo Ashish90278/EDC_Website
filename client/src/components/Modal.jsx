@@ -112,14 +112,13 @@ export const Modal = (props) => {
                   }
                   onChange={handleModalData}
                 />
-                <p>{heading === "department" ?{heading}:"hello"}</p>
+                {/* <p>{heading === "department" ?{heading}:"hello"}</p> */}
               </>
             );
           })}
-          {/* <input type="text" name="name" placeholder="Name" value={userData.name} onChange={handleModalData} /> */}
-          <span>
+          <div>
             <Button text="Update" class="submit button" />
-          </span>
+          </div>
         </form>
       </div>
     </>

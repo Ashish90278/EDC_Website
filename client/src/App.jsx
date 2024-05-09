@@ -20,6 +20,7 @@ import { AdminMembers } from "./components/layouts/AdminMembers.jsx";
 import { AdminEvents } from "./components/layouts/AdminEvents.jsx";
 import { EventPage } from "./components/EventPage.jsx";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 export const App = () => {
 

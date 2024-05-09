@@ -24,6 +24,14 @@ export const Modal = (props) => {
     }
   };
 
+  const isEmail = (email) => {
+    if (email === "email") {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   const handleModalData = (e) => {
     let name = e.target.name;
     let value = e.target.value;
@@ -95,23 +103,26 @@ export const Modal = (props) => {
           className="modal-container"
         >
           <button onClick={props.onClick}>&times;</button>
-          {headings.map((heading) =>  {
+          {headings.map((heading) => {
             return (
               <>
-                <input
-                  key={heading}
-                  name={heading}
-                  type="text"
-                  placeholder={heading}
-                  defaultValue={
-                    buttonClick(button)
-                      ? heading === "department"
-                        ? data[heading].map(e =>e)
-                        : data[heading]
-                      : userData.heading
-                  }
-                  onChange={handleModalData}
-                />
+                <div className="modal-input">
+                  <label htmlFor={heading}>{heading} :</label>
+                  <input
+                    key={heading}
+                    name={heading}
+                    type="text"
+                    placeholder={heading}
+                    defaultValue={
+                      buttonClick(button)
+                        ? heading === "department"
+                          ? data[heading].map((e) => e)
+                          : data[heading]
+                        : userData.heading
+                    }
+                    onChange={handleModalData}
+                  />
+                </div>
                 {/* <p>{heading === "department" ?{heading}:"hello"}</p> */}
               </>
             );

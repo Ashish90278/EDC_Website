@@ -46,7 +46,24 @@
     padding: 0.3rem 1rem;
     border: 1px solid rgb(0, 195, 255);
     background: transparent;
+    width: 40%;
+    margin-right: 20%;
 }
+.modal-container label{
+    color: white;
+}
+.modal-input{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.modal-input label{
+    width: 38%;
+    text-align: right;
+    margin-right: 2%;
+    text-transform: capitalize;
+}
+
 
 .modal-container p{
     color: grey;
@@ -57,8 +74,12 @@
         top: 20%;
     }
 }
-@media only screen and (max-width:450px){
+@media only screen and (max-width:550px){
     .modal-container{
         width: 80%;
+    }
+    .modal-container input{
+        width: 50%;
+        margin-right: 10%;
     }
 }

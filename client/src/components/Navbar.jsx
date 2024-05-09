@@ -11,16 +11,6 @@ export const Navbar = () => {
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
-    const root = document.getElementById("root").children;
-    if (navRef.current.classList.contains("responsive_nav")) {
-      for (var i = 1; i <= root.length; i++) {
-        root[i].style.display = "none";
-      }
-    } else {
-      for (var i = 1; i <= root.length; i++) {
-        root[i].style.display = "block";
-      }
-    }
   };
 
   const navActive = ({ isActive }) => {

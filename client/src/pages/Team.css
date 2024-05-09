@@ -64,7 +64,8 @@
   }
   #core_team,
   #leads,
-  #executive {
+  #executive,
+  #filterdiv {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
@@ -77,7 +78,8 @@
     }
   #core_team,
   #leads,
-  #executive {
+  #executive,
+  #filterdiv {
     gap: 1rem;
     padding: 0rem;
   }
@@ -91,7 +93,8 @@
 @media screen and (max-width: 600px) {
   #core_team,
   #leads,
-  #executive {
+  #executive,
+  #filterdiv {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
@@ -116,7 +119,8 @@
   }
   #core_team,
   #leads,
-  #executive {
+  #executive,
+  #filterdiv {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }

@@ -30,7 +30,7 @@ export const Navbar = () => {
   return (
     <>
       <header>
-        <div className="container">
+        <div id="Navbar" className="container">
           <div className="logo">
             <NavLink to="/">
               <img src="../imgs/EDC_logo.png" alt="Edc_Logo" />

@@ -21,17 +21,8 @@ import { AdminEvents } from "./components/layouts/AdminEvents.jsx";
 import { EventPage } from "./components/EventPage.jsx";
 
 export const App = () => {
-  const [loading, setLoading] = useState(true);
-  const spinner = document.getElementById("spinner");
-  if (spinner) {
-    setTimeout(() => {
-      spinner.style.display = "none";
-      setLoading(false);
-    }, 1500);
-  }
 
   return (
-    !loading && (
       <>
         <BrowserRouter>
           <Navbar />
@@ -560,18 +551,9 @@ export const App = () => {
             />
             <Route path="/admin/members" element={<AdminMembers />} />
             <Route path="/admin/events" element={<AdminEvents />} />
-            {/* <Route path="/admin"element={<AdminLayout/>} >
-            <Route path="users" element={<AdminUsers/>} />
-            <Route path="registrations" element={<AdminRegistrations/>} />
-          </Route> */}
-            {/* <Route path="/admin"element={<AdminLayout/>} >
-            <Route path="users" element={<AdminUsers/>} />
-            <Route path="registrations" element={<AdminRegistrations/>} />
-          </Route> */}
           </Routes>
           <Footer />
         </BrowserRouter>
       </>
-    )
   );
 };

@@ -1,7 +1,7 @@
 {
   "name": "EDC_client",
   "private": false,
-  "version": "1.5.1",
+  "version": "1.6.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@react-three/drei": "^9.105.4",
     "@react-three/fiber": "^8.16.1",
+    "@vercel/speed-insights": "^1.0.10",
     "aos": "^2.3.4",
     "clsx": "^2.1.0",
     "dotenv": "^16.4.5",

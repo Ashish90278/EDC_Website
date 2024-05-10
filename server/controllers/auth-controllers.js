@@ -35,7 +35,7 @@ const signup = async (req, res) => {
     const { username, email, phone, password } = req.body;
 
     // Check user Exist or Not
-    const userExist = await User.findOne({ email });
+    const userExist = await User.findOne({ username, email });
 
     if (userExist) {
       return res.status(400).json({
@@ -62,9 +62,9 @@ const signup = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    const {email, password} = req.body;
+    const {username, password} = req.body;
 
-    const userExist = await User.findOne(email);
+    const userExist = await User.findOne(username);
 
     if(!userExist){
         return res.status(400).json({"msg": "Invalid Credentials"})
@@ -73,15 +73,15 @@ const login = async (req, res) => {
     const isPasswordValid = await bcrypt.compare(password, userExist.password);
 
     if(isPasswordValid){
-        res.status(200).json({ 
+        res.status(201).json({ 
             message: "Login Successful",
-            token: await userExist.generateToken(),
-            userId: userExist._id.toString()
+            // token: await userExist.generateToken(),
+            // userId: userExist._id.toString()
         });
     }else{
-        res.status(401).json({msg: "Invalid email or password"})
+        res.status(401).json({msg: "Invalid Username or password"})
     }
-    res.status(200).send("login");
+    // res.status(200).send("login");
   } catch (error) {
     res.status(500).json("Internal Server Error");
   }

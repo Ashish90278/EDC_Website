@@ -6,7 +6,7 @@ import { Button } from "../components/Button.jsx";
 
 export const Login = () => {
   const [user, setUser] = useState({
-    email: "",
+    username: "",
     password: ""
   });
   const handleInput = (e) => {
@@ -18,10 +18,44 @@ export const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("hello");
-    navigate("/");
+    try {
+      const response = await fetch("https://edc-website-server-api.onrender.com/api/auth/login", {
+        // mode: 'cors',
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        
+        body: JSON.stringify(user),
+      });
+
+      if (response.ok) {
+        setUser({
+          username: "",
+          password: "",
+        });
+        alert("hello");
+        navigate("/");
+      }
+      if(response.status === 400){
+        setUser({
+          username: "",
+          password: "",
+        });
+        alert("Invalid Credentials");
+      }
+      if(response.status === 401){
+        setUser({
+          username: "",
+          password: "",
+        });
+        alert("Invalid email or password");
+      }
+    } catch (error) {
+      console.log("login", error)
+    }
   };
 
   return (
@@ -33,9 +67,9 @@ export const Login = () => {
             
             <div>
               <input
-                type="email"
-                name="email"
-                placeholder="Enter your Email"
+                type="text"
+                name="username"
+                placeholder="Enter your Username"
                 required
                 autoComplete="off"
                 value={user.email}

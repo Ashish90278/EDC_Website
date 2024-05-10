@@ -37,7 +37,7 @@ export const Login = () => {
           password: "",
         });
         alert("hello");
-        navigate("/");
+        navigate("/team");
       }
       if(response.status === 400){
         setUser({

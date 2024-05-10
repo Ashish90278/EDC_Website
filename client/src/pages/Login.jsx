@@ -5,6 +5,9 @@ import { Button } from "../components/Button.jsx";
 
 
 export const Login = () => {
+
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     username: "",
     password: ""
@@ -36,7 +39,7 @@ export const Login = () => {
           username: "",
           password: "",
         });
-        navigate("/signup");
+        navigate("/");
       }
       if(response.status === 400){
         setUser({

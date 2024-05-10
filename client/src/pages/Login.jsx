@@ -36,8 +36,7 @@ export const Login = () => {
           username: "",
           password: "",
         });
-        alert("hello");
-        navigate("/team");
+        navigate("/signup");
       }
       if(response.status === 400){
         setUser({
@@ -51,7 +50,7 @@ export const Login = () => {
           username: "",
           password: "",
         });
-        alert("Invalid email or password");
+        alert("Invalid username or password");
       }
     } catch (error) {
       console.log("login", error)

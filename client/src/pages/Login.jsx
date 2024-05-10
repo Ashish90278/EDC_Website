@@ -22,7 +22,7 @@ export const Login = () => {
     e.preventDefault();
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/auth/login", {
-        // mode: 'cors',
+        mode: 'cors',
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -18,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/auth", authRoute);
 app.use("/api/admin", adminRoute);
+app.use(errorMiddleware);
 
 
 connectDb()

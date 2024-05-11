@@ -15,11 +15,11 @@ export const signupSchema = z.object({
     phone : z
     .string({required_error: "Phone No. is Required"})
     .trim()
-    .min(10,{message:"Phone No. must be atleast of 3 characters"})
-    .max(20,{message:"Phone No. must not be more than 255 characters"}),
+    .min(10,{message:"Phone No. must be atleast of 10 characters"})
+    .max(20,{message:"Phone No. must not be more than 20 characters"}),
     password : z
     .string({required_error: "Password is Required"})
     .trim()
-    .min(7,{message:"Password must be atleast of 3 characters"})
+    .min(7,{message:"Password must be atleast of 7 characters"})
     .max(255,{message:"Password must not be more than 255 characters"}),
 })

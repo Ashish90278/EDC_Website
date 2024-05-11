@@ -11,8 +11,8 @@ const router = express.Router();
 // ----------------- OR -------------------
 
 router.route("/").get(home);
-router.route("/register").post(validate(signupSchema), register);
-router.route("/signup").post(signup);
+router.route("/register").post(register);
+router.route("/signup").post(validate(signupSchema), signup);
 router.route("/login").post(login);
 
 

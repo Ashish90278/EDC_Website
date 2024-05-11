@@ -243,7 +243,7 @@ nav {
     padding: 1rem 0rem;
   }
   #navMenu{
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   #navDropDown{
     top: 200%;
@@ -280,16 +280,11 @@ nav {
     font-size: 1rem;
     padding: 1rem 0rem;
   }
-  #navMenu{
-    font-size: 1rem;
-  }
   #navDropDown{
-    top: 200%;
     right: -10%;
-    /* left: 0; */
   }
   .navMenuButton{
-    right: -160%;
+    right: -150%;
   }
   nav a:nth-child(1){
     margin-top: -11rem;

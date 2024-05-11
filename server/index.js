@@ -4,6 +4,7 @@ import authRoute from "./router/auth-router.js"
 import adminRoute from "./router/admin-router.js"
 import connectDb from "./db/db.js";
 import cors from "cors";
+import { errorMiddleware } from "./middlewares/error_middleware.js";
 
 
 

@@ -1,14 +1,31 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 import client from "../../package.json";
+import { MdArrowDropDown } from "react-icons/md";
 
 import "./Navbar.css";
 
 export const Navbar = () => {
   const navRef = useRef();
+  const [navMenuValue, setNavMenuValue] = useState(false);
 
+  const navMenuState = (navMenuValue) => {
+    if(navMenuValue === true){
+      setNavMenuValue(false);
+      return "none"
+    }else{
+      setNavMenuValue(true);
+      return "block"
+    }
+  }
+  const showNavMenu = () => {
+    document.getElementById("navDropDown").style.display=navMenuState(navMenuValue);
+  };
+  const closeNavMenu = () => {
+    // document.getElementById("navDropDown").style.display=navMenuState(navMenuValue);
+  };
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
@@ -45,6 +62,22 @@ export const Navbar = () => {
             <NavLink style={navActive} to="/contact" onClick={showNavbar}>
               CONTACT
             </NavLink>
+            <div className="showNavMenu">
+              <button className="navMenuButton" onClick={showNavMenu}>
+                <div id="navMenu">
+                  OTHERS
+                  <MdArrowDropDown />
+                </div>
+              </button>
+              <div id="navDropDown">
+                <div onClick={showNavMenu}>
+                  <span><NavLink to="/login">Log Out</NavLink></span>
+                </div>
+                <div onClick={showNavMenu}>
+                  <span><NavLink to="/signup">Sign Up</NavLink></span>
+                </div>
+              </div>
+            </div>
             <button id="communityButton">
               <NavLink
                 to="https://chat.whatsapp.com/Io5MxXmunWaCpUnoW3S0Gs"

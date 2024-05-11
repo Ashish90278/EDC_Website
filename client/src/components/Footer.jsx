@@ -102,8 +102,8 @@ export const Footer = () => {
             <hr style={{ border: "1px solid grey" }} />
           </div>
           <div id="policy">
-            <h4>Created By :&nbsp;</h4>
-            <p>&copy; EDC JSS</p>
+            <h4>Copyright&nbsp;</h4>
+            <p>&copy; 2024 EDC JSS</p>
           </div>
         </div>
       </footer>

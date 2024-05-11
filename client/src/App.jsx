@@ -8,20 +8,17 @@ import { Events } from "./pages/Events.jsx";
 import { Team } from "./pages/Team.jsx";
 import { Blog } from "./pages/Blog.jsx";
 import { Login } from "./pages/Login.jsx";
+import { Logout } from "./pages/Logout.jsx";
 import { Signup } from "./pages/Signup.jsx";
 import { Register } from "./pages/Register.jsx";
 import { Navbar } from "./components/Navbar.jsx";
 import { Footer } from "./components/Footer.jsx";
-// import { AdminLayout } from "./components/layouts/Admin-Layout.jsx";
 import { AdminUsers } from "./components/layouts/AdminUsers.jsx";
 import { AdminSidebar } from "./components/layouts/AdminSidebar.jsx";
 import { AdminStudentsRegister } from "./components/layouts/AdminStudentsRegister.jsx";
 import { AdminMembers } from "./components/layouts/AdminMembers.jsx";
 import { AdminEvents } from "./components/layouts/AdminEvents.jsx";
 import { EventPage } from "./components/EventPage.jsx";
-// import { SpeedInsights } from "@vercel/speed-insights/next"
-// import { Analytics } from "@vercel/analytics/react"
-
 export const App = () => {
 
   return (
@@ -542,6 +539,7 @@ export const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/aboutus" element={<Aboutus />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={<Register />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/team" element={<Team />} />

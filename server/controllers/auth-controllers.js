@@ -38,9 +38,6 @@ const signup = async (req, res) => {
     const usernameExist = await User.findOne({ username });
     const emailExist = await User.findOne({ email });
 
-    console.log(usernameExist);
-    console.log(emailExist);
-
     if (usernameExist || emailExist) {
       return res.status(400).json({
         msg: "User Already Exist",
@@ -76,7 +73,7 @@ const login = async (req, res) => {
     const isPasswordValid = await bcrypt.compare(password, userExist.password);
 
     if(isPasswordValid){
-        res.status(201).json({ 
+        res.status(200).json({ 
             message: "Login Successful",
             token: await userExist.generateToken(),
             userId: userExist._id.toString()

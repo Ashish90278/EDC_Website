@@ -28,12 +28,13 @@ userSchema.methods.generateToken = async function() {
     try {
         return jwt.sign({
             usedId: this._id.toString(),
+            username: this.username,
             email: this.email,
             isAdmin: this.isAdmin
         },
         process.env.JWT_SECRET_KEY,
         {
-            expiresIn:"1d"
+            expiresIn:"1m"
         })        
     } catch (error) {
         console.error(error);

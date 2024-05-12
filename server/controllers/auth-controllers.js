@@ -21,9 +21,9 @@ const register = async (req, res) => {
       return res.status(400).json({ msg: "You already register" });
     }
     await Registration.create({ username, email, branch, year, admissionNo });
-    res.status(200).json(req.body);
+    return res.status(200).json(req.body);
   } catch (error) {
-    res.status(500).json("Internal Server Error");
+    return res.status(500).json("Internal Server Error");
   }
 };
 
@@ -47,14 +47,14 @@ const signup = async (req, res) => {
 
     // Store New user in DB
     const userCreated = await User.create({ username, email, phone, password: hashPassword });
-    res.status(201).json({ 
+    return res.status(201).json({ 
         message: "Registration Successful",
         token: await userCreated.generateToken(),
         userId: userCreated._id.toString()
     });
 
   } catch (error) {
-    res.status(500).json("Internal Server Error");
+    return res.status(500).json("Internal Server Error");
   }
 };
 
@@ -71,16 +71,16 @@ const login = async (req, res) => {
     const isPasswordValid = await bcrypt.compare(password, userExist.password);
 
     if(isPasswordValid){
-        res.status(200).json({ 
+        return res.status(200).json({ 
             message: "Login Successful",
             token: await userExist.generateToken(),
             userId: userExist._id.toString()
         });
     }else{
-        res.status(401).json({msg: "Invalid Username or password"})
+        return res.status(401).json({msg: "Invalid Username or password"})
     }
   } catch (error) {
-    res.status(500).json("Internal Server Error");
+    return res.status(500).json("Internal Server Error");
   }
 };
 

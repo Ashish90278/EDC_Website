@@ -38,7 +38,6 @@ export const Contact = () => {
       [name]: value
     });
   };
-  console.log(contact)
 
   const handleContactSubmit = async(e) => {
     e.preventDefault();

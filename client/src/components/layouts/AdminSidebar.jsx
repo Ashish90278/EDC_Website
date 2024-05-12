@@ -6,11 +6,15 @@ import { FiUsers } from "react-icons/fi";
 import { CiCalendarDate } from "react-icons/ci";
 import { PiStudent } from "react-icons/pi";
 import { MdAdminPanelSettings } from "react-icons/md";
+import { RiPhoneLine } from "react-icons/ri";
 
 export const AdminSidebar = () => {
-
   const navActive = ({ isActive }) => {
-    return { backgroundColor: isActive ? "rgb(0, 195, 255" : "transparent", borderRadius: "0.5rem", color: isActive ? "#011627" : "white" };
+    return {
+      backgroundColor: isActive ? "rgb(0, 195, 255" : "transparent",
+      borderRadius: "0.5rem",
+      color: isActive ? "#011627" : "white",
+    };
   };
 
   return (
@@ -48,6 +52,12 @@ export const AdminSidebar = () => {
                 <li>
                   <CiCalendarDate />
                   Events
+                </li>
+              </NavLink>
+              <NavLink style={navActive} to="/admin/contacts">
+                <li>
+                  <RiPhoneLine />
+                  Contacts
                 </li>
               </NavLink>
             </ul>

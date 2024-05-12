@@ -1,9 +1,67 @@
 import { NavLink } from "react-router-dom";
 import react from "react";
 import "./Contact.css";
+import { useState } from "react";
 import { Button } from "../components/Button.jsx";
+import { useAuth } from "../store/Auth.jsx";
 
 export const Contact = () => {
+
+  const [contact, setContact] = useState({
+    username:"",
+    email:"",
+    subject:"",
+    message:""
+  })
+  const { user } = useAuth();
+
+  const handleContactInput = (e) => {
+    let name = e.target.name;
+    let value = e.target.value;
+
+    setContact({
+      ...contact,
+      [name]: value
+    });
+  };
+  console.log(contact)
+
+  const handleContactSubmit = async(e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("https://edc-website-server-api.onrender.com/api/auth/contact", {
+        mode: 'cors',
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(contact),
+      });
+
+      if(response.ok){
+        setUserRegistrationData({
+          username: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+        alert("Thank for Contacting Us");
+      }
+
+      if(response.status === 400){
+        setUserRegistrationData({
+          username: "",
+          email: "",
+          subject: "",
+          message: ""
+        });
+        alert("Error in Submission");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
   return (
     <>
       <section id="contact">
@@ -24,35 +82,47 @@ export const Contact = () => {
           <div className="contact-content">
             <div className="contact-form">
               <div className="form-header">Message</div>
-              <form id="myForm" action="#">
+              <form id="myForm" onSubmit={handleContactSubmit}>
                 <div className="input-line">
                   <input
                     id="name"
+                    name="username"
                     type="text"
                     placeholder="Name"
-                    required=""
+                    required
                     className="input-name"
+                    value={contact.username}
+                    onChange={handleContactInput}
                   />
                   <input
                     id="email"
+                    name="email"
                     type="email"
                     placeholder="Email"
-                    required=""
+                    required
                     className="input-name"
+                    value={contact.email}
+                    onChange={handleContactInput}
                   />
                 </div>
                 <input
-                  type="text"
                   id="subject"
+                  name="subject"
+                  type="text"
                   placeholder="Subject"
-                  required=""
+                  required
                   className="input-subject"
+                  value={contact.subject}
+                  onChange={handleContactInput}
                 />
                 <textarea
                   id="body"
+                  name="message"
                   className="input-textarea"
-                  required=""
+                  required
                   placeholder="Message"
+                  value={contact.message}
+                  onChange={handleContactInput}
                 ></textarea>
                 <Button text="Submit" class="submit" />
                 {/* <button type="submit" id="submit">

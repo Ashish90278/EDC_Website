@@ -18,6 +18,7 @@ import { AdminSidebar } from "./components/layouts/AdminSidebar.jsx";
 import { AdminStudentsRegister } from "./components/layouts/AdminStudentsRegister.jsx";
 import { AdminMembers } from "./components/layouts/AdminMembers.jsx";
 import { AdminEvents } from "./components/layouts/AdminEvents.jsx";
+import { AdminContacts } from "./components/layouts/AdminContacts.jsx";
 import { EventPage } from "./components/EventPage.jsx";
 
 
@@ -554,6 +555,7 @@ export const App = () => {
             />
             <Route path="/admin/members" element={<AdminMembers />} />
             <Route path="/admin/events" element={<AdminEvents />} />
+            <Route path="/admin/contacts" element={<AdminContacts />} />
           </Routes>
           <Footer />
         </BrowserRouter>

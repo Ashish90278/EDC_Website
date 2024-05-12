@@ -32,8 +32,7 @@ export const Register = () => {
         },
         body: JSON.stringify(userRegistrationData),
       });
-
-      console.log(response);
+      
       if (response.ok) {
         setUserRegistrationData({
           username: "",

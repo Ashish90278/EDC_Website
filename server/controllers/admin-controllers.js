@@ -2,6 +2,7 @@ import User from "../models/users.js";
 import registerStudents from "../models/registration.js";
 import Member from "../models/members.js";
 import Event from "../models/events.js";
+import Contact from "../models/contacts.js";
 
 const getAllUsers = async (req, res) => {
   try {
@@ -189,12 +190,61 @@ const updateEvent = async (req, res) => {
     console.log(error);
   }
 };
+const getAllContacts = async (req, res) => {
+  try {
+    const contacts = await Contact.find();
+
+    if (!contacts || contacts.length === 0) {
+      return res.status(404).json({ message: "No contacts Found" });
+    }
+    return res.status(200).json(contacts);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const addContact = async (req, res) => {
+  try {
+    const { username, email, subject, message } = req.body;
+    await Contact.create({ username, email, subject, message });
+    return res.status(200).json(req.body);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const deleteContact = async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Contact.deleteOne({ _id: id });
+    return res.status(200).json({ message: "Contact Deleted Successfully" });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const updateContact = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const updatedUserData = req.body;
+    const updatedData = await Contact.updateOne(
+      { _id: id },
+      {
+        $set: updatedUserData,
+      }
+    );
+    return res.status(200).json(updatedData);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export {
   getAllUsers,
   getRegisterStudents,
   getAllMembers,
   getAllEvents,
+  getAllContacts,
   deleteUser,
   deleteRegistration,
   addMember,
@@ -205,4 +255,7 @@ export {
   updateRegistration,
   updateMember,
   updateEvent,
+  updateContact,
+  addContact,
+  deleteContact
 };

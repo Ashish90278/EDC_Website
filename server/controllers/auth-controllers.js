@@ -108,4 +108,4 @@ const user = async (req, res) => {
     console.log("Error from user route");
   }
 };
-export { home, register, login, signup, user };
+export { home, register, contact, login, signup, user };

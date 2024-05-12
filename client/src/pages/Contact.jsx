@@ -125,11 +125,6 @@ export const Contact = () => {
                   onChange={handleContactInput}
                 ></textarea>
                 <Button text="Submit" class="submit" />
-                {/* <button type="submit" id="submit">
-                <div id="submitLoader"></div>
-                <span id="submitText"> Submit </span>
-                <div id="submitLoaderSpace"></div>
-              </button> */}
               </form>
             </div>
             <div className="contact-info">

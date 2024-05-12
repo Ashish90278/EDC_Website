@@ -39,7 +39,7 @@ export const Contact = () => {
       });
 
       if(response.ok){
-        setUserRegistrationData({
+        setContact({
           username: "",
           email: "",
           subject: "",
@@ -49,7 +49,7 @@ export const Contact = () => {
       }
 
       if(response.status === 400){
-        setUserRegistrationData({
+        setContact({
           username: "",
           email: "",
           subject: "",

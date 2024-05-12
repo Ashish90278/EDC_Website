@@ -13,7 +13,21 @@ export const Contact = () => {
     subject:"",
     message:""
   })
+
+  const [userData, setUserData] = useState(true);
+
   const { user } = useAuth();
+
+  if(userData && user){
+    setContact({
+      username: user.username,
+      email: user.email,
+      subject: "",
+      message: ""
+    });
+
+    setUserData(false);
+  };
 
   const handleContactInput = (e) => {
     let name = e.target.name;

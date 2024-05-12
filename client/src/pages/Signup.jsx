@@ -42,7 +42,8 @@ export const Signup = () => {
       if (response.ok) {
         const res_data = await res.data.json();
 
-        storetokenInLS(res_data.token)
+        storetokenInLS(res_data.token);
+        console.log(res_data);
         setUser({
           username: "",
           email: "",

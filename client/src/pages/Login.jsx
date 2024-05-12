@@ -41,7 +41,7 @@ export const Login = () => {
       if (response.ok) {
         const res_data = await res.data.json();
 
-        // storetokenInLS(res_data.token);
+        storetokenInLS(res_data.token);
         setUser({
           username: "",
           password: "",

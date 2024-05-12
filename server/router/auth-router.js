@@ -1,5 +1,5 @@
 import express from "express";
-import { home, register, signup, login, user, contact } from "../controllers/auth-controllers.js"
+import { home, register, signup, login, user, contact, events, members } from "../controllers/auth-controllers.js"
 import { validate } from "../middlewares/validate_middleware.js";
 import { signupSchema } from "../validators/auth-validator.js";
 import { authMiddleware } from "../middlewares/auth_middleware.js";
@@ -18,6 +18,8 @@ router.route("/contact").post(contact);
 router.route("/signup").post(validate(signupSchema), signup);
 router.route("/login").post(login);
 router.route("/user").get(authMiddleware, user);
+router.route("/event").get(events);
+router.route("/member").get(members);
 
 
 

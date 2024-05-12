@@ -1,6 +1,8 @@
 import express from "express";
 import User from "../models/users.js";
 import Registration from "../models/registration.js";
+import Member from "../models/members.js";
+import Event from "../models/events.js";
 import Contact from "../models/contacts.js";
 import bcrypt from "bcryptjs";
 
@@ -107,4 +109,32 @@ const user = async (req, res) => {
     console.log("Error from user route");
   }
 };
-export { home, register, contact, login, signup, user };
+
+const events = async (req, res) => {
+  try {
+    const response = await Event.find();
+    if(!response){
+        res.status(404).json({ message: "No Event Found" });
+    }
+    res.status(200).json({ response });
+  } catch (error) {
+    console.log("Error from event route");
+  }
+};
+
+const members = async (req, res) => {
+  try {
+    const response = await Member.find();
+    if(!response){
+      res.status(404).json({ message: "No Member Found" });
+    }
+    res.status(200).json({ response });
+  } catch (error) {
+    console.log("Error from member route");
+  }
+};
+
+
+
+
+export { home, register, contact, login, signup, user, events, members };

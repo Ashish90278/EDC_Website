@@ -7,20 +7,43 @@ import { usestate, useEffect } from "react";
 
 export const Team = () => {
   const [dept, setDept] = useState("");
+  const [teamMembers, setTeamMembers] = useState("");
 
-  const buttonActive = (department) => {
-    if(department === "core")
-    return { backgroundColor:"rgb(0, 195, 255", color: "white" };
-    else if(department === "technical")
-    return { backgroundColor:"rgb(0, 195, 255", color: "white" };
+  const getAllTeamMembers = async() => {
+    try {
+      const response = await fetch(
+        "https://edc-website-server-api.onrender.com/api/auth/member",
+        {
+          mode: "cors",
+          method: "GET",
+        }
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        setTeamMembers(data.message);
+        console.log(data.message)
+      }
+    } catch (error) {
+      console.log(`Services frontend error: ${error}`);
+    }
   };
 
-  useEffect(() => {}, [dept]);
+  const buttonActive = (department) => {
+    if (department === "core")
+      return { backgroundColor: "rgb(0, 195, 255", color: "white" };
+    else if (department === "technical")
+      return { backgroundColor: "rgb(0, 195, 255", color: "white" };
+  };
+
+  // useEffect(() => {}, [dept]);
 
   const removeButtonBackground = (prevDept) => {
-    if(prevDept === ""){
-    }else{document.getElementById(prevDept).style.backgroundColor = "transparent";}
-  }
+    if (prevDept === "") {
+    } else {
+      document.getElementById(prevDept).style.backgroundColor = "transparent";
+    }
+  };
   const handleDeptChange = (newDept) => {
     document.getElementById("core_team").style.display = "none";
     document.getElementById("leads").style.display = "none";
@@ -48,6 +71,11 @@ export const Team = () => {
       ));
   };
 
+  useEffect(() => {
+    getAllTeamMembers();
+  }, [])
+  
+
   return (
     <>
       <section className="teamMembers">
@@ -55,25 +83,67 @@ export const Team = () => {
         <div className="container">
           <div className="team">
             <ul>
-              <button id="core" onClick={() => { removeButtonBackground(dept); handleDeptChange("core")}}>
+              <button
+                id="core"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("core");
+                }}
+              >
                 <li>Core Team</li>
               </button>
-              <button id="technical" onClick={() => {removeButtonBackground(dept); handleDeptChange("technical")}}>
+              <button
+                id="technical"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("technical");
+                }}
+              >
                 <li>Tech Team</li>
               </button>
-              <button id="design" onClick={() => {removeButtonBackground(dept); handleDeptChange("design")}}>
+              <button
+                id="design"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("design");
+                }}
+              >
                 <li>Design Team</li>
               </button>
-              <button id="content" onClick={() => {removeButtonBackground(dept); handleDeptChange("content")}}>
+              <button
+                id="content"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("content");
+                }}
+              >
                 <li>Content Team</li>
               </button>
-              <button id="outreach" onClick={() => {removeButtonBackground(dept); handleDeptChange("outreach")}}>
+              <button
+                id="outreach"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("outreach");
+                }}
+              >
                 <li>Outreach Team</li>
               </button>
-              <button id="operations" onClick={() => {removeButtonBackground(dept); handleDeptChange("operations")}}>
+              <button
+                id="operations"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("operations");
+                }}
+              >
                 <li>Operation Team</li>
               </button>
-              <button id="marketing" onClick={() => {removeButtonBackground(dept); handleDeptChange("marketing")}}>
+              <button
+                id="marketing"
+                onClick={() => {
+                  removeButtonBackground(dept);
+                  handleDeptChange("marketing");
+                }}
+              >
                 <li>Marketing Team</li>
               </button>
             </ul>

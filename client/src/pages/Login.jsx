@@ -39,7 +39,7 @@ export const Login = () => {
       );
 
       if (response.ok) {
-        const res_data = await response.data.json();
+        const res_data = await response.json();
 
         storetokenInLS(res_data.token);
         setUser({

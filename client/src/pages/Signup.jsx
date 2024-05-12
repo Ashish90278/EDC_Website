@@ -40,12 +40,9 @@ export const Signup = () => {
       });
 
       if (response.ok) {
-        console.log(response.data);
-        console.log(response);
         const res_data = await response.json();
 
         storetokenInLS(res_data.token);
-        console.log(res_data);
         setUser({
           username: "",
           email: "",

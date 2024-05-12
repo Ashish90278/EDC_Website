@@ -19,6 +19,9 @@ import { AdminStudentsRegister } from "./components/layouts/AdminStudentsRegiste
 import { AdminMembers } from "./components/layouts/AdminMembers.jsx";
 import { AdminEvents } from "./components/layouts/AdminEvents.jsx";
 import { EventPage } from "./components/EventPage.jsx";
+
+
+
 export const App = () => {
 
   return (

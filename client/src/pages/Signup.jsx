@@ -2,10 +2,13 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Signup.css";
 import { Button } from "../components/Button.jsx";
+import { useAuth } from "../store/Auth.jsx";
 
 export const Signup = () => {
 
   const navigate = useNavigate();
+
+  const {storetokenInLS} = useAuth();
 
   const [user, setUser] = useState({
     username: "",
@@ -37,6 +40,9 @@ export const Signup = () => {
       });
 
       if (response.ok) {
+        const res_data = await res.data.json();
+
+        storetokenInLS(res_data.token)
         setUser({
           username: "",
           email: "",

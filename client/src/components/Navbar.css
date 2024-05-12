@@ -119,10 +119,10 @@ nav a {
   margin: 0.5rem 1rem;
   padding: 0.4rem 0.5rem;
   border-radius: 5px;
+  width: 5.5rem;
 }
 
 #navDropDown span a{
-  
   color: #ffffff;
   font-size: 0.85rem;
 }

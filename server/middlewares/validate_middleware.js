@@ -11,7 +11,7 @@ export const validate = (schema) => async(req, res, next) => {
         const error = {
             status,
             message
-        }
+        };
         next(error);
     }
 }

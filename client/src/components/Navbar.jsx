@@ -4,27 +4,27 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
 import client from "../../package.json";
 import { MdArrowDropDown } from "react-icons/md";
+import { useAuth } from "../store/Auth.jsx";
 
 import "./Navbar.css";
 
 export const Navbar = () => {
+  const { isLoggedIn } = useAuth();
   const navRef = useRef();
   const [navMenuValue, setNavMenuValue] = useState(false);
 
   const navMenuState = (navMenuValue) => {
-    if(navMenuValue === true){
+    if (navMenuValue === true) {
       setNavMenuValue(false);
-      return "none"
-    }else{
+      return "none";
+    } else {
       setNavMenuValue(true);
-      return "block"
+      return "block";
     }
-  }
-  const showNavMenu = () => {
-    document.getElementById("navDropDown").style.display=navMenuState(navMenuValue);
   };
-  const closeNavMenu = () => {
-    // document.getElementById("navDropDown").style.display=navMenuState(navMenuValue);
+  const showNavMenu = () => {
+    document.getElementById("navDropDown").style.display =
+      navMenuState(navMenuValue);
   };
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -70,12 +70,26 @@ export const Navbar = () => {
                 </div>
               </button>
               <div id="navDropDown">
-                <div onClick={showNavMenu}>
-                  <span><NavLink to="/login">Log Out</NavLink></span>
-                </div>
-                <div onClick={showNavMenu}>
-                  <span><NavLink to="/signup">Sign Up</NavLink></span>
-                </div>
+                {isLoggedIn ? (
+                  <div onClick={showNavMenu}>
+                    <span>
+                      <NavLink to="/logout">Log Out</NavLink>
+                    </span>
+                  </div>
+                ) : (
+                  <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", width: "100%"}}>
+                    <div onClick={showNavMenu}>
+                      <span>
+                        <NavLink to="/login">Login</NavLink>
+                      </span>
+                    </div>
+                    <div onClick={showNavMenu}>
+                      <span>
+                        <NavLink to="/signup">Sign Up</NavLink>
+                      </span>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             <button id="communityButton">

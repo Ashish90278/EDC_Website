@@ -3,8 +3,6 @@ import User from "../models/users.js";
 import Registration from "../models/registration.js";
 import bcrypt from "bcryptjs";
 
-// import bcrypt from "bcryptjs";
-
 const home = async (req, res) => {
   try {
     res.status(200).send("home");

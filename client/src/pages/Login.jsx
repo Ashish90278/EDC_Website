@@ -2,15 +2,16 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import "./Login.css";
 import { Button } from "../components/Button.jsx";
-
+import { useAuth } from "../store/Auth.jsx";
 
 export const Login = () => {
-
   const navigate = useNavigate();
+
+  const {storetokenInLS} = useAuth();
 
   const [user, setUser] = useState({
     username: "",
-    password: ""
+    password: "",
   });
   const handleInput = (e) => {
     let name = e.target.name;
@@ -24,31 +25,37 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://edc-website-server-api.onrender.com/api/auth/login", {
-        mode: 'cors',
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        "https://edc-website-server-api.onrender.com/api/auth/login",
+        {
+          mode: "cors",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+
+          body: JSON.stringify(user),
+        }
+      );
 
       if (response.ok) {
+        const res_data = await res.data.json();
+
+        // storetokenInLS(res_data.token);
         setUser({
           username: "",
           password: "",
         });
         navigate("/");
       }
-      if(response.status === 400){
+      if (response.status === 400) {
         setUser({
           username: "",
           password: "",
         });
         alert("Invalid Credentials");
       }
-      if(response.status === 401){
+      if (response.status === 401) {
         setUser({
           username: "",
           password: "",
@@ -56,7 +63,7 @@ export const Login = () => {
         alert("Invalid username or password");
       }
     } catch (error) {
-      console.log("login", error)
+      console.log("login", error);
     }
   };
 
@@ -66,7 +73,6 @@ export const Login = () => {
         <div className="login-container">
           <h3>Login</h3>
           <form onSubmit={handleSubmit}>
-            
             <div>
               <input
                 type="text"
@@ -78,7 +84,6 @@ export const Login = () => {
                 onChange={handleInput}
               />
             </div>
-            
             <div>
               <input
                 type="password"
@@ -98,7 +103,7 @@ export const Login = () => {
           </form>
         </div>
       </div>
-      <hr style={{border:"1px solid grey" }}/>
+      <hr style={{ border: "1px solid grey" }} />
     </>
   );
 };

@@ -14,7 +14,7 @@ export const MemberCard = (props) => {
           <div
             className="front"
             style={{
-              backgroundImage: `url('https://ik.imagekit.io/lbqkuzbjo/memberImages/${props.memberImage}')`,
+              backgroundImage: `url('https://ik.imagekit.io/lbqkuzbjo/membersImg/${props.memberImage}')`,
             }}
           >
             <div className="designation">
@@ -25,7 +25,7 @@ export const MemberCard = (props) => {
           <div
             className="back"
             style={{
-              backgroundImage: `url('https://ik.imagekit.io/lbqkuzbjo/memberImages/${props.memberImage}')`,
+              backgroundImage: `url('https://ik.imagekit.io/lbqkuzbjo/membersImg/${props.memberImage}')`,
             }}
           >
             <div className="overlay">

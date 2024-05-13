@@ -2,12 +2,12 @@ import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import "./Team.css";
 import { MemberCard } from "../components/MemberCard.jsx";
-import members from "./Json/Members.json";
+// import members from "./Json/Members.json";
 import { usestate, useEffect } from "react";
 
 export const Team = () => {
   const [dept, setDept] = useState("");
-  const [teamMembers, setTeamMembers] = useState("");
+  const [teamMembers, setTeamMembers] = useState([]);
 
   const getAllTeamMembers = async() => {
     try {
@@ -21,8 +21,7 @@ export const Team = () => {
 
       if (response.ok) {
         const data = await response.json();
-        setTeamMembers(data.message);
-        console.log(data.message)
+        setTeamMembers(data.response);
       }
     } catch (error) {
       console.log(`Services frontend error: ${error}`);
@@ -55,20 +54,27 @@ export const Team = () => {
     setDept(newDept);
   };
 
+  const department = (dept) => {
+    if(dept === ""){
+      setDept("none");
+    }
+  }
+
   const memberFiltered = () => {
-    return members
+    department(dept);
+    return teamMembers
       .filter((member) => member.department.includes(dept))
       .map((member, index) => (
         <MemberCard
           key={index}
           memberImage={member.image}
-          designation={member.position}
+          designation={member.post}
           memberName={member.name}
           linkedIn={member.linkedIn}
           instagram={member.instagram}
           x={member.x}
         />
-      ));
+      ));                
   };
 
   useEffect(() => {
@@ -79,7 +85,6 @@ export const Team = () => {
   return (
     <>
       <section className="teamMembers">
-        {/* <div>hii</div> */}
         <div className="container">
           <div className="team">
             <ul>
@@ -152,14 +157,15 @@ export const Team = () => {
           <div id="filterdiv">{memberFiltered()}</div>
           <h2 id="core_team_hr">Core Team</h2>
           <div id="core_team">
-            {members
+            {teamMembers
               .filter((member) => member.year === "4th")
               .map((member, index) => {
+                console.log(member)
                 return (
                   <MemberCard
                     key={index}
                     memberImage={member.image}
-                    designation={member.position}
+                    designation={member.post}
                     memberName={member.name}
                     linkedIn={member.linkedIn}
                     instagram={member.instagram}
@@ -168,17 +174,16 @@ export const Team = () => {
                 );
               })}
           </div>
-          {/* <hr style={{ border: "1px solid grey" }} /> */}
           <h2 id="leads_hr">Team Leads</h2>
           <div id="leads">
-            {members
+            {teamMembers
               .filter((member) => member.year === "3rd")
               .map((member, index) => {
                 return (
                   <MemberCard
                     key={index}
                     memberImage={member.image}
-                    designation={member.position}
+                    designation={member.post}
                     memberName={member.name}
                     linkedIn={member.linkedIn}
                     instagram={member.instagram}
@@ -187,17 +192,16 @@ export const Team = () => {
                 );
               })}
           </div>
-          {/* <hr style={{ border: "1px solid grey" }} /> */}
           <h2 id="executive_hr">Executive Members</h2>
           <div id="executive">
-            {members
-              .filter((member) => member.year === "2nd" || member.year === "2")
+            {teamMembers
+              .filter((member) => member.year === "2nd")
               .map((member, index) => {
                 return (
                   <MemberCard
                     key={index}
                     memberImage={member.image}
-                    designation={member.position}
+                    designation={member.post}
                     memberName={member.name}
                     linkedIn={member.linkedIn}
                     instagram={member.instagram}

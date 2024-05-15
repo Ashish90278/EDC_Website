@@ -157,8 +157,8 @@ const getAllEvents = async (req, res) => {
 
 const addEvent = async (req, res) => {
   try {
-    const { eventName, description, date, time, venue } = req.body;
-    await Event.create({ eventName, description, date, time, venue });
+    const { description, imageLink, redirectLink, redirectButtonName, date, time, venue } = req.body;
+    await Event.create({ description, imageLink, redirectLink, redirectButtonName, date, time, venue });
     return res.status(200).json(req.body);
   } catch (error) {
     console.log(error);

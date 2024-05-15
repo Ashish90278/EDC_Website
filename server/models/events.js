@@ -1,11 +1,19 @@
 import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema({
-    eventName: {
+    description: {
         type: String,
         require: true
     },
-    description: {
+    imageLink: {
+        type: String,
+        require: true
+    },
+    redirectLink: {
+        type: String,
+        require: true
+    },
+    redirectButtonName: {
         type: String,
         require: true
     },

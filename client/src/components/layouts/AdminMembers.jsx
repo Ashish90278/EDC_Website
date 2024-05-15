@@ -96,7 +96,7 @@ export const AdminMembers = () => {
               members.map((curUser, index) => {
                 return (
                   <tr key={index}>
-                    <td>{index + 1}</td>
+                    <td>{index + 1}.</td>
                     <td>{curUser.name}</td>
                     <td>{curUser.post}</td>
                     <td>{curUser.department.map((e)=> e+" ")}</td>

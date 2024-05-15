@@ -44,18 +44,6 @@
   font-size: 20px;
 }
 
-/* .contact-header-caption div {
-  border: 2px solid black;
-    font-size: 25px;
-    font-weight: 700;
-
-  display: flex;
-} */
-
-/* #submit {
-  background-color: rgb(0, 195, 255);
-} */
-
 input,
 textarea {
   transition: 0.3 ease-in;
@@ -67,14 +55,6 @@ textarea:focus {
   border: 1px solid rgb(0, 195, 255);
   transition: 0.3s ease-in;
 }
-
-/* #contact .section-header {
-  color: whitesmoke;
-} */
-/* #contact .section-header h2 {
-  font-family: poppins;
-  margin-bottom: 10px;
-} */
 
 .contact-content {
   width: 100%;
@@ -196,7 +176,6 @@ form button {
   background-position: center;
   background-size: cover;
   border-radius: 16px;
-  /* background-color: black; */
   position: relative;
   overflow: hidden;
 }
@@ -301,6 +280,7 @@ form button {
 
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px;
   color: rgb(0, 195, 255);
   transition: all 0.4s ease;
 }

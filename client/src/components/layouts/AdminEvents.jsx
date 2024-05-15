@@ -18,10 +18,13 @@ export const AdminEvents = () => {
 
   const getAllEventsData = async () => {
     try {
-      const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/events", {
-        mode: 'cors',
-        method: "GET",
-      });
+      const response = await fetch(
+        "https://edc-website-server-api.onrender.com/api/admin/events",
+        {
+          mode: "cors",
+          method: "GET",
+        }
+      );
 
       const data = await response.json();
       setEvents(data);
@@ -35,7 +38,7 @@ export const AdminEvents = () => {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/events/delete/${id}`,
         {
-          mode: 'cors',
+          mode: "cors",
           method: "DELETE",
         }
       );
@@ -52,8 +55,10 @@ export const AdminEvents = () => {
   }, []);
 
   const eventsTableHeadings = [
-    "eventName",
     "description",
+    "imageLink",
+    "redirectLink",
+    "redirectButtonName",
     "date",
     "time",
     "venue",
@@ -75,13 +80,13 @@ export const AdminEvents = () => {
               <Button text="Add" class="add button" />
             </span>
           </div>
-          {/* <hr /> */}
-          {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
           <table>
             <tr>
               <th>S No.</th>
-              <th>Event Name</th>
               <th>Description</th>
+              <th>ImageLink</th>
+              <th>RedirectLink</th>
+              <th>RedirectButtonName</th>
               <th>Date</th>
               <th>Time</th>
               <th>Venue</th>
@@ -95,9 +100,11 @@ export const AdminEvents = () => {
               events.map((curUser, index) => {
                 return (
                   <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{curUser.eventName}</td>
+                    <td>{index + 1}.</td>
                     <td>{curUser.description}</td>
+                    <td>{curUser.imageLink}</td>
+                    <td>{curUser.redirectLink}</td>
+                    <td>{curUser.redirectButtonName}</td>
                     <td>{curUser.date}</td>
                     <td>{curUser.time}</td>
                     <td>{curUser.venue}</td>

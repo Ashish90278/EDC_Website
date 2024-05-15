@@ -75,7 +75,7 @@ export const AdminUsers = () => {
               users.map((curUser, index) => {
                 return (
                   <tr key={index}>
-                    <td>{index + 1}</td>
+                    <td>{index + 1}.</td>
                     <td>{curUser.username}</td>
                     <td>{curUser.email}</td>
                     <td>{curUser.phone}</td>

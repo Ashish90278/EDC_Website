@@ -2,6 +2,7 @@
   display: flex;
   background-color: #011627;
   margin-top: 100px;
+  overflow-x: hidden;
 }
 
 .admin-events {
@@ -12,8 +13,8 @@
   position: relative;
   background-color: #011627;
   border-radius: 1rem;
-  padding: 2.4rem 1rem 1rem 1rem;
-  margin-top: 8vh;
+  padding: 0rem 1rem 1rem 1rem;
+  margin-top: 3vh;
   margin-bottom: 4vh;
   margin-left: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -23,14 +24,19 @@
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  /* border: 2px solid red; */
+  overflow-x: scroll;
+  
 }
 
 .admin-events div {
   display: flex;
   align-items: center;
   width: 95%;
-  position: absolute;
-  top: -1.5rem;
+  position: sticky;
+  left: 1.5rem;
+  /* z-index: 1 ; */
+  top: 0rem;
   justify-content: space-between;
   padding: 0.8rem 0.8rem 0.8rem 1.2rem;
   border-radius: 0.5rem;
@@ -53,7 +59,8 @@
   color: white;
 }
 .admin-events table {
-  width: 100%;
+  width: 200%;
+  margin-left: 52.5rem;
 }
 
 .admin-events tr th {
@@ -68,7 +75,7 @@
   width: 100%;
   height: 3rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   font-family: "Open-Sans", sans-serif;
   font-weight: 100;
   color: white;
@@ -86,38 +93,47 @@
   text-wrap: wrap;
 }
 .admin-events tr :nth-child(2) {
-  width: 17%;
+  width: 15%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-events tr :nth-child(3) {
-  width: 27%;
+  width: 11%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-events tr :nth-child(4) {
-  width: 11%;
+  width: 9%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-events tr :nth-child(5) {
-  width: 11%;
+  width: 15%;
   text-align: center;
   text-wrap: wrap;
 }
 .admin-events tr :nth-child(6) {
   width: 11%;
   text-align: center;
+  text-wrap: wrap;
 }
-
 .admin-events tr :nth-child(7) {
-  width: 5%;
+  width: 11%;
   text-align: center;
+  text-wrap: wrap;
 }
 .admin-events tr :nth-child(8) {
-  width: 12%;
+  width: 11%;
   text-align: center;
-  margin-left: 3%;
+}
+
+.admin-events tr :nth-child(9) {
+  width: 6%;
+  text-align: center;
+}
+.admin-events tr :nth-child(10) {
+  width: 6%;
+  text-align: center;
 }
 
 @media screen and (max-width: 950px) {

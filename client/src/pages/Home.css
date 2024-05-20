@@ -45,7 +45,8 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  padding-top: 8rem;
+  justify-content: center;
+  /* padding-top: 8rem; */
   gap: 1rem;
   padding-left: 4rem;
   margin-right: 4rem;
@@ -53,7 +54,7 @@
 
 .left_hero_section div {
   display: flex;
-  font-size: 1.7rem;
+  font-size: 2.4rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   position: relative;
@@ -68,14 +69,14 @@
   color: rgb(0, 195, 255);
   font-size: 2rem;
   position: absolute;
-  top: -40%;
-  left: 12%;
+  left: 16%;
 }
 .right_hero_section {
   width: 50%;
   height: 100%;
-  padding: 0rem 0rem 3rem 0rem;
+  /* padding: 0rem 0rem 3rem 0rem; */
   filter: drop-shadow(0 0 0.75rem rgb(0, 195, 255));
+  /* border: 2px solid red; */
 }
 /*-------------------------------------------- Hero Section End  --------------------------------------------- */
 
@@ -462,13 +463,12 @@ span {
   }
   .main_hero_section .left_hero_section {
     width: 50%;
-    padding-top: 8rem;
+    /* padding-top: 8rem; */
     margin-right: 2rem;
   }
 
   .left_hero_section h3 {
-    top: -35%;
-    left: 14%;
+    left: 18%;
   }
   .right_hero_section {
     width: 50%;
@@ -483,8 +483,7 @@ span {
   }
 
   .left_hero_section h3 {
-    top: -35%;
-    left: 15%;
+    left: 20%;
   }
   .right_hero_section {
     width: 50%;
@@ -520,18 +519,15 @@ span {
 @media screen and (max-width: 920px) {
   .main_hero_section .left_hero_section {
     width: 60%;
-    padding-top: 7rem;
+    /* padding-top: 7rem; */
     margin-right: 2rem;
   }
 
   .left_hero_section h3 {
-    top: -35%;
-    left: 15%;
+    left: 20%;
   }
   .right_hero_section {
     width: 40%;
-    padding-top: 0rem;
-    margin-bottom: -2rem;
   }
   .carousel > .card {
     min-width: 40%;
@@ -663,20 +659,21 @@ span {
     margin-bottom: 0rem;
   }
   .main_hero_section .left_hero_section {
-    width: 60%;
-    padding-top: 6rem;
-    margin-right: 2rem;
-    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: justify;
+    padding: 0rem 1rem;
+    margin: 0rem;
+    margin-bottom: -3rem;
   }
 
   .left_hero_section h3 {
-    top: -35%;
-    left: 20%;
+    left: 15%;
   }
   .right_hero_section {
-    width: 40%;
-    padding-top: 0rem;
-    margin-bottom: -2rem;
+    display: none;
   }
 
   .wwr p {
@@ -804,23 +801,8 @@ span {
   }
 }
 @media screen and (max-width: 580px) {
-  .main_hero_section .left_hero_section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* border: 2px solid rgb(255, 255, 255); */
-    width: 100%;
-    padding-top: 0rem;
-    padding: 0rem 0rem 0rem 2rem;
-    margin-right: 0rem;
-    margin-bottom: -3rem;
-  }
   .left_hero_section h3 {
-    top: -35%;
-    left: 16%;
-  }
-  .right_hero_section {
-    display: none;
+    left: 18%;
   }
   .wwr_head {
     display: flex;
@@ -918,25 +900,16 @@ span {
 }
 @media screen and (max-width: 450px) {
   .main_hero_section {
-    margin: 4rem 0rem 0rem 0rem;
-  }
-  .left_hero_section {
-    padding-left: 0rem;
-    margin-left: -0.5rem;
+    margin: 8rem 0rem 4rem 0rem;
   }
   .left_hero_section > div {
     font-size: 1.5rem;
-    /* border: 2px solid red; */
   }
   .left_hero_section span {
     font-size: 2.2rem;
   }
   .left_hero_section h3 {
-    top: -30%;
-    left: 17%;
-  }
-  .left_hero_section p {
-    text-align: justify;
+    left: 24%;
   }
   .wwr_main {
     padding: 0rem;

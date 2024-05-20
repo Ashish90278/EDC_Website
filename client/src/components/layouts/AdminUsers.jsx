@@ -11,7 +11,7 @@ export const AdminUsers = () => {
   const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => setShowModal(false);
+  const usersTableHeadings = ["username", "email", "phone", "isAdmin"];
 
   const getAllUsersData = async () => {
     try {
@@ -43,11 +43,17 @@ export const AdminUsers = () => {
       console.log(error);
     }
   };
+
+  const closeModal = () => {
+    setShowModal(false);
+    getAllUsersData();
+  };
+
+  
   useEffect(() => {
     getAllUsersData();
   }, []);
 
-  const usersTableHeadings = ["username", "email", "phone", "isAdmin"];
 
   return (
     <>

@@ -44,26 +44,27 @@ export const Team = () => {
     }
   };
   const handleDeptChange = (newDept) => {
+    console.log(newDept);
     document.getElementById("core_team").style.display = "none";
     document.getElementById("leads").style.display = "none";
     document.getElementById("executive").style.display = "none";
     document.getElementById("core_team_hr").style.display = "none";
     document.getElementById("leads_hr").style.display = "none";
     document.getElementById("executive_hr").style.display = "none";
-    document.getElementById(newDept).style.backgroundColor = "rgb(0, 195, 255";
+    document.getElementById(newDept).style.backgroundColor = "rgb(0, 195, 255)";
     setDept(newDept);
   };
 
-  const department = (dept) => {
-    if(dept === ""){
-      setDept("none");
-    }
-  }
+  // const department = (dept) => {
+  //   if(dept === ""){
+  //     setDept("none");
+  //   }
+  // }
 
   const memberFiltered = () => {
-    department(dept);
+    // department(dept);
     return teamMembers
-      .filter((member) => member.department.includes(dept))
+      .filter((member) => member.department.map((dept)=> dept.value).includes(dept))
       .map((member, index) => (
         <MemberCard
           key={index}
@@ -78,6 +79,7 @@ export const Team = () => {
   };
 
   useEffect(() => {
+    // department(dept);
     getAllTeamMembers();
   }, [])
   

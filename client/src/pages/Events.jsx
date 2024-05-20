@@ -25,22 +25,22 @@ export const Events = () => {
 
   useEffect(() => {
     getAllEventsData();
-  }, [])
+  }, []);
 
   return (
     <>
       <div className="container">
         <section className="events">
           {events.map((event, index) => {
-            // console.log(event);
             return (
               <EventCard
-                eventImage="../imgs/EDC_GFG.png"
-                eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
-                eventDate="Friday, 10 Nov 2023"
-                eventTime="03:45 PM - 04:45 PM "
-                eventVenue="MPH"
-                eventPageLink="/events/mr.sandeepjain"
+                description={event.description}
+                imageLink={event.imageLink}
+                redirectLink={event.redirectLink}
+                redirectButtonName={event.redirectButtonName}
+                date={event.date}
+                time={event.time}
+                venue={event.venue}
               ></EventCard>
             );
           })}

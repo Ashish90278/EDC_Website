@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./Login.css";
 import { Button } from "../components/Button.jsx";
 import { useAuth } from "../store/Auth.jsx";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -47,20 +49,21 @@ export const Login = () => {
           password: "",
         });
         navigate("/");
+        toast("Login Successfully");
       }
       if (response.status === 400) {
         setUser({
           username: "",
           password: "",
         });
-        alert("Invalid Credentials");
+        toast.error("Invalid Credentials");
       }
       if (response.status === 401) {
         setUser({
           username: "",
           password: "",
         });
-        alert("Invalid username or password");
+        toast.error("Invalid username or password");
       }
     } catch (error) {
       console.log("login", error);

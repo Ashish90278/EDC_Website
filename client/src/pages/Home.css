@@ -38,11 +38,9 @@
   align-items: center;
   color: rgb(255, 255, 255);
   margin-top: 90px;
-  /* border: 2px solid red; */
 }
 
 .main_hero_section .left_hero_section {
-  /* border: 2px solid rgb(246, 187, 187); */
   height: 100%;
   width: 50%;
   display: flex;
@@ -56,7 +54,6 @@
 .left_hero_section div {
   display: flex;
   font-size: 1.7rem;
-  /* border: 2px solid red; */
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   position: relative;
@@ -69,7 +66,6 @@
 .left_hero_section h3 {
   height: fit-content;
   color: rgb(0, 195, 255);
-  /* border: 2px solid red; */
   font-size: 2rem;
   position: absolute;
   top: -40%;
@@ -80,7 +76,6 @@
   height: 100%;
   padding: 0rem 0rem 3rem 0rem;
   filter: drop-shadow(0 0 0.75rem rgb(0, 195, 255));
-  /* border: 2px solid red; */
 }
 /*-------------------------------------------- Hero Section End  --------------------------------------------- */
 
@@ -90,7 +85,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 2px solid red; */
 }
 
 .flowchart {
@@ -168,7 +162,6 @@
   width: 100%;
   align-items: center;
   font-family: "Open Sans", sans-serif;
-  /* background-color: chartreuse; */
   padding: 1rem 2rem 0rem 3rem;
   color: rgba(0, 195, 255, 1);
 }
@@ -221,7 +214,6 @@
 
 .carousel-container {
   position: relative;
-  /* border: 2px solid red; */
 }
 
 .carousel {
@@ -233,7 +225,7 @@
   width: 100%;
   position: relative;
   scrollbar-width: none;
-  scroll-behavior: smooth;  
+  scroll-behavior: smooth;
 }
 
 .arrow-button {
@@ -259,7 +251,6 @@
 span {
   position: relative;
   top: 3px;
-  /* border: 2px solid red; */
   height: 100%;
   width: 100%;
   color: rgb(0, 195, 255);
@@ -317,9 +308,11 @@ span {
   width: 50%;
 }
 
-.prop h4 {
+
+.prop-count{
   margin-top: -4%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .prop p {
@@ -344,36 +337,30 @@ span {
   display: grid;
   grid-template-columns: 10% 70% 20%;
   margin: 3rem 0rem 2rem 0rem;
-  /* border: 2px solid rgb(255, 255, 255); */
 }
 
 .cloth_container {
   display: grid;
   grid-template-columns: 45% 10% 45%;
-  /* border: 2px solid red; */
   position: relative;
 }
 
 .cloth {
   width: 100%;
   aspect-ratio: 9/11.5;
-  /* border: 2px solid red; */
   margin-top: -1rem;
 }
 .cloth_empty_divv {
   width: 100%;
   aspect-ratio: 9/11.5;
-  /* border: 2px solid rgb(0, 148, 79); */
   margin-top: -1rem;
 }
 
 .cloth img {
   width: 100%;
-  /* border: 2px solid red; */
 }
 
 .brand {
-  /* border: 2px solid red; */
   margin-top: -1rem;
   width: 100%;
   height: 100%;
@@ -397,42 +384,60 @@ span {
 
 /* ------------------------------------- Our Collaborations Section Start ---------------------------------------- */
 
+@keyframes slide-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-35%);
+  }
+}
+@keyframes slide-right {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 #our_collaborations hr {
   width: 35%;
 }
 
 .sponsors {
   width: 100%;
-  overflow: hidden;
+  overflow:hidden;
 }
 
+.sponsors .sponsor:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
 .sponsor {
   display: flex;
-  animation: slide 10s linear infinite;
   width: 100%;
   gap: 1.5rem;
   margin: 4rem 0rem;
 }
+.sponsor-left{
+  animation: slide-left 2.5s linear infinite;
+}
+.sponsor-right{
+  animation: slide-right 3.5s linear infinite;
+}
 .sponsor img {
-  height: 10rem;
+  height: 8rem;
   border-radius: 1rem;
 }
-@keyframes slide {
-  0% {
-    transform: translateX(-2%);
-  } /* Start from initial position */
-  100% {
-    transform: translateX(-90%);
-  }
+.sponsor img:hover {
+  transition-duration: 350ms;
+  transition-property: scale;
+  scale: 1.1;
 }
 
+
 /* ------------------------------------- Our Collaborations Section End ---------------------------------------- */
-
-
-
-
-
-
 
 /* ---------------------------------------- Media Query Starts from Here --------------------------------------- */
 
@@ -456,7 +461,6 @@ span {
     width: 25%;
   }
   .main_hero_section .left_hero_section {
-    /* border: 2px solid rgb(255, 255, 255); */
     width: 50%;
     padding-top: 8rem;
     margin-right: 2rem;
@@ -475,7 +479,6 @@ span {
 
 @media screen and (max-width: 1050px) {
   .main_hero_section .left_hero_section {
-    /* border: 2px solid rgb(255, 255, 255); */
     width: 50%;
   }
 
@@ -519,7 +522,6 @@ span {
     width: 60%;
     padding-top: 7rem;
     margin-right: 2rem;
-    /* border: 2px solid rgb(255, 255, 255); */
   }
 
   .left_hero_section h3 {
@@ -661,7 +663,6 @@ span {
     margin-bottom: 0rem;
   }
   .main_hero_section .left_hero_section {
-    /* border: 2px solid rgb(255, 255, 255); */
     width: 60%;
     padding-top: 6rem;
     margin-right: 2rem;
@@ -695,12 +696,10 @@ span {
   }
   .e_summit_mid {
     padding: 4rem 2rem;
-    /* border: 2px solid red; */
   }
 
   .e_summit_bottom {
     padding: 0rem 2rem 1rem 0rem;
-    /* border: 2px solid red; */
   }
 
   .carousel-container {
@@ -754,7 +753,6 @@ span {
   .clothes {
     display: flex;
     justify-content: center;
-    /* border: 2px solid red; */
     align-items: center;
   }
 
@@ -766,7 +764,6 @@ span {
   .cloth {
     width: 100%;
     aspect-ratio: 9/18;
-    /* border: 2px solid red; */
     margin-top: -1rem;
   }
   .cloth_empty_divv {
@@ -780,8 +777,29 @@ span {
     left: 37%;
   }
 
-  .sponsor {
-    animation: slide 5s linear infinite;
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-160%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .sponsor-left {
+    animation: slide-left 5s linear infinite;
+    margin: 2rem 0rem;
+  }
+  .sponsor-right {
+    animation: slide-right 6s linear infinite;
     margin: 2rem 0rem;
   }
 }
@@ -980,6 +998,31 @@ span {
   .hanger {
     top: 1.6rem;
     left: 34%;
+  }
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-310%);
+    }
+  }
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-380%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  
+  .sponsor-left {
+    animation: slide-left 6s linear infinite;
+    margin: 2rem 0rem;
+  }
+  .sponsor-right {
+    animation: slide-right 7s linear infinite;
+    margin: 2rem 0rem;
   }
 }
 

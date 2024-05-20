@@ -2,13 +2,26 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./Modal.css";
 import { Button } from "./Button.jsx";
+import Select from "react-select";
 
 export const Modal = (props) => {
+  const [userData, setUserData] = useState({});
+
   const headings = props.tableHeadings;
   const button = props.button;
   const page = props.page;
   const data = props.data;
-  const [userData, setUserData] = useState({});
+
+  const options = [
+    { value: 'core', label: 'Core' },
+    { value: 'technical', label: 'Technical' },
+    { value: 'outreach', label: 'Outreach' },
+    { value: 'operations', label: 'Operations' },
+    { value: 'content', label: 'Content' },
+    { value: 'marketing', label: 'Marketing' },
+    { value: 'design', label: 'Design' }
+  ]
+
   const recentPage = (page) => {
     if (page === "members") {
       return true;
@@ -16,6 +29,7 @@ export const Modal = (props) => {
       return false;
     }
   };
+
   const buttonClick = (button) => {
     if (button === "edit") {
       return true;
@@ -32,23 +46,22 @@ export const Modal = (props) => {
     }
   };
 
+
   const handleModalData = (e) => {
     let name = e.target.name;
     let value = e.target.value;
-    if (name === "department") {
-      let deptt = value.split(" ");
-      setUserData({
-        ...userData,
-        [name]: deptt,
-      });
-    } else {
-      setUserData({
-        ...userData,
-        [name]: value,
-      });
-    }
+    setUserData({
+      ...userData,
+      [name]: value,
+    });
   };
-  console.log(userData);
+
+  const handleSelectData = (change) => {
+    setUserData({
+      ...userData,
+      department: change,
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -66,7 +79,7 @@ export const Modal = (props) => {
         }
       );
 
-      setUserData();
+      // setUserData();
       if (response.ok) {
         setUserData({});
         alert(`${page} Added Successfully`);
@@ -76,7 +89,8 @@ export const Modal = (props) => {
     }
   };
 
-  const handleUpdate = async () => {
+  const handleUpdate = async (e) => {
+    e.preventDefault();
     try {
       const response = await fetch(
         `https://edc-website-server-api.onrender.com/api/admin/${page}/update/${data._id}`,
@@ -89,6 +103,10 @@ export const Modal = (props) => {
           body: JSON.stringify(userData),
         }
       );
+      if (response.ok) {
+        setUserData({});
+        alert(`${page} Updated Successfully`);
+      }
     } catch (error) {
       console.log(error);
     }
@@ -104,31 +122,49 @@ export const Modal = (props) => {
         >
           <button onClick={props.onClick}>&times;</button>
           {headings.map((heading) => {
+            // console.log(data)
             return (
               <>
                 <div className="modal-input">
                   <label htmlFor={heading}>{heading} :</label>
-                  <input
-                    key={heading}
-                    name={heading}
-                    type="text"
-                    placeholder={heading}
-                    defaultValue={
-                      buttonClick(button)
-                        ? heading === "department"
-                          ? data[heading].map((e) => e)
-                          : data[heading]
-                        : userData.heading
-                    }
-                    onChange={handleModalData}
-                  />
+                  {heading === "department" ? (
+                    <Select
+                      // defaultValue={data[heading]}
+                      defaultValue={
+                        buttonClick(button)
+                          ? data[heading]
+                          : userData.heading
+                      }
+                      isMulti
+                      name="department"
+                      options={options}
+                      className="sel"
+                      classNamePrefix="select"
+                      onChange={(change) => handleSelectData(change)}
+                    />
+                  ) : (
+                    <input
+                      key={heading}
+                      name={heading}
+                      type="text"
+                      placeholder={heading}
+                      defaultValue={
+                        buttonClick(button)
+                          ? data[heading]
+                          : userData.heading
+                      }
+                      onChange={handleModalData}
+                    />
+                  )}
                 </div>
-                {/* <p>{heading === "department" ?{heading}:"hello"}</p> */}
               </>
             );
           })}
           <div>
-            <Button text="Update" class="submit button" />
+            <Button
+              text={buttonClick(button) ? "Update" : "Add"}
+              class="submit button"
+            />
           </div>
         </form>
       </div>

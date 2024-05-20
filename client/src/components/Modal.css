@@ -49,6 +49,16 @@
     width: 40%;
     margin-right: 20%;
 }
+
+.sel{
+    width: 40%;
+    margin-right: 20%;
+}
+.sel span{
+    top:-0.5rem;
+    color: white;
+}
+
 .modal-input{
     display: flex;
     width: 100%;

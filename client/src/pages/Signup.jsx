@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./Signup.css";
 import { Button } from "../components/Button.jsx";
 import { useAuth } from "../store/Auth.jsx";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 export const Signup = () => {
 
@@ -58,7 +60,7 @@ export const Signup = () => {
           phone: "",
           password: "",
         });
-        alert("User Already Exist")
+        toast("User Already Exist")
         navigate("/login");
       }
     } catch (error) {

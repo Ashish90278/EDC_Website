@@ -9,6 +9,19 @@ export const AdminMembers = () => {
   const [members, setMembers] = useState([]);
   const [userEdit, setUserEdit] = useState({});
   const [buttonClick, setButtonClick] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  
+  const memberTableHeadings = [
+    "name",
+    "year",
+    "post",
+    "department",
+    "image",
+    "linkedIn",
+    "instagram",
+    "x",
+  ];
+  
   const getAllMembersData = async () => {
     try {
       const response = await fetch("https://edc-website-server-api.onrender.com/api/admin/members", {
@@ -40,25 +53,16 @@ export const AdminMembers = () => {
     }
   };
 
-  useEffect(() => {
-    getAllMembersData();
-  }, []);
-  const [showModal, setShowModal] = useState(false);
-
+  
   const closeModal = () => {
     setShowModal(false);
     getAllMembersData();
   };
-  const memberTableHeadings = [
-    "name",
-    "year",
-    "post",
-    "department",
-    "image",
-    "linkedIn",
-    "instagram",
-    "x",
-  ];
+  
+
+  useEffect(() => {
+    getAllMembersData();
+  }, []);
 
   return (
     <>
@@ -76,8 +80,6 @@ export const AdminMembers = () => {
               <Button text="Add" class="add button" />
             </span>
           </div>
-          {/* <hr /> */}
-          {/* <Button text="Update" color="black" backgroundColor="red" padding="10px 20px" /> */}
           <table>
             <tr>
               <th>S No.</th>
@@ -99,7 +101,7 @@ export const AdminMembers = () => {
                     <td>{index + 1}.</td>
                     <td>{curUser.name}</td>
                     <td>{curUser.post}</td>
-                    <td>{curUser.department.map((e)=> e+" ")}</td>
+                    <td>{curUser.department.map((e)=> e.label+" ")}</td>
                     <td>{curUser.image}</td>
 
                     <td

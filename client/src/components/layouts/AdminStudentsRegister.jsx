@@ -11,7 +11,13 @@ export const AdminStudentsRegister = () => {
   const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => setShowModal(false);
+  const studentRegisterTableHeadings = [
+    "username",
+    "email",
+    "branch",
+    "year",
+    "admissionNo",
+  ];
 
   const getAllRegistrationData = async () => {
     try {
@@ -47,17 +53,17 @@ export const AdminStudentsRegister = () => {
       console.log(error);
     }
   };
+
+  const closeModal = () => {
+    setShowModal(false);
+    getAllRegistrationData();
+  };
+
+
   useEffect(() => {
     getAllRegistrationData();
   }, []);
 
-  const studentRegisterTableHeadings = [
-    "username",
-    "email",
-    "branch",
-    "year",
-    "admissionNo",
-  ];
 
   return (
     <>

@@ -1,14 +1,17 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import "./Home.css";
 import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
+import CountUp from "react-countup";
+// import ScrollTrigger from "react-scroll-trigger";
 import { MemberCard } from "../components/MemberCard.jsx";
 import { EventCard } from "../components/EventCard.jsx";
+import "./Home.css";
 import "./Loader.css";
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [counterOn, setCounterOn] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -221,31 +224,35 @@ export const Home = () => {
                 </div>
 
                 {/* <!-- Society Info --> */}
+                {/* <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}> */}
                 <div className="props">
                   <div className="prop">
                     <img src="../imgs/prop3.svg" alt="Members" />
-                    <h4 id="value1">100</h4>
+                    <h4 id="value1">
+                      <CountUp className="prop-count" start={0} end={100} duration={10} delay={0} />
+                    </h4>
                     <p>Members</p>
                   </div>
 
                   <div className="prop">
                     <img src="../imgs/prop4.svg" alt="Members" />
-                    <h4 id="value2">100</h4>
+                    <h4 id="value2"><CountUp className="prop-count" start={0} end={100} duration={10} delay={0} /></h4>
                     <p>Startups</p>
                   </div>
 
                   <div className="prop">
                     <img src="../imgs/prop1.svg" alt="Members" />
-                    <h4 id="value3">100</h4>
+                    <h4 id="value3"><CountUp className="prop-count" start={0} end={100} duration={10} delay={0} /></h4>
                     <p>Alumni</p>
                   </div>
 
                   <div className="prop">
                     <img src="../imgs/prop2.svg" alt="Members" />
-                    <h4 id="value4">100</h4>
+                    <h4 id="value4"><CountUp className="prop-count" start={0} end={100} duration={10} delay={0} /></h4>
                     <p>Events</p>
                   </div>
                 </div>
+                {/* </ScrollTrigger> */}
               </div>
             </section>
 
@@ -287,7 +294,7 @@ export const Home = () => {
                   <hr />
                 </div>
                 <div className="sponsors">
-                  <div className="sponsor">
+                  <div className="sponsor sponsor-left">
                     <img src="../imgs/OurCollaborations/19 1.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 2.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 3.png" alt="" />
@@ -295,13 +302,29 @@ export const Home = () => {
                     <img src="../imgs/OurCollaborations/19 5.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 6.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 7.png" alt="" />
-                    <img src="../imgs/OurCollaborations/19 8.png" alt="" />
+                    {/* <img src="../imgs/OurCollaborations/19 8.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 9.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 10.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 11.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 12.png" alt="" />
                     <img src="../imgs/OurCollaborations/19 13.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 14.png" alt="" /> */}
+                  </div>
+                  <div className="sponsor sponsor-right">
+                    {/* <img src="../imgs/OurCollaborations/19 1.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 2.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 3.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 4.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 5.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 6.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 7.png" alt="" /> */}
                     <img src="../imgs/OurCollaborations/19 14.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 13.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 12.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 11.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 10.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 9.png" alt="" />
+                    <img src="../imgs/OurCollaborations/19 8.png" alt="" />
                   </div>
                 </div>
               </div>

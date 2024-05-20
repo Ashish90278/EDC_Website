@@ -10,11 +10,17 @@ export const AdminEvents = () => {
   const [userEdit, setUserEdit] = useState({});
   const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
+  
+  const eventsTableHeadings = [
+    "description",
+    "imageLink",
+    "redirectLink",
+    "redirectButtonName",
+    "date",
+    "time",
+    "venue",
+  ];
 
-  const closeModal = () => {
-    setShowModal(false);
-    getAllEventsData();
-  };
 
   const getAllEventsData = async () => {
     try {
@@ -50,20 +56,14 @@ export const AdminEvents = () => {
     }
   };
 
+  const closeModal = () => {
+    setShowModal(false);
+    getAllEventsData();
+  };
+  
   useEffect(() => {
     getAllEventsData();
   }, []);
-
-  const eventsTableHeadings = [
-    "description",
-    "imageLink",
-    "redirectLink",
-    "redirectButtonName",
-    "date",
-    "time",
-    "venue",
-  ];
-
   return (
     <>
       <section className="admin-events-section">

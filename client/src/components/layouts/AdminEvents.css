@@ -100,7 +100,6 @@
 .admin-events tr :nth-child(3) {
   width: 11%;
   text-align: center;
-  text-wrap: wrap;
 }
 .admin-events tr :nth-child(4) {
   width: 9%;

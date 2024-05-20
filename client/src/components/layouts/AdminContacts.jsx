@@ -11,10 +11,12 @@ export const AdminContacts = () => {
   const [buttonClick, setButtonClick] = useState("");
   const [showModal, setShowModal] = useState(false);
 
-  const closeModal = () => {
-    setShowModal(false);
-    getAllContactsData();
-  };
+  const contactsTableHeadings = [
+    "username",
+    "email",
+    "subject",
+    "message"
+  ];
 
   const getAllContactsData = async () => {
     try {
@@ -47,16 +49,16 @@ export const AdminContacts = () => {
     }
   };
 
+  const closeModal = () => {
+    setShowModal(false);
+    getAllContactsData();
+  };
+
+  
   useEffect(() => {
     getAllContactsData();
   }, []);
 
-  const contactsTableHeadings = [
-    "username",
-    "email",
-    "subject",
-    "message"
-  ];
 
   return (
     <>
@@ -71,7 +73,6 @@ export const AdminContacts = () => {
                 setButtonClick("add");
               }}
             >
-              <Button text="Add" class="add button" />
             </span>
           </div>
           <table>

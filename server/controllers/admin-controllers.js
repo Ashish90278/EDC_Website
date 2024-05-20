@@ -158,7 +158,6 @@ const getAllEvents = async (req, res) => {
 const addEvent = async (req, res) => {
   try {
     const { description, imageLink, redirectLink, redirectButtonName, date, time, venue } = req.body;
-    console.log("hii", req.body);
     await Event.create({ description, imageLink, redirectLink, redirectButtonName, date, time, venue });
     return res.status(200).json(req.body);
   } catch (error) {
@@ -199,16 +198,6 @@ const getAllContacts = async (req, res) => {
       return res.status(404).json({ message: "No contacts Found" });
     }
     return res.status(200).json(contacts);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-const addContact = async (req, res) => {
-  try {
-    const { username, email, subject, message } = req.body;
-    await Contact.create({ username, email, subject, message });
-    return res.status(200).json(req.body);
   } catch (error) {
     console.log(error);
   }
@@ -257,6 +246,5 @@ export {
   updateMember,
   updateEvent,
   updateContact,
-  addContact,
   deleteContact
 };

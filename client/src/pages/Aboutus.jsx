@@ -46,7 +46,7 @@ export const Aboutus = () => {
           <div className="president-note">
             <h2>President's Note</h2>
             <div className="president-photo">
-              <img src="https://ik.imagekit.io/lbqkuzbjo/memberImages/PuneetSir.jpg" alt="" />
+              <img src="https://ik.imagekit.io/lbqkuzbjo/membersImg/PuneetSir.jpg" alt="" />
             </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,

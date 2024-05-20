@@ -25,13 +25,17 @@ export const Events = () => {
 
   useEffect(() => {
     getAllEventsData();
+    
   }, []);
 
   return (
     <>
       <div className="container">
         <section className="events">
-          {events.map((event, index) => {
+          {/* {events.reverse()} */}
+          {
+            events.map((event, index) => {
+            events.reverse();
             return (
               <EventCard
                 description={event.description}

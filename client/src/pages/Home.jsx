@@ -229,26 +229,56 @@ export const Home = () => {
                   <div className="prop">
                     <img src="../imgs/prop3.svg" alt="Members" />
                     <h4 id="value1">
-                      <CountUp className="prop-count" start={0} end={100} duration={10} delay={0} />
+                      <CountUp
+                        className="prop-count"
+                        start={0}
+                        end={100}
+                        duration={10}
+                        delay={0}
+                      />
                     </h4>
                     <p>Members</p>
                   </div>
 
                   <div className="prop">
                     <img src="../imgs/prop4.svg" alt="Members" />
-                    <h4 id="value2"><CountUp className="prop-count" start={0} end={100} duration={10} delay={0} /></h4>
+                    <h4 id="value2">
+                      <CountUp
+                        className="prop-count"
+                        start={0}
+                        end={100}
+                        duration={10}
+                        delay={0}
+                      />
+                    </h4>
                     <p>Startups</p>
                   </div>
 
                   <div className="prop">
                     <img src="../imgs/prop1.svg" alt="Members" />
-                    <h4 id="value3"><CountUp className="prop-count" start={0} end={100} duration={10} delay={0} /></h4>
+                    <h4 id="value3">
+                      <CountUp
+                        className="prop-count"
+                        start={0}
+                        end={100}
+                        duration={10}
+                        delay={0}
+                      />
+                    </h4>
                     <p>Alumni</p>
                   </div>
 
                   <div className="prop">
                     <img src="../imgs/prop2.svg" alt="Members" />
-                    <h4 id="value4"><CountUp className="prop-count" start={0} end={100} duration={10} delay={0} /></h4>
+                    <h4 id="value4">
+                      <CountUp
+                        className="prop-count"
+                        start={0}
+                        end={100}
+                        duration={10}
+                        delay={0}
+                      />
+                    </h4>
                     <p>Events</p>
                   </div>
                 </div>

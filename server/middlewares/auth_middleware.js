@@ -21,7 +21,8 @@ export const authMiddleware = async(req, res, next) => {
 
         next();
     } catch (error) {
-        return res.status(401).json({ message : "Unauthorized Invlaid Token." });
+        next(error);
+        // return res.status(401).json({ message : "Unauthorized Invlaid Token." });
     }
     
 };

@@ -11,13 +11,32 @@ import "./Loader.css";
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [events, setEvents] = useState([]);
   const [counterOn, setCounterOn] = useState(false);
+
+  const getAllEventsData = async () => {
+    try {
+      const response = await fetch(
+        "https://edc-website-server-api.onrender.com/api/admin/events",
+        {
+          mode: "cors",
+          method: "GET",
+        }
+      );
+
+      const data = await response.json();
+      setEvents(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 1500); // Change the time duration as per your requirement
 
+    getAllEventsData();
     return () => clearTimeout(timer);
   }, []);
 
@@ -84,13 +103,18 @@ export const Home = () => {
                       </h3>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Debitis aspernatur veniam blanditiis aut eius distinctio
-                      recusandae dolorum aliquid nesciunt cumque. Corrupti
-                      nesciunt mollitia quaerat doloremque est ab sequi placeat
-                      maiores. Placeat, tempora adipisci praesentium, sunt,
-                      beatae ipsa officiis sit accusamus minus ipsum a corporis
-                      voluptatem.
+                      The Entrepreneurship Development Cell (EDC) at JSSATE
+                      Noida is a dynamic hub of support and empowerment for
+                      budding entrepreneurs and ambitious professionals. We are
+                      committed to fostering a culture of innovation through
+                      impactful workshops, thought-provoking speaker sessions,
+                      exciting business plan competitions, and a range of
+                      transformative initiatives. Our team of experienced
+                      mentors provides personalized guidance, access to funding
+                      opportunities, and a robust network to help propel
+                      aspiring entrepreneurs towards success. Join us at EDC
+                      JSSATE Noida and embark on a journey that has the
+                      potential to redefine your future!
                     </p>
                   </div>
                   <div className="right_hero_section">
@@ -160,7 +184,20 @@ export const Home = () => {
                 {/* <!-- Carousel --> */}
                 <div className="carousel-container">
                   <div className="carousel">
-                    <EventCard
+                    {events.map((event, index) => {
+                      return (
+                        <EventCard
+                          description={event.description}
+                          imageLink={event.imageLink}
+                          redirectLink={event.redirectLink}
+                          redirectButtonName={event.redirectButtonName}
+                          date={event.date}
+                          time={event.time}
+                          venue={event.venue}
+                        ></EventCard>
+                      );
+                    })}
+                    {/* <EventCard
                       eventImage="../imgs/EDC_GFG.png"
                       eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
                       eventDate="Friday, 10 Nov 2023"
@@ -207,7 +244,7 @@ export const Home = () => {
                       eventTime="03:45 PM - 04:45 PM "
                       eventVenue="MPH"
                       eventPageLink="/events/stockgrow"
-                    ></EventCard>
+                    ></EventCard> */}
                   </div>
                   {/* <button
               className="arrow-button left-arrow"

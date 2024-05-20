@@ -63,12 +63,13 @@ export const Register = () => {
       <div className="container event-register">
         <div className="event-info-container">
           <EventCard
-            eventImage="../imgs/EDC_GFG.png"
-            eventName="Speaker session with Mr. Sandeep Jain ( Founder of Geeks for Geeks )"
-            eventDate="Friday, 10 Nov 2023"
-            eventTime="03:45 PM - 04:45 PM "
-            eventVenue="Multi-Purpose Hall"
-            eventPageLink="/events/mr.sandeepjain"
+            imageLink="https://ik.imagekit.io/lbqkuzbjo/events/Virtual%20Stock.png"
+            description="Virtual Stock Market"
+            date="Friday, 10 Nov 2023"
+            time="03:45 PM - 04:45 PM "
+            venue="Multi-Purpose Hall"
+            redirectLink="/events/mr.sandeepjain"
+            redirectButtonName="Read More"
           ></EventCard>
         </div>
         <div className="register-container">

@@ -54,7 +54,7 @@
   display: flex;
   flex-direction: column;
   justify-content: right;
-  height: 70vh;
+  height: 75vh;
   width: 30vw;
   padding: 0rem 1rem;
   border-radius: 3rem;
@@ -67,7 +67,7 @@
 }
 @media screen and (max-width: 1280px){
   .event-info-container{
-    height: 55vh;
+    /* height: 75vh; */
     width: 40vw;
   }
 }

@@ -62,13 +62,13 @@ export const Footer = () => {
               <div className="footer_container_middle">
                 <ul>
                   <h4>Quick Links</h4>
-                  <li>Team Members</li>
-                  <li>JSSATE Noida</li>
-                  <li>Upcoming Event</li>
-                  <li>Contact</li>
-                  <li>Events</li>
-                  <li>Collaborate</li>
-                  <li>Gallery</li>
+                  <li><NavLink to="/team">Team Members</NavLink></li>
+                  <li><NavLink to="https://jssaten.ac.in/" target="_blank">JSSATE Noida</NavLink></li>
+                  <li><a href="#our_events">Upcoming Event</a></li>
+                  <li><NavLink to="/contact">Contact</NavLink></li>
+                  <li><NavLink>Collaborate</NavLink></li>
+                  <li><NavLink to="/aboutus">Gallery</NavLink></li>
+                  <li><NavLink to="/events">Events</NavLink></li>
                 </ul>
               </div>
 

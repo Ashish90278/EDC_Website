@@ -25,22 +25,22 @@ export const membersSchema = z.object({
     .string({ required_error: "Image URL is Required" })
     .trim()
     .startsWith("https://ik.imagekit.io/lbqkuzbjo/", {
-      message: "Must provide Valid URL",
+      message: "Must provide Valid Image URL",
     }),
   linkedIn: z
     .string({ required_error: "Linkedin URL is Required" })
     .trim()
     .startsWith("https://www.linkedin.com/", {
-      message: "Must provide Valid URL",
+      message: "Must provide Valid Linkedin URL",
     }),
   instagram: z
     .string({ required_error: "Instagram URL is Required" })
     .trim()
     .startsWith("https://www.instagram.com/", {
-      message: "Must provide Valid URL",
+      message: "Must provide Valid Instagram URL",
     }),
   x: z
     .string({ required_error: "X URL is Required" })
     .trim()
-    .startsWith("https://twitter.com/", { message: "Must provide Valid URL" }),
+    .startsWith("https://www.twitter.com/" || "https://www.x.com/" || "https://twitter.com/" || "https://x.com/" , { message: "Must provide Valid X URL" }),
 });

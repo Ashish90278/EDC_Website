@@ -56,12 +56,12 @@ export const registerSchema = z.object({
     .string({required_error: "Year is Required"})
     .trim()
     .min(1,{message:"Year must be atleast of 1 characters"})
-    .max(10,{message:"Year must not be more than 10 characters"}),
+    .max(7,{message:"Year must not be more than 7 characters"}),
     admissionNo : z
     .string({required_error: "Admission No. is Required"})
     .trim()
     .min(7,{message:"Admission No. must be atleast of 7 characters"})
-    .max(10,{message:"Admission No. must not be more than 10 characters"}),
+    .max(12,{message:"Admission No. must not be more than 12 characters"}),
 })
 export const contactSchema = z.object({
     username : z

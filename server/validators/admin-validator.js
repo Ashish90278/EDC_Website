@@ -42,5 +42,5 @@ export const membersSchema = z.object({
   x: z
     .string({ required_error: "X URL is Required" })
     .trim()
-    .startsWith("https://www.twitter.com/" || "https://www.x.com/" || "https://twitter.com/" || "https://x.com/" , { message: "Must provide Valid X URL" }),
+    .startsWith(["https://www.twitter.com/" , "https://www.x.com/" , "https://twitter.com/" , "https://x.com/"] , { message: "Must provide Valid X URL" }),
 });

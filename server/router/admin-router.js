@@ -15,8 +15,8 @@ import {
   updateEvent,
   deleteEvent,
   getAllContacts,
-  updateContact
-  deleteContact,
+  updateContact,
+  deleteContact
 } from "../controllers/admin-controllers.js";
 import { validate } from "../middlewares/validate_middleware.js";
 import { membersSchema } from "../validators/admin-validator.js";
@@ -26,7 +26,7 @@ import { adminMiddleware } from "../middlewares/admin_middleware.js";
 
 const router = express.Router();
 
-router.route("/users").get(authMiddleware, adminMiddleware getAllUsers);
+router.route("/users").get(authMiddleware, adminMiddleware, getAllUsers);
 router.route("/users/delete/:id").delete(authMiddleware, adminMiddleware, deleteUser);
 router.route("/users/update/:id").patch(authMiddleware, adminMiddleware, updateUser);
 router.route("/registrations").get(authMiddleware, adminMiddleware, getRegisterStudents);

@@ -64,7 +64,7 @@ export const Footer = () => {
                   <h4>Quick Links</h4>
                   <li><NavLink to="/team">Team Members</NavLink></li>
                   <li><NavLink to="https://jssaten.ac.in/" target="_blank">JSSATE Noida</NavLink></li>
-                  <li><a href="#our_events">Upcoming Event</a></li>
+                  <li><a href="/ #our_events">Upcoming Event</a></li>
                   <li><NavLink to="/contact">Contact</NavLink></li>
                   <li><NavLink>Collaborate</NavLink></li>
                   <li><NavLink to="/aboutus">Gallery</NavLink></li>

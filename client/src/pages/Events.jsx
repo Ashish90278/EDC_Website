@@ -9,7 +9,7 @@ export const Events = () => {
   const getAllEventsData = async () => {
     try {
       const response = await fetch(
-        "https://edc-website-server-api.onrender.com/api/admin/events",
+        "https://edc-website-server-api.onrender.com/api/auth/event",
         {
           mode: "cors",
           method: "GET",

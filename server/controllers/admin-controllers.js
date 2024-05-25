@@ -4,29 +4,41 @@ import Member from "../models/members.js";
 import Event from "../models/events.js";
 import Contact from "../models/contacts.js";
 
-const getAllUsers = async (req, res) => {
+const getAllUsers = async (req, res, next) => {
   try {
     const users = await User.find({}, { password: 0 });
     if (!users || users.length === 0) {
       return res.status(404).json({ message: "No users Found" });
     }
     return res.status(200).json(users);
-  } catch (error) {
-    return res.status(500).json(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message,
+    };
+    next(error);
   }
 };
 
-const deleteUser = async (req, res) => {
+const deleteUser = async (req, res, next) => {
   try {
     const id = req.params.id;
     await User.deleteOne({ _id: id });
     return res.status(200).json({ message: "User Deleted Successfully" });
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message,
+    };
+    next(error);
   }
 };
 
-const updateUser = async (req, res) => {
+const updateUser = async (req, res, next) => {
   try {
     const id = req.params.id;
     const updatedUserData = req.body;
@@ -37,36 +49,54 @@ const updateUser = async (req, res) => {
       }
     );
     return res.status(200).json(updatedData);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const getRegisterStudents = async (req, res) => {
+const getRegisterStudents = async (req, res, next) => {
   try {
     const students = await registerStudents.find();
     if (!students || students.length === 0) {
       return res.status(404).json({ message: "No users Found" });
     }
     return res.status(200).json(students);
-  } catch (error) {
-    return res.status(500).json("Internal error");
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const deleteRegistration = async (req, res) => {
+const deleteRegistration = async (req, res, next) => {
   try {
     const id = req.params.id;
     await registerStudents.deleteOne({ _id: id });
     return res
       .status(200)
       .json({ message: "Registration Deleted Successfully" });
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const updateRegistration = async (req, res) => {
+const updateRegistration = async (req, res, next) => {
   try {
     const id = req.params.id;
     const updatedUserData = req.body;
@@ -77,12 +107,18 @@ const updateRegistration = async (req, res) => {
       }
     );
     return res.status(200).json(updatedData);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const getAllMembers = async (req, res) => {
+const getAllMembers = async (req, res, next) => {
   try {
     const members = await Member.find();
 
@@ -90,12 +126,18 @@ const getAllMembers = async (req, res) => {
       return res.status(404).json({ message: "No members Found" });
     }
     return res.status(200).json(members);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const addMember = async (req, res) => {
+const addMember = async (req, res, next) => {
   try {
     const { name, year, post, department, image, linkedIn, instagram, x } =
       req.body;
@@ -110,23 +152,34 @@ const addMember = async (req, res) => {
       x,
     });
     return res.status(200).json(req.body);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const deleteMember = async (req, res) => {
+const deleteMember = async (req, res, next) => {
   try {
     const id = req.params.id;
     await Member.deleteOne({ _id: id });
     return res.status(200).json({ message: "Member Deleted Successfully" });
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-
-const updateMember = async (req, res) => {
+const updateMember = async (req, res, next) => {
   try {
     const id = req.params.id;
     const updatedUserData = req.body;
@@ -137,12 +190,18 @@ const updateMember = async (req, res) => {
       }
     );
     return res.status(200).json(updatedData);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const getAllEvents = async (req, res) => {
+const getAllEvents = async (req, res, next) => {
   try {
     const events = await Event.find();
 
@@ -150,32 +209,67 @@ const getAllEvents = async (req, res) => {
       return res.status(404).json({ message: "No events Found" });
     }
     return res.status(200).json(events);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const addEvent = async (req, res) => {
+const addEvent = async (req, res, next) => {
   try {
-    const { description, imageLink, redirectLink, redirectButtonName, date, time, venue } = req.body;
-    await Event.create({ description, imageLink, redirectLink, redirectButtonName, date, time, venue });
+    const {
+      description,
+      imageLink,
+      redirectLink,
+      redirectButtonName,
+      date,
+      time,
+      venue,
+    } = req.body;
+
+    await Event.create({
+      description,
+      imageLink,
+      redirectLink,
+      redirectButtonName,
+      date,
+      time,
+      venue,
+    });
     return res.status(200).json(req.body);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const deleteEvent = async (req, res) => {
+const deleteEvent = async (req, res, next) => {
   try {
     const id = req.params.id;
     await Event.deleteOne({ _id: id });
     return res.status(200).json({ message: "Event Deleted Successfully" });
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const updateEvent = async (req, res) => {
+const updateEvent = async (req, res, next) => {
   try {
     const id = req.params.id;
     const updatedUserData = req.body;
@@ -186,11 +280,17 @@ const updateEvent = async (req, res) => {
       }
     );
     return res.status(200).json(updatedData);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
-const getAllContacts = async (req, res) => {
+const getAllContacts = async (req, res, next) => {
   try {
     const contacts = await Contact.find();
 
@@ -198,22 +298,34 @@ const getAllContacts = async (req, res) => {
       return res.status(404).json({ message: "No contacts Found" });
     }
     return res.status(200).json(contacts);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const deleteContact = async (req, res) => {
+const deleteContact = async (req, res, next) => {
   try {
     const id = req.params.id;
     await Contact.deleteOne({ _id: id });
     return res.status(200).json({ message: "Contact Deleted Successfully" });
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const updateContact = async (req, res) => {
+const updateContact = async (req, res, next) => {
   try {
     const id = req.params.id;
     const updatedUserData = req.body;
@@ -224,8 +336,14 @@ const updateContact = async (req, res) => {
       }
     );
     return res.status(200).json(updatedData);
-  } catch (error) {
-    console.log(error);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
@@ -246,5 +364,5 @@ export {
   updateMember,
   updateEvent,
   updateContact,
-  deleteContact
+  deleteContact,
 };

@@ -14,33 +14,48 @@ const home = async (req, res) => {
   }
 };
 
-const register = async (req, res) => {
+const register = async (req, res, next) => {
   try {
     const { username, email, branch, year, admissionNo } = req.body;
     const duplicateRegistration = await Registration.findOne({
       admissionNo,
     });
+
     if (duplicateRegistration) {
-      return res.status(400).json({ msg: "You already register" });
+      return res.status(400).json({ message: "You already register" });
     }
+
     await Registration.create({ username, email, branch, year, admissionNo });
+
     res.status(200).json(req.body);
-  } catch (error) {
-    res.status(500).json("Internal Server Error");
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
-const contact = async (req, res) => {
+const contact = async (req, res, next) => {
   try {
     const { username, email, subject, message } = req.body;
     await Contact.create({ username, email, subject, message });
 
     res.status(200).json(req.body);
-  } catch (error) {
-    res.status(400).json("Internal Server Error");
+  } catch (err) {
+    const status = 400;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const signup = async (req, res) => {
+const signup = async (req, res, next) => {
   try {
     // Getting userData from POST request
     const { username, email, phone, password } = req.body;
@@ -51,7 +66,7 @@ const signup = async (req, res) => {
 
     if (usernameExist || emailExist) {
       return res.status(400).json({
-        msg: "User Already Exist",
+        message: "User Already Exist",
       });
     }
 
@@ -70,19 +85,25 @@ const signup = async (req, res) => {
       token: await userCreated.generateToken(),
       userId: userCreated._id.toString(),
     });
-  } catch (error) {
-    res.status(500).json("Internal Server Error");
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const login = async (req, res) => {
+const login = async (req, res, next) => {
   try {
     const { username, password } = req.body;
 
     const userExist = await User.findOne({ username });
 
     if (!userExist) {
-      return res.status(400).json({ msg: "Invalid Credentials" });
+      return res.status(400).json({ message: "Invalid Credentials" });
     }
 
     const isPasswordValid = await bcrypt.compare(password, userExist.password);
@@ -94,43 +115,67 @@ const login = async (req, res) => {
         userId: userExist._id.toString(),
       });
     } else {
-      res.status(401).json({ msg: "Invalid Username or password" });
+      res.status(401).json({ message: "Invalid Username or password" });
     }
-  } catch (error) {
-    res.status(500).json("Internal Server Error");
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const user = async (req, res) => {
+const user = async (req, res, next) => {
   try {
     const userData = req.user;
-    return res.status(200).json({ userData });
-  } catch (error) {
-    console.log("Error from user route");
+    return res.status(200).json(userData);
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const events = async (req, res) => {
+const events = async (req, res, next) => {
   try {
     const response = await Event.find();
     if(!response){
         res.status(404).json({ message: "No Event Found" });
     }
     res.status(200).json({ response });
-  } catch (error) {
-    console.log("Error from event route");
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 
-const members = async (req, res) => {
+const members = async (req, res, next) => {
   try {
     const response = await Member.find();
     if(!response){
       res.status(404).json({ message: "No Member Found" });
     }
     res.status(200).json({ response });
-  } catch (error) {
-    console.log("Error from member route");
+  } catch (err) {
+    const status = 500;
+    const message = err.message;
+    const error = {
+      status,
+      message
+    };
+    next(error);
   }
 };
 

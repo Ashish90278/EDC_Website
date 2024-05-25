@@ -2,7 +2,6 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import CountUp from "react-countup";
-// import ScrollTrigger from "react-scroll-trigger";
 import { MemberCard } from "../components/MemberCard.jsx";
 import { EventCard } from "../components/EventCard.jsx";
 import "./Home.css";
@@ -17,19 +16,19 @@ export const Home = () => {
   const getAllEventsData = async () => {
     try {
       const response = await fetch(
-        "https://edc-website-server-api.onrender.com/api/admin/events",
+        "https://edc-website-server-api.onrender.com/api/auth/event",
         {
           mode: "cors",
           method: "GET",
         }
       );
-
       const data = await response.json();
       setEvents(data);
     } catch (error) {
       console.log(error);
     }
   };
+  // console.log(events.response);
 
   useEffect(() => {
     const timer = setTimeout(() => {

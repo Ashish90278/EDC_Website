@@ -3,6 +3,7 @@ import "./Blog.css";
 import blogs from "./Json/Blogs.json";
 
 export const Blog = () => {
+  
   return (
     <>
       <div className="blogContainer container">

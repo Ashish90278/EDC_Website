@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import react from "react";
-import "./Contact.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "../components/Button.jsx";
 import { useAuth } from "../store/Auth.jsx";
+import "./Contact.css";
 
 export const Contact = () => {
 
@@ -17,6 +17,7 @@ export const Contact = () => {
   const [userData, setUserData] = useState(true);
 
   const { user } = useAuth();
+  const { isLoggedIn } = useAuth();
 
   if(userData && user){
     setContact({
@@ -75,6 +76,11 @@ export const Contact = () => {
     }
 
   }
+  console.log(isLoggedIn)
+  useEffect(() => {
+    
+  }, [isLoggedIn])
+  
   return (
     <>
       <section id="contact">

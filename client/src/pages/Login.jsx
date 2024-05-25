@@ -1,10 +1,10 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import "./Login.css";
 import { Button } from "../components/Button.jsx";
 import { useAuth } from "../store/Auth.jsx";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import "./Login.css";
 
 export const Login = () => {
   const navigate = useNavigate();

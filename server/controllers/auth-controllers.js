@@ -149,7 +149,7 @@ const events = async (req, res, next) => {
     if(!response){
         res.status(404).json({ message: "No Event Found" });
     }
-    res.status(200).json({ response });
+    res.status(200).json(response);
   } catch (err) {
     const status = 500;
     const message = err.message;
@@ -167,7 +167,7 @@ const members = async (req, res, next) => {
     if(!response){
       res.status(404).json({ message: "No Member Found" });
     }
-    res.status(200).json({ response });
+    res.status(200).json(response);
   } catch (err) {
     const status = 500;
     const message = err.message;

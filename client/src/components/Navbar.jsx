@@ -2,9 +2,9 @@ import { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { GoArrowRight } from "react-icons/go";
-import client from "../../package.json";
 import { MdArrowDropDown } from "react-icons/md";
 import { useAuth } from "../store/Auth.jsx";
+import client from "../../package.json";
 
 import "./Navbar.css";
 

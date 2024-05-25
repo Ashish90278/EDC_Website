@@ -1,10 +1,12 @@
 import { createContext, useContext, useState, useEffect } from "react";
+import {Contact} from "../pages/Contact.jsx";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
   const [user, setUser] = useState("");
+  // const [isLoggedIn, setIsLoggedIn] = useState(!!token);
 
   const storetokenInLS = (serverToken) => {
     setToken(serverToken);
@@ -30,11 +32,15 @@ export const AuthProvider = ({ children }) => {
           },
         }
       );
-
+      
+      console.log(response);
       if(response.ok){
         const data = await response.json();
-        console.log(data.userData);
-        setUser(data.userData);
+        console.log(data);
+        setUser(data);
+      }else{
+        userLogout();
+        console.log(user)
       }
     } catch (error) {
       console.log("Error Fetching User Data");
@@ -43,10 +49,10 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     userAuthentication();
-  }, []);
+  }, [true]);
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, storetokenInLS, userLogout, user }}>
+    <AuthContext.Provider value={{ isLoggedIn, storetokenInLS, userLogout, user, setUser }}>
       {children}
     </AuthContext.Provider>
   );

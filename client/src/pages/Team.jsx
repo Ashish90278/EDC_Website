@@ -1,9 +1,7 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
-import "./Team.css";
 import { MemberCard } from "../components/MemberCard.jsx";
-// import members from "./Json/Members.json";
 import { usestate, useEffect } from "react";
+import "./Team.css";
 
 export const Team = () => {
   const [dept, setDept] = useState("");

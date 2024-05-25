@@ -28,7 +28,7 @@ export const Home = () => {
       console.log(error);
     }
   };
-  // console.log(events.response);
+  // console.log(events);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -187,6 +187,7 @@ export const Home = () => {
                       events.reverse();
                       return (
                         <EventCard
+                        key={index}
                           description={event.description}
                           imageLink={event.imageLink}
                           redirectLink={event.redirectLink}

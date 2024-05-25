@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { MemberCard } from "../components/MemberCard.jsx";
-import { usestate, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Team.css";
 
 export const Team = () => {

@@ -46,7 +46,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* padding-top: 8rem; */
   gap: 1rem;
   padding-left: 4rem;
   margin-right: 4rem;
@@ -74,9 +73,7 @@
 .right_hero_section {
   width: 50%;
   height: 100%;
-  /* padding: 0rem 0rem 3rem 0rem; */
   filter: drop-shadow(0 0 0.75rem rgb(0, 195, 255));
-  /* border: 2px solid red; */
 }
 /*-------------------------------------------- Hero Section End  --------------------------------------------- */
 

@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { AdminSidebar } from "./AdminSidebar.jsx";
 import { Button } from "../Button.jsx";

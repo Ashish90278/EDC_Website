@@ -53,31 +53,24 @@ export const Team = () => {
     setDept(newDept);
   };
 
-  // const department = (dept) => {
-  //   if(dept === ""){
-  //     setDept("none");
-  //   }
-  // }
 
   const memberFiltered = () => {
-    // department(dept);
     return teamMembers
-      .filter((member) => member.department.map((dept)=> dept.value).includes(dept))
-      .map((member, index) => (
-        <MemberCard
-          key={index}
-          memberImage={member.image}
-          designation={member.post}
-          memberName={member.name}
-          linkedIn={member.linkedIn}
-          instagram={member.instagram}
-          x={member.x}
-        />
-      ));                
+    .filter((member) => member.department.map((dept)=> dept.value).includes(dept))
+    .map((member, index) => (
+      <MemberCard
+      key={index}
+      memberImage={member.image}
+      designation={member.post}
+      memberName={member.name}
+      linkedIn={member.linkedIn}
+      instagram={member.instagram}
+      x={member.x}
+      />
+    ));                
   };
 
   useEffect(() => {
-    // department(dept);
     getAllTeamMembers();
   }, [])
   

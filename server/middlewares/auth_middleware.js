@@ -5,7 +5,7 @@ export const authMiddleware = async(req, res, next) => {
     const token = req.header("Authorization");
     
     if(!token){
-        return res.status(401).json({ message : "Unauthorized HTTP, Token not provided" });
+        return res.status(401).send("hhhh");
     }
 
     const jwtToken = token.replace("Bearer", "").trim();

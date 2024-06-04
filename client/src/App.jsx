@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import "./App.css";
+import { ErrorPage } from "./pages/ErrorPage.jsx";
 import { Home } from "./pages/Home.jsx";
 import { Aboutus } from "./pages/Aboutus.jsx";
 import { Contact } from "./pages/Contact.jsx";
@@ -13,6 +14,7 @@ import { Signup } from "./pages/Signup.jsx";
 import { Register } from "./pages/Register.jsx";
 import { Navbar } from "./components/Navbar.jsx";
 import { Footer } from "./components/Footer.jsx";
+import { Admin } from "./components/layouts/Admin.jsx";
 import { AdminUsers } from "./components/layouts/AdminUsers.jsx";
 import { AdminSidebar } from "./components/layouts/AdminSidebar.jsx";
 import { AdminStudentsRegister } from "./components/layouts/AdminStudentsRegister.jsx";
@@ -30,7 +32,9 @@ export const App = () => {
         <BrowserRouter>
           <Navbar />
           <Routes>
+            <Route path="*" element={<ErrorPage />} />
             <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route
               path="/events/mr.sandeepjain"
@@ -547,15 +551,16 @@ export const App = () => {
             <Route path="/register" element={<Register />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/admin" element={<AdminUsers />} />
-            <Route path="/admin/users" element={<AdminUsers />} />
-            <Route
-              path="/admin/students-register"
-              element={<AdminStudentsRegister />}
-            />
-            <Route path="/admin/members" element={<AdminMembers />} />
-            <Route path="/admin/events" element={<AdminEvents />} />
-            <Route path="/admin/contacts" element={<AdminContacts />} />
+            <Route path="/admin" element={<Admin />} >
+              <Route path="users" element={<AdminUsers />} />
+              <Route
+                path="students-register"
+                element={<AdminStudentsRegister />}
+              />
+              <Route path="members" element={<AdminMembers />} />
+              <Route path="events" element={<AdminEvents />} />
+              <Route path="contacts" element={<AdminContacts />} />
+            </Route>
           </Routes>
           <Footer />
         </BrowserRouter>

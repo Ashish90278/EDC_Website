@@ -35,7 +35,7 @@ export const Events = () => {
           {/* {events.reverse()} */}
           {
             events.map((event, index) => {
-            events.reverse();
+            // events.reverse();
             return (
               <EventCard
                 description={event.description}

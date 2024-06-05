@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 import "./Modal.css";
 import { Button } from "./Button.jsx";
 import Select from "react-select";
+import { useAuth } from "../store/Auth.jsx";
 
 export const Modal = (props) => {
   const [userData, setUserData] = useState({});
+
+  const { token } = useAuth();
 
   const headings = props.tableHeadings;
   const button = props.button;
@@ -57,6 +60,7 @@ export const Modal = (props) => {
   };
 
   const handleSelectData = (change) => {
+    console.log(change);
     setUserData({
       ...userData,
       department: change,
@@ -74,10 +78,12 @@ export const Modal = (props) => {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify(userData),
         }
       );
+      console.log(response);
 
       // setUserData();
       if (response.ok) {
@@ -99,6 +105,7 @@ export const Modal = (props) => {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify(userData),
         }
@@ -129,7 +136,6 @@ export const Modal = (props) => {
                   <label htmlFor={heading}>{heading} :</label>
                   {heading === "department" ? (
                     <Select
-                      // defaultValue={data[heading]}
                       defaultValue={
                         buttonClick(button)
                           ? data[heading]

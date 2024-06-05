@@ -158,7 +158,7 @@ export const Contact = () => {
                   <div className="contact-info-icon-text">
                     <h6>Email Us</h6>
                     <a href="mailto:edciitd.team@gmail.com">
-                      <p>ecelljss@gmail.com</p>
+                      <p>edcjssate@gmail.com</p>
                     </a>
                   </div>
                 </div>

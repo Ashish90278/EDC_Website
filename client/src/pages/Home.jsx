@@ -184,7 +184,7 @@ export const Home = () => {
                 <div className="carousel-container">
                   <div className="carousel">
                     {events.map((event, index) => {
-                      events.reverse();
+                      // events.reverse();
                       return (
                         <EventCard
                         key={index}

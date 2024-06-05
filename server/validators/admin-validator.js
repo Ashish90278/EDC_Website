@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+const departmentSchema = z.object({
+  value: z.string(),
+  label: z.string()
+});
+
 export const membersSchema = z.object({
   name: z
     .string({ required_error: "Name is Required" })
@@ -17,9 +22,8 @@ export const membersSchema = z.object({
     .min(4, { message: "Post must be atleast of 4 characters" })
     .max(30, { message: "Post must not be more than 30 characters" }),
   department: z
-    .string({ required_error: "Department is Required" })
-    .trim()
-    .min(4, { message: "Department must be atleast of 4 characters" })
+    .array(departmentSchema, { required_error: "Department is Required" })
+    .min(0, { message: "Department must be atleast of 1 characters" })
     .max(20, { message: "Department must not be more than 20 characters" }),
   image: z
     .string({ required_error: "Image URL is Required" })

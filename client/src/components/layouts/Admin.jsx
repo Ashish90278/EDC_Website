@@ -7,22 +7,20 @@ import { AdminSidebar } from "./AdminSidebar.jsx";
 export const Admin = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
-  const { isAdmin } = useAuth();
   const { isLoggedIn } = useAuth();
 
   return (
     <>
-      {isAdmin ? (
+      {user.isAdmin ? (
         <>
-          <AdminSidebar />
-          <Outlet />
+          <section className="admin-users-section">
+            <AdminSidebar />
+            <Outlet />
+          </section>
+          <hr style={{ border: "1px solid grey" }} />
         </>
       ) : (
-        // navigate("/login")
-        <>
-          <AdminSidebar />
-          <Outlet />
-        </>
+        navigate("/login")
       )}
     </>
   );

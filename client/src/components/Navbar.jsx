@@ -5,10 +5,10 @@ import { GoArrowRight } from "react-icons/go";
 import { MdArrowDropDown } from "react-icons/md";
 import { useAuth } from "../store/Auth.jsx";
 import client from "../../package.json";
-
 import "./Navbar.css";
 
 export const Navbar = () => {
+  const { user } = useAuth();
   const { isLoggedIn } = useAuth();
   const navRef = useRef();
   const [navMenuValue, setNavMenuValue] = useState(false);
@@ -71,13 +71,38 @@ export const Navbar = () => {
               </button>
               <div id="navDropDown">
                 {isLoggedIn ? (
-                  <div onClick={showNavMenu}>
-                    <span>
-                      <NavLink to="/logout">Log Out</NavLink>
-                    </span>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                    }}
+                  >
+                    {user.isAdmin && (
+                      <div onClick={showNavMenu}>
+                        <span>
+                          <NavLink to="/admin">Admin</NavLink>
+                        </span>
+                      </div>
+                    )}
+                    <div onClick={showNavMenu}>
+                      <span>
+                        <NavLink to="/logout">Log Out</NavLink>
+                      </span>
+                    </div>
                   </div>
                 ) : (
-                  <div style={{display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center", width: "100%"}}>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: "100%",
+                    }}
+                  >
                     <div onClick={showNavMenu}>
                       <span>
                         <NavLink to="/login">Login</NavLink>
